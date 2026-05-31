@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCAA Men's Soccer Programs — U.S. West Coast</title>
+<style>
+  :root {
+    --bg: #fafaf7; --panel: #ffffff; --text: #1a1a1a;
+    --muted: #6b6b66; --border: #e3e0d6;
+    --state-fill: #f3eee0; --state-stroke: #b8af96;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; }
+  .subtitle { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 18px;
+  }
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px;
+    color: var(--muted); margin-bottom: 14px; align-items: center; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .ranked-marker { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--text); background: transparent; }
+  #map-container { position: relative; }
+  svg { width: 100%; height: auto; display: block; }
+  .tooltip {
+    position: absolute; pointer-events: none; background: white;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; font-size: 13px; line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    opacity: 0; transition: opacity .12s; z-index: 10; max-width: 260px;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px; margin-top: 8px;
+  }
+  .stat-card {
+    background: var(--bg); padding: 14px 16px;
+    border-radius: 8px; border: 1px solid var(--border);
+  }
+  .stat-num { font-size: 22px; font-weight: 600; }
+  .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  h2 { font-size: 16px; font-weight: 600; margin: 0 0 12px; }
+  footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 24px; }
+  ul.ranked { margin: 0; padding-left: 18px; font-size: 14px; columns: 2; column-gap: 24px; }
+  ul.ranked li { margin-bottom: 4px; break-inside: avoid; }
+  @media (max-width: 600px) {
+    body { padding: 12px; } h1 { font-size: 20px; }
+    .panel { padding: 14px; } ul.ranked { columns: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NCAA Men's Soccer Programs — U.S. West Coast</h1>
+  <p class="subtitle">57 programs across 2 states &middot; 2025 season</p>
+
+  <div class="panel">
+    <div class="legend">
+      <span class="legend-item"><span class="dot" style="background:#7F77DD"></span>D1 (22)</span>
+      <span class="legend-item"><span class="dot" style="background:#1D9E75"></span>D2 (25)</span>
+      <span class="legend-item"><span class="dot" style="background:#D85A30"></span>D3 (10)</span>
+      <span class="legend-item"><span class="ranked-marker"></span>2025 Top-25 ranked</span>
+    </div>
+    <div id="map-container">
+      <svg id="map" viewBox="0 0 700 660" role="img" aria-label="57 NCAA mens soccer programs"></svg>
+      <div class="tooltip" id="tip"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>By state</h2>
+    <div class="stats-grid"><div class="stat-card"><div class="stat-num">54</div><div class="stat-label">California</div></div><div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Hawaii</div></div></div>
+  </div>
+
+  <div class="panel">
+    <h2>2025 ranked programs in this region</h2>
+    <ul class="ranked"><li>D2 #5 Cal State Stanislaus &mdash; <strong>Quarterfinalist</strong></li><li>D2 #7 Point Loma Nazarene &mdash; <strong>Quarterfinalist</strong></li><li>D1 #7 Stanford &mdash; <strong>Round of 16</strong></li><li>D1 #9 San Diego</li></ul>
+  </div>
+
+  <footer>
+    Compiled from NCAA.com, United Soccer Coaches, Wikipedia &middot; Map via D3.js + us-atlas
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const STATES_IN_REGION = ["California", "Hawaii"];
+const COL = {D1:'#7F77DD', D2:'#1D9E75', D3:'#D85A30'};
+const SCHOOLS = [{"n":"Stanford","d":"D1","c":"Stanford","s":"CA","la":37.428,"lo":-122.17,"r":7},{"n":"San Diego","d":"D1","c":"San Diego","s":"CA","la":32.716,"lo":-117.161,"r":9},{"n":"Cal Poly","d":"D1","c":"San Luis Obispo","s":"CA","la":35.283,"lo":-120.66,"r":null},{"n":"Cal State Bakersfield","d":"D1","c":"Bakersfield","s":"CA","la":35.373,"lo":-119.019,"r":null},{"n":"Cal State Fullerton","d":"D1","c":"Fullerton","s":"CA","la":33.87,"lo":-117.924,"r":null},{"n":"Cal State Northridge","d":"D1","c":"Northridge","s":"CA","la":34.238,"lo":-118.53,"r":null},{"n":"California (Cal Berkeley)","d":"D1","c":"Berkeley","s":"CA","la":37.872,"lo":-122.273,"r":null},{"n":"California Baptist","d":"D1","c":"Riverside","s":"CA","la":33.981,"lo":-117.376,"r":null},{"n":"Loyola Marymount (LMU)","d":"D1","c":"Los Angeles","s":"CA","la":34.052,"lo":-118.244,"r":null},{"n":"Pacific","d":"D1","c":"Stockton","s":"CA","la":37.958,"lo":-121.291,"r":null},{"n":"Sacramento State","d":"D1","c":"Sacramento","s":"CA","la":38.582,"lo":-121.494,"r":null},{"n":"Saint Mary's","d":"D1","c":"Moraga","s":"CA","la":37.835,"lo":-122.13,"r":null},{"n":"San Diego State (SDSU)","d":"D1","c":"San Diego","s":"CA","la":32.716,"lo":-117.161,"r":null},{"n":"San Francisco (USF)","d":"D1","c":"San Francisco","s":"CA","la":37.775,"lo":-122.419,"r":null},{"n":"San Jose State","d":"D1","c":"San Jose","s":"CA","la":37.338,"lo":-121.886,"r":null},{"n":"Santa Clara","d":"D1","c":"Santa Clara","s":"CA","la":37.354,"lo":-121.955,"r":null},{"n":"UC Davis","d":"D1","c":"Davis","s":"CA","la":38.545,"lo":-121.74,"r":null},{"n":"UC Irvine","d":"D1","c":"Irvine","s":"CA","la":33.685,"lo":-117.826,"r":null},{"n":"UC Riverside","d":"D1","c":"Riverside","s":"CA","la":33.981,"lo":-117.376,"r":null},{"n":"UC San Diego","d":"D1","c":"La Jolla","s":"CA","la":32.833,"lo":-117.271,"r":null},{"n":"UC Santa Barbara","d":"D1","c":"Santa Barbara","s":"CA","la":34.421,"lo":-119.698,"r":null},{"n":"UCLA","d":"D1","c":"Los Angeles","s":"CA","la":34.052,"lo":-118.244,"r":null},{"n":"Point Loma Nazarene","d":"D2","c":"San Diego","s":"CA","la":32.716,"lo":-117.161,"r":7},{"n":"Cal State Dominguez Hills","d":"D2","c":"Carson","s":"CA","la":33.832,"lo":-118.282,"r":20},{"n":"Academy of Art","d":"D2","c":"San Francisco","s":"CA","la":37.775,"lo":-122.419,"r":null},{"n":"Azusa Pacific","d":"D2","c":"Azusa","s":"CA","la":34.134,"lo":-117.908,"r":null},{"n":"Biola","d":"D2","c":"La Mirada","s":"CA","la":33.917,"lo":-118.012,"r":null},{"n":"Cal Poly Humboldt","d":"D2","c":"Arcata","s":"CA","la":40.867,"lo":-124.083,"r":null},{"n":"Cal Poly Pomona","d":"D2","c":"Pomona","s":"CA","la":34.055,"lo":-117.75,"r":null},{"n":"Cal State East Bay","d":"D2","c":"Hayward","s":"CA","la":37.669,"lo":-122.081,"r":null},{"n":"Cal State Los Angeles","d":"D2","c":"Los Angeles","s":"CA","la":34.052,"lo":-118.244,"r":null},{"n":"Cal State Monterey Bay","d":"D2","c":"Seaside","s":"CA","la":36.611,"lo":-121.852,"r":null},{"n":"Cal State San Bernardino","d":"D2","c":"San Bernardino","s":"CA","la":34.108,"lo":-117.29,"r":null},{"n":"Cal State San Marcos","d":"D2","c":"San Marcos","s":"CA","la":33.143,"lo":-117.166,"r":null},{"n":"Chaminade","d":"D2","c":"Honolulu","s":"HI","la":21.31,"lo":-157.858,"r":null},{"n":"Chico State","d":"D2","c":"Chico","s":"CA","la":39.728,"lo":-121.838,"r":null},{"n":"Concordia Irvine","d":"D2","c":"Irvine","s":"CA","la":33.685,"lo":-117.826,"r":null},{"n":"Dominican (CA)","d":"D2","c":"San Rafael","s":"CA","la":37.974,"lo":-122.531,"r":null},{"n":"Fresno Pacific","d":"D2","c":"Fresno","s":"CA","la":36.738,"lo":-119.787,"r":null},{"n":"Hawaii Hilo","d":"D2","c":"Hilo","s":"HI","la":19.73,"lo":-155.09,"r":null},{"n":"Hawaii Pacific","d":"D2","c":"Honolulu","s":"HI","la":21.31,"lo":-157.858,"r":null},{"n":"Jessup","d":"D2","c":"Rocklin","s":"CA","la":38.791,"lo":-121.236,"r":null},{"n":"Menlo","d":"D2","c":"Atherton","s":"CA","la":37.461,"lo":-122.199,"r":null},{"n":"Stanislaus State","d":"D2","c":"Turlock","s":"CA","la":37.495,"lo":-120.847,"r":null},{"n":"UC Merced","d":"D2","c":"Merced","s":"CA","la":37.302,"lo":-120.483,"r":null},{"n":"Vanguard","d":"D2","c":"Costa Mesa","s":"CA","la":33.641,"lo":-117.919,"r":null},{"n":"Westmont","d":"D2","c":"Santa Barbara","s":"CA","la":34.421,"lo":-119.698,"r":null},{"n":"Cal Lutheran","d":"D3","c":"Thousand Oaks","s":"CA","la":34.171,"lo":-118.838,"r":null},{"n":"Caltech","d":"D3","c":"Pasadena","s":"CA","la":34.148,"lo":-118.144,"r":null},{"n":"Chapman","d":"D3","c":"Orange","s":"CA","la":33.788,"lo":-117.853,"r":null},{"n":"Claremont-Mudd-Scripps","d":"D3","c":"Claremont","s":"CA","la":34.097,"lo":-117.72,"r":null},{"n":"La Verne","d":"D3","c":"La Verne","s":"CA","la":34.101,"lo":-117.768,"r":null},{"n":"Occidental","d":"D3","c":"Los Angeles","s":"CA","la":34.052,"lo":-118.244,"r":null},{"n":"Pomona-Pitzer","d":"D3","c":"Claremont","s":"CA","la":34.097,"lo":-117.72,"r":null},{"n":"Redlands","d":"D3","c":"Redlands","s":"CA","la":34.056,"lo":-117.183,"r":null},{"n":"UC Santa Cruz","d":"D3","c":"Santa Cruz","s":"CA","la":36.974,"lo":-122.031,"r":null},{"n":"Whittier","d":"D3","c":"Whittier","s":"CA","la":33.979,"lo":-118.033,"r":null}];
+const USE_ALBERS_USA = true;
+const W = 700, H = 660;
+
+const svg = d3.select('#map');
+const tip = d3.select('#tip');
+
+function showTip(html, evt) {
+  const box = document.getElementById('map-container').getBoundingClientRect();
+  tip.html(html).style('opacity', 1)
+    .style('left', (evt.clientX - box.left + 14) + 'px')
+    .style('top', (evt.clientY - box.top - 8) + 'px');
+}
+
+d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(us => {
+  const allFeatures = topojson.feature(us, us.objects.states).features;
+  const filtered = allFeatures.filter(f => STATES_IN_REGION.includes(f.properties.name));
+  const fc = { type: 'FeatureCollection', features: filtered };
+
+  let projection;
+  if (USE_ALBERS_USA) {
+    projection = d3.geoAlbersUsa();
+    projection.fitSize([W - 40, H - 60], fc);
+  } else {
+    projection = d3.geoMercator().fitSize([W - 40, H - 60], fc);
+  }
+  const path = d3.geoPath(projection);
+
+  const g = svg.append('g').attr('transform', 'translate(20, 30)');
+
+  g.selectAll('path').data(fc.features).join('path')
+    .attr('d', path).attr('fill', '#f3eee0').attr('stroke', '#b8af96').attr('stroke-width', 1);
+
+  g.selectAll('text.state-label').data(fc.features).join('text')
+    .attr('class','state-label')
+    .attr('x', d => path.centroid(d)[0])
+    .attr('y', d => path.centroid(d)[1])
+    .attr('text-anchor','middle')
+    .attr('font-size', 11).attr('font-weight', 500)
+    .attr('fill', '#9a9180').attr('pointer-events','none')
+    .text(d => d.properties.name);
+
+  g.selectAll('circle').data(SCHOOLS).join('circle')
+    .attr('cx', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[0] : -9999;
+    })
+    .attr('cy', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[1] : -9999;
+    })
+    .attr('r', d => d.r ? 6.5 : 4)
+    .attr('fill', d => COL[d.d])
+    .attr('fill-opacity', 0.85)
+    .attr('stroke', d => d.r ? '#111' : 'none')
+    .attr('stroke-width', d => d.r ? 1.5 : 0)
+    .style('cursor', 'pointer')
+    .on('mouseenter', function(e, d) {
+      d3.select(this).attr('r', d.r ? 9 : 6);
+      const rk = d.r ? ' <span style="color:#b88200">#' + d.r + '</span>' : '';
+      showTip('<strong style="font-size:13px">' + d.n + '</strong>' + rk +
+              '<br><span style="color:#6b6b66">' + d.d + ' &middot; ' + d.c + ', ' + d.s + '</span>', e);
+    })
+    .on('mousemove', function(e) { showTip(tip.html(), e); })
+    .on('mouseleave', function(e, d) {
+      d3.select(this).attr('r', d.r ? 6.5 : 4);
+      tip.style('opacity', 0);
+    });
+});
+</script>
+</body>
+</html>

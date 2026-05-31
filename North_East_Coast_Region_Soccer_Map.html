@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCAA Men's Soccer Programs — U.S. North East Coast</title>
+<style>
+  :root {
+    --bg: #fafaf7; --panel: #ffffff; --text: #1a1a1a;
+    --muted: #6b6b66; --border: #e3e0d6;
+    --state-fill: #f3eee0; --state-stroke: #b8af96;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; }
+  .subtitle { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 18px;
+  }
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px;
+    color: var(--muted); margin-bottom: 14px; align-items: center; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .ranked-marker { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--text); background: transparent; }
+  #map-container { position: relative; }
+  svg { width: 100%; height: auto; display: block; }
+  .tooltip {
+    position: absolute; pointer-events: none; background: white;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; font-size: 13px; line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    opacity: 0; transition: opacity .12s; z-index: 10; max-width: 260px;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px; margin-top: 8px;
+  }
+  .stat-card {
+    background: var(--bg); padding: 14px 16px;
+    border-radius: 8px; border: 1px solid var(--border);
+  }
+  .stat-num { font-size: 22px; font-weight: 600; }
+  .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  h2 { font-size: 16px; font-weight: 600; margin: 0 0 12px; }
+  footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 24px; }
+  ul.ranked { margin: 0; padding-left: 18px; font-size: 14px; columns: 2; column-gap: 24px; }
+  ul.ranked li { margin-bottom: 4px; break-inside: avoid; }
+  @media (max-width: 600px) {
+    body { padding: 12px; } h1 { font-size: 20px; }
+    .panel { padding: 14px; } ul.ranked { columns: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NCAA Men's Soccer Programs — U.S. North East Coast</h1>
+  <p class="subtitle">210 programs across 8 states &middot; 2025 season</p>
+
+  <div class="panel">
+    <div class="legend">
+      <span class="legend-item"><span class="dot" style="background:#7F77DD"></span>D1 (51)</span>
+      <span class="legend-item"><span class="dot" style="background:#1D9E75"></span>D2 (24)</span>
+      <span class="legend-item"><span class="dot" style="background:#D85A30"></span>D3 (135)</span>
+      <span class="legend-item"><span class="ranked-marker"></span>2025 Top-25 ranked</span>
+    </div>
+    <div id="map-container">
+      <svg id="map" viewBox="0 0 800 740" role="img" aria-label="210 NCAA mens soccer programs"></svg>
+      <div class="tooltip" id="tip"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>By state</h2>
+    <div class="stats-grid"><div class="stat-card"><div class="stat-num">89</div><div class="stat-label">New York</div></div><div class="stat-card"><div class="stat-num">46</div><div class="stat-label">Massachusetts</div></div><div class="stat-card"><div class="stat-num">26</div><div class="stat-label">New Jersey</div></div><div class="stat-card"><div class="stat-num">20</div><div class="stat-label">Connecticut</div></div><div class="stat-card"><div class="stat-num">10</div><div class="stat-label">New Hampshire</div></div><div class="stat-card"><div class="stat-num">8</div><div class="stat-label">Rhode Island</div></div><div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Maine</div></div><div class="stat-card"><div class="stat-num">5</div><div class="stat-label">Vermont</div></div></div>
+  </div>
+
+  <div class="panel">
+    <h2>2025 ranked programs in this region</h2>
+    <ul class="ranked"><li>D3 #1 Tufts (MA) &mdash; <strong>National Champion</strong></li><li>D1 #2 Vermont &mdash; <strong>Round of 32</strong></li><li>D1 #3 Princeton (NJ) &mdash; <strong>Round of 32</strong></li><li>D2 #4 Southern NH (SNHU) &mdash; <strong>Semifinalist</strong></li><li>D3 #5 Bowdoin (ME) &mdash; <strong>Quarterfinalist</strong></li><li>D1 #6 Bryant (RI) &mdash; <strong>Round of 16</strong></li><li>D1 #13 UConn &mdash; <strong>Round of 16</strong></li><li>D2 #14 Franklin Pierce (NH)</li><li>D2 #19 Bentley (MA)</li><li>D1 #21 Seton Hall (NJ) &mdash; <strong>Round of 32</strong></li><li>D1 #22 Hofstra (NY) &mdash; <strong>Round of 16</strong></li><li>D1 #23 Cornell (NY) &mdash; <strong>Round of 32</strong></li><li>D3 #23 UMass Boston</li></ul>
+  </div>
+
+  <footer>
+    Compiled from NCAA.com, United Soccer Coaches, Wikipedia &middot; Map via D3.js + us-atlas
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const STATES_IN_REGION = ["Maine", "New Hampshire", "Vermont", "Massachusetts", "Rhode Island", "Connecticut", "New York", "New Jersey"];
+const COL = {D1:'#7F77DD', D2:'#1D9E75', D3:'#D85A30'};
+const SCHOOLS = [{"n":"Vermont","d":"D1","c":"Burlington","s":"VT","la":44.476,"lo":-73.212,"r":2},{"n":"Princeton","d":"D1","c":"Princeton","s":"NJ","la":40.357,"lo":-74.667,"r":3},{"n":"Bryant","d":"D1","c":"Smithfield","s":"RI","la":41.877,"lo":-71.548,"r":6},{"n":"Connecticut (UConn)","d":"D1","c":"Storrs","s":"CT","la":41.808,"lo":-72.249,"r":13},{"n":"Seton Hall","d":"D1","c":"South Orange","s":"NJ","la":40.749,"lo":-74.261,"r":21},{"n":"Hofstra","d":"D1","c":"Hempstead","s":"NY","la":40.706,"lo":-73.619,"r":22},{"n":"Cornell","d":"D1","c":"Ithaca","s":"NY","la":42.444,"lo":-76.502,"r":23},{"n":"Albany (SUNY)","d":"D1","c":"Albany","s":"NY","la":42.653,"lo":-73.756,"r":null},{"n":"Army West Point","d":"D1","c":"West Point","s":"NY","la":41.392,"lo":-73.957,"r":null},{"n":"Binghamton","d":"D1","c":"Binghamton","s":"NY","la":42.099,"lo":-75.918,"r":null},{"n":"Boston College","d":"D1","c":"Chestnut Hill","s":"MA","la":42.325,"lo":-71.165,"r":null},{"n":"Boston University","d":"D1","c":"Boston","s":"MA","la":42.36,"lo":-71.059,"r":null},{"n":"Brown","d":"D1","c":"Providence","s":"RI","la":41.824,"lo":-71.413,"r":null},{"n":"Canisius","d":"D1","c":"Buffalo","s":"NY","la":42.886,"lo":-78.878,"r":null},{"n":"Central Connecticut","d":"D1","c":"New Britain","s":"CT","la":41.661,"lo":-72.779,"r":null},{"n":"Colgate","d":"D1","c":"Hamilton","s":"NY","la":42.828,"lo":-75.546,"r":null},{"n":"Columbia","d":"D1","c":"New York","s":"NY","la":40.713,"lo":-74.006,"r":null},{"n":"Dartmouth","d":"D1","c":"Hanover","s":"NH","la":43.702,"lo":-72.29,"r":null},{"n":"Fairfield","d":"D1","c":"Fairfield","s":"CT","la":41.141,"lo":-73.261,"r":null},{"n":"Fairleigh Dickinson","d":"D1","c":"Teaneck","s":"NJ","la":40.898,"lo":-74.016,"r":null},{"n":"Fordham","d":"D1","c":"Bronx","s":"NY","la":40.845,"lo":-73.865,"r":null},{"n":"Harvard","d":"D1","c":"Cambridge","s":"MA","la":42.374,"lo":-71.11,"r":null},{"n":"Holy Cross","d":"D1","c":"Worcester","s":"MA","la":42.263,"lo":-71.802,"r":null},{"n":"Iona","d":"D1","c":"New Rochelle","s":"NY","la":40.911,"lo":-73.782,"r":null},{"n":"Le Moyne","d":"D1","c":"Syracuse","s":"NY","la":43.048,"lo":-76.147,"r":null},{"n":"LIU (Long Island)","d":"D1","c":"Brooklyn","s":"NY","la":40.678,"lo":-73.944,"r":null},{"n":"Manhattan","d":"D1","c":"Bronx","s":"NY","la":40.845,"lo":-73.865,"r":null},{"n":"Marist","d":"D1","c":"Poughkeepsie","s":"NY","la":41.7,"lo":-73.921,"r":null},{"n":"Merrimack","d":"D1","c":"North Andover","s":"MA","la":42.699,"lo":-71.135,"r":null},{"n":"Monmouth","d":"D1","c":"West Long Branch","s":"NJ","la":40.289,"lo":-74.015,"r":null},{"n":"New Hampshire","d":"D1","c":"Durham","s":"NH","la":43.134,"lo":-70.926,"r":null},{"n":"New Haven","d":"D1","c":"West Haven","s":"CT","la":41.271,"lo":-72.947,"r":null},{"n":"Niagara","d":"D1","c":"Lewiston","s":"NY","la":43.172,"lo":-79.038,"r":null},{"n":"NJIT","d":"D1","c":"Newark","s":"NJ","la":40.736,"lo":-74.172,"r":null},{"n":"Northeastern","d":"D1","c":"Boston","s":"MA","la":42.36,"lo":-71.059,"r":null},{"n":"Providence","d":"D1","c":"Providence","s":"RI","la":41.824,"lo":-71.413,"r":null},{"n":"Quinnipiac","d":"D1","c":"Hamden","s":"CT","la":41.396,"lo":-72.897,"r":null},{"n":"Rhode Island (URI)","d":"D1","c":"Kingston","s":"RI","la":41.481,"lo":-71.528,"r":null},{"n":"Rider","d":"D1","c":"Lawrenceville","s":"NJ","la":40.297,"lo":-74.729,"r":null},{"n":"Rutgers","d":"D1","c":"Piscataway","s":"NJ","la":40.555,"lo":-74.461,"r":null},{"n":"Sacred Heart","d":"D1","c":"Fairfield","s":"CT","la":41.141,"lo":-73.261,"r":null},{"n":"Saint Peter's","d":"D1","c":"Jersey City","s":"NJ","la":40.718,"lo":-74.043,"r":null},{"n":"Siena","d":"D1","c":"Loudonville","s":"NY","la":42.703,"lo":-73.761,"r":null},{"n":"St. Bonaventure","d":"D1","c":"St. Bonaventure","s":"NY","la":42.08,"lo":-78.472,"r":null},{"n":"St. John's","d":"D1","c":"Queens","s":"NY","la":40.728,"lo":-73.795,"r":null},{"n":"Stonehill","d":"D1","c":"Easton","s":"MA","la":42.033,"lo":-71.119,"r":null},{"n":"Stony Brook","d":"D1","c":"Stony Brook","s":"NY","la":40.926,"lo":-73.141,"r":null},{"n":"Syracuse","d":"D1","c":"Syracuse","s":"NY","la":43.048,"lo":-76.147,"r":null},{"n":"UMass","d":"D1","c":"Amherst","s":"MA","la":42.373,"lo":-72.52,"r":null},{"n":"UMass Lowell","d":"D1","c":"Lowell","s":"MA","la":42.633,"lo":-71.316,"r":null},{"n":"Yale","d":"D1","c":"New Haven","s":"CT","la":41.308,"lo":-72.928,"r":null},{"n":"Southern New Hampshire (SNHU)","d":"D2","c":"Manchester","s":"NH","la":42.996,"lo":-71.455,"r":4},{"n":"Franklin Pierce","d":"D2","c":"Rindge","s":"NH","la":42.752,"lo":-72.01,"r":14},{"n":"Bentley","d":"D2","c":"Waltham","s":"MA","la":42.377,"lo":-71.236,"r":19},{"n":"Adelphi","d":"D2","c":"Garden City","s":"NY","la":40.727,"lo":-73.634,"r":null},{"n":"American International","d":"D2","c":"Springfield","s":"MA","la":42.102,"lo":-72.59,"r":null},{"n":"Assumption","d":"D2","c":"Worcester","s":"MA","la":42.263,"lo":-71.802,"r":null},{"n":"Bridgeport","d":"D2","c":"Bridgeport","s":"CT","la":41.187,"lo":-73.195,"r":null},{"n":"Caldwell","d":"D2","c":"Caldwell","s":"NJ","la":40.84,"lo":-74.277,"r":null},{"n":"D'Youville","d":"D2","c":"Buffalo","s":"NY","la":42.886,"lo":-78.878,"r":null},{"n":"Daemen","d":"D2","c":"Amherst","s":"NY","la":42.978,"lo":-78.8,"r":null},{"n":"Dominican (NY)","d":"D2","c":"Orangeburg","s":"NY","la":41.047,"lo":-73.948,"r":null},{"n":"Felician","d":"D2","c":"Lodi","s":"NJ","la":40.884,"lo":-74.083,"r":null},{"n":"Georgian Court","d":"D2","c":"Lakewood","s":"NJ","la":40.097,"lo":-74.218,"r":null},{"n":"Mercy","d":"D2","c":"Dobbs Ferry","s":"NY","la":41.013,"lo":-73.872,"r":null},{"n":"Molloy","d":"D2","c":"Rockville Centre","s":"NY","la":40.658,"lo":-73.641,"r":null},{"n":"Pace","d":"D2","c":"Pleasantville","s":"NY","la":41.134,"lo":-73.786,"r":null},{"n":"Post","d":"D2","c":"Waterbury","s":"CT","la":41.558,"lo":-73.052,"r":null},{"n":"Queens College (CUNY)","d":"D2","c":"Queens","s":"NY","la":40.728,"lo":-73.795,"r":null},{"n":"Roberts Wesleyan","d":"D2","c":"Rochester","s":"NY","la":43.157,"lo":-77.609,"r":null},{"n":"Saint Anselm","d":"D2","c":"Manchester","s":"NH","la":42.996,"lo":-71.455,"r":null},{"n":"Saint Michael's","d":"D2","c":"Colchester","s":"VT","la":44.543,"lo":-73.148,"r":null},{"n":"Southern Connecticut","d":"D2","c":"New Haven","s":"CT","la":41.308,"lo":-72.928,"r":null},{"n":"St. Thomas Aquinas","d":"D2","c":"Sparkill","s":"NY","la":41.028,"lo":-73.918,"r":null},{"n":"Staten Island (CUNY)","d":"D2","c":"Staten Island","s":"NY","la":40.58,"lo":-74.15,"r":null},{"n":"Tufts","d":"D3","c":"Medford","s":"MA","la":42.418,"lo":-71.106,"r":1},{"n":"Bowdoin","d":"D3","c":"Brunswick","s":"ME","la":43.914,"lo":-69.966,"r":5},{"n":"UMass Boston","d":"D3","c":"Boston","s":"MA","la":42.36,"lo":-71.059,"r":23},{"n":"Albertus Magnus","d":"D3","c":"New Haven","s":"CT","la":41.308,"lo":-72.928,"r":null},{"n":"Alfred State","d":"D3","c":"Alfred","s":"NY","la":42.254,"lo":-77.791,"r":null},{"n":"Alfred U.","d":"D3","c":"Alfred","s":"NY","la":42.254,"lo":-77.791,"r":null},{"n":"Amherst","d":"D3","c":"Amherst","s":"MA","la":42.373,"lo":-72.52,"r":null},{"n":"Anna Maria","d":"D3","c":"Paxton","s":"MA","la":42.31,"lo":-71.93,"r":null},{"n":"Babson","d":"D3","c":"Wellesley","s":"MA","la":42.297,"lo":-71.292,"r":null},{"n":"Bard","d":"D3","c":"Annandale-on-Hudson","s":"NY","la":42.021,"lo":-73.91,"r":null},{"n":"Baruch","d":"D3","c":"New York","s":"NY","la":40.713,"lo":-74.006,"r":null},{"n":"Bates","d":"D3","c":"Lewiston","s":"ME","la":44.1,"lo":-70.215,"r":null},{"n":"Brandeis","d":"D3","c":"Waltham","s":"MA","la":42.377,"lo":-71.236,"r":null},{"n":"Bridgewater State","d":"D3","c":"Bridgewater","s":"MA","la":41.99,"lo":-70.975,"r":null},{"n":"Brooklyn (CUNY)","d":"D3","c":"Brooklyn","s":"NY","la":40.678,"lo":-73.944,"r":null},{"n":"Buffalo State","d":"D3","c":"Buffalo","s":"NY","la":42.886,"lo":-78.878,"r":null},{"n":"Castleton","d":"D3","c":"Castleton","s":"VT","la":43.609,"lo":-73.181,"r":null},{"n":"CCNY","d":"D3","c":"New York","s":"NY","la":40.713,"lo":-74.006,"r":null},{"n":"Centenary (NJ)","d":"D3","c":"Hackettstown","s":"NJ","la":40.854,"lo":-74.829,"r":null},{"n":"Clark (MA)","d":"D3","c":"Worcester","s":"MA","la":42.263,"lo":-71.802,"r":null},{"n":"Clarkson","d":"D3","c":"Potsdam","s":"NY","la":44.67,"lo":-74.981,"r":null},{"n":"Coast Guard","d":"D3","c":"New London","s":"CT","la":41.356,"lo":-72.1,"r":null},{"n":"Colby","d":"D3","c":"Waterville","s":"ME","la":44.552,"lo":-69.632,"r":null},{"n":"Colby-Sawyer","d":"D3","c":"New London","s":"NH","la":43.413,"lo":-71.985,"r":null},{"n":"Connecticut College","d":"D3","c":"New London","s":"CT","la":41.356,"lo":-72.1,"r":null},{"n":"Curry","d":"D3","c":"Milton","s":"MA","la":42.249,"lo":-71.066,"r":null},{"n":"Dean","d":"D3","c":"Franklin","s":"MA","la":42.083,"lo":-71.397,"r":null},{"n":"Drew","d":"D3","c":"Madison","s":"NJ","la":40.76,"lo":-74.417,"r":null},{"n":"Eastern Connecticut","d":"D3","c":"Willimantic","s":"CT","la":41.711,"lo":-72.209,"r":null},{"n":"Elmira","d":"D3","c":"Elmira","s":"NY","la":42.09,"lo":-76.808,"r":null},{"n":"Elms","d":"D3","c":"Chicopee","s":"MA","la":42.149,"lo":-72.608,"r":null},{"n":"Emerson","d":"D3","c":"Boston","s":"MA","la":42.36,"lo":-71.059,"r":null},{"n":"Emmanuel (MA)","d":"D3","c":"Boston","s":"MA","la":42.36,"lo":-71.059,"r":null},{"n":"Endicott","d":"D3","c":"Beverly","s":"MA","la":42.558,"lo":-70.88,"r":null},{"n":"Farmingdale State","d":"D3","c":"East Farmingdale","s":"NY","la":40.737,"lo":-73.412,"r":null},{"n":"FDU-Florham","d":"D3","c":"Madison","s":"NJ","la":40.76,"lo":-74.417,"r":null},{"n":"Fitchburg State","d":"D3","c":"Fitchburg","s":"MA","la":42.583,"lo":-71.802,"r":null},{"n":"Framingham State","d":"D3","c":"Framingham","s":"MA","la":42.279,"lo":-71.416,"r":null},{"n":"Gordon (MA)","d":"D3","c":"Wenham","s":"MA","la":42.596,"lo":-70.879,"r":null},{"n":"Hamilton","d":"D3","c":"Clinton","s":"NY","la":43.054,"lo":-75.38,"r":null},{"n":"Hartford","d":"D3","c":"West Hartford","s":"CT","la":41.762,"lo":-72.742,"r":null},{"n":"Hartwick","d":"D3","c":"Oneonta","s":"NY","la":42.453,"lo":-75.064,"r":null},{"n":"Hilbert","d":"D3","c":"Hamburg","s":"NY","la":42.716,"lo":-78.829,"r":null},{"n":"Hobart","d":"D3","c":"Geneva","s":"NY","la":42.869,"lo":-76.978,"r":null},{"n":"Houghton","d":"D3","c":"Houghton","s":"NY","la":42.422,"lo":-78.159,"r":null},{"n":"Hunter","d":"D3","c":"New York","s":"NY","la":40.713,"lo":-74.006,"r":null},{"n":"Ithaca","d":"D3","c":"Ithaca","s":"NY","la":42.444,"lo":-76.502,"r":null},{"n":"John Jay","d":"D3","c":"New York","s":"NY","la":40.713,"lo":-74.006,"r":null},{"n":"JWU Providence","d":"D3","c":"Providence","s":"RI","la":41.824,"lo":-71.413,"r":null},{"n":"Kean","d":"D3","c":"Union","s":"NJ","la":40.698,"lo":-74.263,"r":null},{"n":"Keene State","d":"D3","c":"Keene","s":"NH","la":42.934,"lo":-72.278,"r":null},{"n":"Keuka","d":"D3","c":"Keuka Park","s":"NY","la":42.596,"lo":-77.125,"r":null},{"n":"Lasell","d":"D3","c":"Newton","s":"MA","la":42.337,"lo":-71.209,"r":null},{"n":"Lehman","d":"D3","c":"Bronx","s":"NY","la":40.845,"lo":-73.865,"r":null},{"n":"Manhattanville","d":"D3","c":"Purchase","s":"NY","la":41.04,"lo":-73.713,"r":null},{"n":"Mass. College of Liberal Arts (MCLA)","d":"D3","c":"North Adams","s":"MA","la":42.701,"lo":-73.109,"r":null},{"n":"Mass. Maritime","d":"D3","c":"Buzzards Bay","s":"MA","la":41.745,"lo":-70.617,"r":null},{"n":"Medgar Evers","d":"D3","c":"Brooklyn","s":"NY","la":40.678,"lo":-73.944,"r":null},{"n":"Middlebury","d":"D3","c":"Middlebury","s":"VT","la":44.015,"lo":-73.167,"r":null},{"n":"MIT","d":"D3","c":"Cambridge","s":"MA","la":42.374,"lo":-71.11,"r":null},{"n":"Mitchell","d":"D3","c":"New London","s":"CT","la":41.356,"lo":-72.1,"r":null},{"n":"Montclair State","d":"D3","c":"Montclair","s":"NJ","la":40.826,"lo":-74.209,"r":null},{"n":"Mount Saint Mary College","d":"D3","c":"Newburgh","s":"NY","la":41.503,"lo":-74.01,"r":null},{"n":"Mount Saint Vincent (NY)","d":"D3","c":"Bronx","s":"NY","la":40.845,"lo":-73.865,"r":null},{"n":"Nazareth","d":"D3","c":"Rochester","s":"NY","la":43.157,"lo":-77.609,"r":null},{"n":"New England","d":"D3","c":"Biddeford","s":"ME","la":43.493,"lo":-70.453,"r":null},{"n":"New England College","d":"D3","c":"Henniker","s":"NH","la":43.178,"lo":-71.822,"r":null},{"n":"New Jersey City (NJCU)","d":"D3","c":"Jersey City","s":"NJ","la":40.718,"lo":-74.043,"r":null},{"n":"Nichols","d":"D3","c":"Dudley","s":"MA","la":42.05,"lo":-71.929,"r":null},{"n":"Norwich","d":"D3","c":"Northfield","s":"VT","la":44.149,"lo":-72.657,"r":null},{"n":"NYU","d":"D3","c":"New York","s":"NY","la":40.713,"lo":-74.006,"r":null},{"n":"Plymouth State","d":"D3","c":"Plymouth","s":"NH","la":43.757,"lo":-71.689,"r":null},{"n":"Pratt","d":"D3","c":"Brooklyn","s":"NY","la":40.678,"lo":-73.944,"r":null},{"n":"Ramapo","d":"D3","c":"Mahwah","s":"NJ","la":41.089,"lo":-74.144,"r":null},{"n":"Regis (MA)","d":"D3","c":"Weston","s":"MA","la":42.367,"lo":-71.303,"r":null},{"n":"Rhode Island College","d":"D3","c":"Providence","s":"RI","la":41.824,"lo":-71.413,"r":null},{"n":"RIT","d":"D3","c":"Rochester","s":"NY","la":43.157,"lo":-77.609,"r":null},{"n":"Rivier","d":"D3","c":"Nashua","s":"NH","la":42.765,"lo":-71.468,"r":null},{"n":"Rochester","d":"D3","c":"Rochester","s":"NY","la":43.157,"lo":-77.609,"r":null},{"n":"Roger Williams","d":"D3","c":"Bristol","s":"RI","la":41.68,"lo":-71.266,"r":null},{"n":"Rowan","d":"D3","c":"Glassboro","s":"NJ","la":39.704,"lo":-75.112,"r":null},{"n":"RPI","d":"D3","c":"Troy","s":"NY","la":42.728,"lo":-73.692,"r":null},{"n":"Russell Sage","d":"D3","c":"Troy","s":"NY","la":42.728,"lo":-73.692,"r":null},{"n":"Rutgers-Camden","d":"D3","c":"Camden","s":"NJ","la":39.926,"lo":-75.12,"r":null},{"n":"Rutgers-Newark","d":"D3","c":"Newark","s":"NJ","la":40.736,"lo":-74.172,"r":null},{"n":"Saint Elizabeth","d":"D3","c":"Morristown","s":"NJ","la":40.797,"lo":-74.481,"r":null},{"n":"Saint Joseph (CT)","d":"D3","c":"West Hartford","s":"CT","la":41.762,"lo":-72.742,"r":null},{"n":"Salem State","d":"D3","c":"Salem","s":"MA","la":42.52,"lo":-70.897,"r":null},{"n":"Salve Regina","d":"D3","c":"Newport","s":"RI","la":41.49,"lo":-71.313,"r":null},{"n":"Sarah Lawrence","d":"D3","c":"Yonkers","s":"NY","la":40.931,"lo":-73.899,"r":null},{"n":"Skidmore","d":"D3","c":"Saratoga Springs","s":"NY","la":43.083,"lo":-73.785,"r":null},{"n":"Southern Maine","d":"D3","c":"Portland","s":"ME","la":43.659,"lo":-70.257,"r":null},{"n":"Springfield","d":"D3","c":"Springfield","s":"MA","la":42.102,"lo":-72.59,"r":null},{"n":"St. John Fisher","d":"D3","c":"Rochester","s":"NY","la":43.157,"lo":-77.609,"r":null},{"n":"St. Joseph's (ME)","d":"D3","c":"Standish","s":"ME","la":43.785,"lo":-70.544,"r":null},{"n":"St. Joseph's Brooklyn","d":"D3","c":"Brooklyn","s":"NY","la":40.678,"lo":-73.944,"r":null},{"n":"St. Joseph's Long Island","d":"D3","c":"Patchogue","s":"NY","la":40.766,"lo":-73.015,"r":null},{"n":"St. Lawrence","d":"D3","c":"Canton","s":"NY","la":44.596,"lo":-75.169,"r":null},{"n":"Stevens","d":"D3","c":"Hoboken","s":"NJ","la":40.744,"lo":-74.032,"r":null},{"n":"Stockton","d":"D3","c":"Galloway","s":"NJ","la":39.493,"lo":-74.454,"r":null},{"n":"Suffolk","d":"D3","c":"Boston","s":"MA","la":42.36,"lo":-71.059,"r":null},{"n":"SUNY Brockport","d":"D3","c":"Brockport","s":"NY","la":43.215,"lo":-77.939,"r":null},{"n":"SUNY Canton","d":"D3","c":"Canton","s":"NY","la":44.596,"lo":-75.169,"r":null},{"n":"SUNY Cortland","d":"D3","c":"Cortland","s":"NY","la":42.601,"lo":-76.18,"r":null},{"n":"SUNY Fredonia","d":"D3","c":"Fredonia","s":"NY","la":42.44,"lo":-79.332,"r":null},{"n":"SUNY Geneseo","d":"D3","c":"Geneseo","s":"NY","la":42.796,"lo":-77.816,"r":null},{"n":"SUNY Maritime","d":"D3","c":"Bronx","s":"NY","la":40.845,"lo":-73.865,"r":null},{"n":"SUNY Morrisville","d":"D3","c":"Morrisville","s":"NY","la":42.892,"lo":-75.644,"r":null},{"n":"SUNY New Paltz","d":"D3","c":"New Paltz","s":"NY","la":41.748,"lo":-74.087,"r":null},{"n":"SUNY Old Westbury","d":"D3","c":"Old Westbury","s":"NY","la":40.794,"lo":-73.591,"r":null},{"n":"SUNY Oneonta","d":"D3","c":"Oneonta","s":"NY","la":42.453,"lo":-75.064,"r":null},{"n":"SUNY Oswego","d":"D3","c":"Oswego","s":"NY","la":43.455,"lo":-76.51,"r":null},{"n":"SUNY Plattsburgh","d":"D3","c":"Plattsburgh","s":"NY","la":44.7,"lo":-73.453,"r":null},{"n":"SUNY Poly","d":"D3","c":"Utica","s":"NY","la":43.101,"lo":-75.233,"r":null},{"n":"SUNY Potsdam","d":"D3","c":"Potsdam","s":"NY","la":44.67,"lo":-74.981,"r":null},{"n":"SUNY Purchase","d":"D3","c":"Purchase","s":"NY","la":41.04,"lo":-73.713,"r":null},{"n":"TCNJ","d":"D3","c":"Ewing","s":"NJ","la":40.269,"lo":-74.8,"r":null},{"n":"Trinity (CT)","d":"D3","c":"Hartford","s":"CT","la":41.766,"lo":-72.673,"r":null},{"n":"UMass Dartmouth","d":"D3","c":"Dartmouth","s":"MA","la":41.636,"lo":-70.998,"r":null},{"n":"Union (NY)","d":"D3","c":"Schenectady","s":"NY","la":42.814,"lo":-73.94,"r":null},{"n":"USMMA","d":"D3","c":"Kings Point","s":"NY","la":40.816,"lo":-73.734,"r":null},{"n":"Utica","d":"D3","c":"Utica","s":"NY","la":43.101,"lo":-75.233,"r":null},{"n":"Vassar","d":"D3","c":"Poughkeepsie","s":"NY","la":41.7,"lo":-73.921,"r":null},{"n":"Wentworth","d":"D3","c":"Boston","s":"MA","la":42.36,"lo":-71.059,"r":null},{"n":"Wesleyan","d":"D3","c":"Middletown","s":"CT","la":41.562,"lo":-72.651,"r":null},{"n":"Western Connecticut","d":"D3","c":"Danbury","s":"CT","la":41.395,"lo":-73.454,"r":null},{"n":"Western New England","d":"D3","c":"Springfield","s":"MA","la":42.102,"lo":-72.59,"r":null},{"n":"Westfield State","d":"D3","c":"Westfield","s":"MA","la":42.125,"lo":-72.749,"r":null},{"n":"Wheaton (MA)","d":"D3","c":"Norton","s":"MA","la":41.967,"lo":-71.185,"r":null},{"n":"William Paterson","d":"D3","c":"Wayne","s":"NJ","la":40.918,"lo":-74.236,"r":null},{"n":"Williams","d":"D3","c":"Williamstown","s":"MA","la":42.712,"lo":-73.204,"r":null},{"n":"Worcester State","d":"D3","c":"Worcester","s":"MA","la":42.263,"lo":-71.802,"r":null},{"n":"WPI","d":"D3","c":"Worcester","s":"MA","la":42.263,"lo":-71.802,"r":null},{"n":"Yeshiva","d":"D3","c":"New York","s":"NY","la":40.713,"lo":-74.006,"r":null},{"n":"York (CUNY)","d":"D3","c":"Queens","s":"NY","la":40.728,"lo":-73.795,"r":null}];
+const USE_ALBERS_USA = false;
+const W = 800, H = 740;
+
+const svg = d3.select('#map');
+const tip = d3.select('#tip');
+
+function showTip(html, evt) {
+  const box = document.getElementById('map-container').getBoundingClientRect();
+  tip.html(html).style('opacity', 1)
+    .style('left', (evt.clientX - box.left + 14) + 'px')
+    .style('top', (evt.clientY - box.top - 8) + 'px');
+}
+
+d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(us => {
+  const allFeatures = topojson.feature(us, us.objects.states).features;
+  const filtered = allFeatures.filter(f => STATES_IN_REGION.includes(f.properties.name));
+  const fc = { type: 'FeatureCollection', features: filtered };
+
+  let projection;
+  if (USE_ALBERS_USA) {
+    projection = d3.geoAlbersUsa();
+    projection.fitSize([W - 40, H - 60], fc);
+  } else {
+    projection = d3.geoMercator().fitSize([W - 40, H - 60], fc);
+  }
+  const path = d3.geoPath(projection);
+
+  const g = svg.append('g').attr('transform', 'translate(20, 30)');
+
+  g.selectAll('path').data(fc.features).join('path')
+    .attr('d', path).attr('fill', '#f3eee0').attr('stroke', '#b8af96').attr('stroke-width', 1);
+
+  g.selectAll('text.state-label').data(fc.features).join('text')
+    .attr('class','state-label')
+    .attr('x', d => path.centroid(d)[0])
+    .attr('y', d => path.centroid(d)[1])
+    .attr('text-anchor','middle')
+    .attr('font-size', 11).attr('font-weight', 500)
+    .attr('fill', '#9a9180').attr('pointer-events','none')
+    .text(d => d.properties.name);
+
+  g.selectAll('circle').data(SCHOOLS).join('circle')
+    .attr('cx', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[0] : -9999;
+    })
+    .attr('cy', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[1] : -9999;
+    })
+    .attr('r', d => d.r ? 6.5 : 4)
+    .attr('fill', d => COL[d.d])
+    .attr('fill-opacity', 0.85)
+    .attr('stroke', d => d.r ? '#111' : 'none')
+    .attr('stroke-width', d => d.r ? 1.5 : 0)
+    .style('cursor', 'pointer')
+    .on('mouseenter', function(e, d) {
+      d3.select(this).attr('r', d.r ? 9 : 6);
+      const rk = d.r ? ' <span style="color:#b88200">#' + d.r + '</span>' : '';
+      showTip('<strong style="font-size:13px">' + d.n + '</strong>' + rk +
+              '<br><span style="color:#6b6b66">' + d.d + ' &middot; ' + d.c + ', ' + d.s + '</span>', e);
+    })
+    .on('mousemove', function(e) { showTip(tip.html(), e); })
+    .on('mouseleave', function(e, d) {
+      d3.select(this).attr('r', d.r ? 6.5 : 4);
+      tip.style('opacity', 0);
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCAA Men's Soccer Programs — U.S. Central (Mountain West / SW)</title>
+<style>
+  :root {
+    --bg: #fafaf7; --panel: #ffffff; --text: #1a1a1a;
+    --muted: #6b6b66; --border: #e3e0d6;
+    --state-fill: #f3eee0; --state-stroke: #b8af96;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; }
+  .subtitle { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 18px;
+  }
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px;
+    color: var(--muted); margin-bottom: 14px; align-items: center; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .ranked-marker { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--text); background: transparent; }
+  #map-container { position: relative; }
+  svg { width: 100%; height: auto; display: block; }
+  .tooltip {
+    position: absolute; pointer-events: none; background: white;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; font-size: 13px; line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    opacity: 0; transition: opacity .12s; z-index: 10; max-width: 260px;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px; margin-top: 8px;
+  }
+  .stat-card {
+    background: var(--bg); padding: 14px 16px;
+    border-radius: 8px; border: 1px solid var(--border);
+  }
+  .stat-num { font-size: 22px; font-weight: 600; }
+  .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  h2 { font-size: 16px; font-weight: 600; margin: 0 0 12px; }
+  footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 24px; }
+  ul.ranked { margin: 0; padding-left: 18px; font-size: 14px; columns: 2; column-gap: 24px; }
+  ul.ranked li { margin-bottom: 4px; break-inside: avoid; }
+  @media (max-width: 600px) {
+    body { padding: 12px; } h1 { font-size: 20px; }
+    .panel { padding: 14px; } ul.ranked { columns: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NCAA Men's Soccer Programs — U.S. Central (Mountain West / SW)</h1>
+  <p class="subtitle">17 programs across 7 states &middot; 2025 season</p>
+
+  <div class="panel">
+    <div class="legend">
+      <span class="legend-item"><span class="dot" style="background:#7F77DD"></span>D1 (6)</span>
+      <span class="legend-item"><span class="dot" style="background:#1D9E75"></span>D2 (10)</span>
+      <span class="legend-item"><span class="dot" style="background:#D85A30"></span>D3 (1)</span>
+      <span class="legend-item"><span class="ranked-marker"></span>2025 Top-25 ranked</span>
+    </div>
+    <div id="map-container">
+      <svg id="map" viewBox="0 0 820 660" role="img" aria-label="17 NCAA mens soccer programs"></svg>
+      <div class="tooltip" id="tip"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>By state</h2>
+    <div class="stats-grid"><div class="stat-card"><div class="stat-num">12</div><div class="stat-label">Colorado</div></div><div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Utah</div></div><div class="stat-card"><div class="stat-num">1</div><div class="stat-label">Arizona</div></div><div class="stat-card"><div class="stat-num">1</div><div class="stat-label">Nevada</div></div></div>
+  </div>
+
+  <div class="panel">
+    <h2>2025 ranked programs in this region</h2>
+    <ul class="ranked"><li>D2 #18 UCCS (Colorado-Colorado Springs)</li></ul>
+  </div>
+
+  <footer>
+    Compiled from NCAA.com, United Soccer Coaches, Wikipedia &middot; Map via D3.js + us-atlas
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const STATES_IN_REGION = ["Colorado", "Utah", "Nevada", "Arizona", "New Mexico", "Wyoming", "Montana"];
+const COL = {D1:'#7F77DD', D2:'#1D9E75', D3:'#D85A30'};
+const SCHOOLS = [{"n":"Air Force","d":"D1","c":"Colorado Springs","s":"CO","la":38.834,"lo":-104.821,"r":null},{"n":"Denver","d":"D1","c":"Denver","s":"CO","la":39.739,"lo":-104.99,"r":null},{"n":"Grand Canyon","d":"D1","c":"Phoenix","s":"AZ","la":33.448,"lo":-112.074,"r":null},{"n":"UNLV","d":"D1","c":"Las Vegas","s":"NV","la":36.17,"lo":-115.14,"r":null},{"n":"Utah Tech","d":"D1","c":"St. George","s":"UT","la":37.096,"lo":-113.568,"r":null},{"n":"Utah Valley (UVU)","d":"D1","c":"Orem","s":"UT","la":40.297,"lo":-111.695,"r":null},{"n":"UCCS (Colorado-Colorado Springs)","d":"D2","c":"Colorado Springs","s":"CO","la":38.834,"lo":-104.821,"r":18},{"n":"Adams State","d":"D2","c":"Alamosa","s":"CO","la":37.469,"lo":-105.87,"r":null},{"n":"Colorado Christian","d":"D2","c":"Lakewood","s":"CO","la":39.705,"lo":-105.081,"r":null},{"n":"Colorado Mesa","d":"D2","c":"Grand Junction","s":"CO","la":39.064,"lo":-108.551,"r":null},{"n":"Colorado School of Mines","d":"D2","c":"Golden","s":"CO","la":39.755,"lo":-105.221,"r":null},{"n":"CSU Pueblo","d":"D2","c":"Pueblo","s":"CO","la":38.254,"lo":-104.609,"r":null},{"n":"Fort Lewis","d":"D2","c":"Durango","s":"CO","la":37.275,"lo":-107.88,"r":null},{"n":"MSU Denver","d":"D2","c":"Denver","s":"CO","la":39.739,"lo":-104.99,"r":null},{"n":"Regis (CO)","d":"D2","c":"Denver","s":"CO","la":39.739,"lo":-104.99,"r":null},{"n":"Westminster (UT)","d":"D2","c":"Salt Lake City","s":"UT","la":40.761,"lo":-111.891,"r":null},{"n":"Colorado College","d":"D3","c":"Colorado Springs","s":"CO","la":38.834,"lo":-104.821,"r":null}];
+const USE_ALBERS_USA = false;
+const W = 820, H = 660;
+
+const svg = d3.select('#map');
+const tip = d3.select('#tip');
+
+function showTip(html, evt) {
+  const box = document.getElementById('map-container').getBoundingClientRect();
+  tip.html(html).style('opacity', 1)
+    .style('left', (evt.clientX - box.left + 14) + 'px')
+    .style('top', (evt.clientY - box.top - 8) + 'px');
+}
+
+d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(us => {
+  const allFeatures = topojson.feature(us, us.objects.states).features;
+  const filtered = allFeatures.filter(f => STATES_IN_REGION.includes(f.properties.name));
+  const fc = { type: 'FeatureCollection', features: filtered };
+
+  let projection;
+  if (USE_ALBERS_USA) {
+    projection = d3.geoAlbersUsa();
+    projection.fitSize([W - 40, H - 60], fc);
+  } else {
+    projection = d3.geoMercator().fitSize([W - 40, H - 60], fc);
+  }
+  const path = d3.geoPath(projection);
+
+  const g = svg.append('g').attr('transform', 'translate(20, 30)');
+
+  g.selectAll('path').data(fc.features).join('path')
+    .attr('d', path).attr('fill', '#f3eee0').attr('stroke', '#b8af96').attr('stroke-width', 1);
+
+  g.selectAll('text.state-label').data(fc.features).join('text')
+    .attr('class','state-label')
+    .attr('x', d => path.centroid(d)[0])
+    .attr('y', d => path.centroid(d)[1])
+    .attr('text-anchor','middle')
+    .attr('font-size', 11).attr('font-weight', 500)
+    .attr('fill', '#9a9180').attr('pointer-events','none')
+    .text(d => d.properties.name);
+
+  g.selectAll('circle').data(SCHOOLS).join('circle')
+    .attr('cx', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[0] : -9999;
+    })
+    .attr('cy', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[1] : -9999;
+    })
+    .attr('r', d => d.r ? 6.5 : 4)
+    .attr('fill', d => COL[d.d])
+    .attr('fill-opacity', 0.85)
+    .attr('stroke', d => d.r ? '#111' : 'none')
+    .attr('stroke-width', d => d.r ? 1.5 : 0)
+    .style('cursor', 'pointer')
+    .on('mouseenter', function(e, d) {
+      d3.select(this).attr('r', d.r ? 9 : 6);
+      const rk = d.r ? ' <span style="color:#b88200">#' + d.r + '</span>' : '';
+      showTip('<strong style="font-size:13px">' + d.n + '</strong>' + rk +
+              '<br><span style="color:#6b6b66">' + d.d + ' &middot; ' + d.c + ', ' + d.s + '</span>', e);
+    })
+    .on('mousemove', function(e) { showTip(tip.html(), e); })
+    .on('mouseleave', function(e, d) {
+      d3.select(this).attr('r', d.r ? 6.5 : 4);
+      tip.style('opacity', 0);
+    });
+});
+</script>
+</body>
+</html>

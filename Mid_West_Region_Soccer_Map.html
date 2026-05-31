@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCAA Men's Soccer Programs — U.S. Mid West</title>
+<style>
+  :root {
+    --bg: #fafaf7; --panel: #ffffff; --text: #1a1a1a;
+    --muted: #6b6b66; --border: #e3e0d6;
+    --state-fill: #f3eee0; --state-stroke: #b8af96;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; }
+  .subtitle { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 18px;
+  }
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px;
+    color: var(--muted); margin-bottom: 14px; align-items: center; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .ranked-marker { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--text); background: transparent; }
+  #map-container { position: relative; }
+  svg { width: 100%; height: auto; display: block; }
+  .tooltip {
+    position: absolute; pointer-events: none; background: white;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; font-size: 13px; line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    opacity: 0; transition: opacity .12s; z-index: 10; max-width: 260px;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px; margin-top: 8px;
+  }
+  .stat-card {
+    background: var(--bg); padding: 14px 16px;
+    border-radius: 8px; border: 1px solid var(--border);
+  }
+  .stat-num { font-size: 22px; font-weight: 600; }
+  .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  h2 { font-size: 16px; font-weight: 600; margin: 0 0 12px; }
+  footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 24px; }
+  ul.ranked { margin: 0; padding-left: 18px; font-size: 14px; columns: 2; column-gap: 24px; }
+  ul.ranked li { margin-bottom: 4px; break-inside: avoid; }
+  @media (max-width: 600px) {
+    body { padding: 12px; } h1 { font-size: 20px; }
+    .panel { padding: 14px; } ul.ranked { columns: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NCAA Men's Soccer Programs — U.S. Mid West</h1>
+  <p class="subtitle">186 programs across 12 states &middot; 2025 season</p>
+
+  <div class="panel">
+    <div class="legend">
+      <span class="legend-item"><span class="dot" style="background:#7F77DD"></span>D1 (41)</span>
+      <span class="legend-item"><span class="dot" style="background:#1D9E75"></span>D2 (35)</span>
+      <span class="legend-item"><span class="dot" style="background:#D85A30"></span>D3 (110)</span>
+      <span class="legend-item"><span class="ranked-marker"></span>2025 Top-25 ranked</span>
+    </div>
+    <div id="map-container">
+      <svg id="map" viewBox="0 0 880 620" role="img" aria-label="186 NCAA mens soccer programs"></svg>
+      <div class="tooltip" id="tip"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>By state</h2>
+    <div class="stats-grid"><div class="stat-card"><div class="stat-num">37</div><div class="stat-label">Illinois</div></div><div class="stat-card"><div class="stat-num">36</div><div class="stat-label">Ohio</div></div><div class="stat-card"><div class="stat-num">24</div><div class="stat-label">Wisconsin</div></div><div class="stat-card"><div class="stat-num">19</div><div class="stat-label">Minnesota</div></div><div class="stat-card"><div class="stat-num">18</div><div class="stat-label">Indiana</div></div><div class="stat-card"><div class="stat-num">16</div><div class="stat-label">Michigan</div></div><div class="stat-card"><div class="stat-num">16</div><div class="stat-label">Missouri</div></div><div class="stat-card"><div class="stat-num">12</div><div class="stat-label">Iowa</div></div><div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Nebraska</div></div><div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Kansas</div></div><div class="stat-card"><div class="stat-num">1</div><div class="stat-label">North Dakota</div></div><div class="stat-card"><div class="stat-num">1</div><div class="stat-label">South Dakota</div></div></div>
+  </div>
+
+  <div class="panel">
+    <h2>2025 ranked programs in this region</h2>
+    <ul class="ranked"><li>D2 #3 Fort Hays State (KS) &mdash; <strong>Semifinalist</strong></li><li>D3 #3 St. Olaf (MN) &mdash; <strong>Semifinalist</strong></li><li>D1 #10 Michigan &mdash; <strong>Round of 32</strong></li><li>D2 #13 Rockhurst (MO)</li><li>D3 #13 Macalester (MN)</li><li>D2 #16 Lincoln (MO)</li><li>D2 #21 Cedarville (OH)</li><li>D1 #24 Saint Louis (SLU) &mdash; <strong>Semifinalist</strong></li><li>D1 #25 Indiana &mdash; <strong>Round of 32</strong></li><li>D1 #25 Kansas City (UMKC) &mdash; <strong>Round of 32</strong></li></ul>
+  </div>
+
+  <footer>
+    Compiled from NCAA.com, United Soccer Coaches, Wikipedia &middot; Map via D3.js + us-atlas
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const STATES_IN_REGION = ["Ohio", "Indiana", "Michigan", "Illinois", "Wisconsin", "Minnesota", "Iowa", "Missouri", "North Dakota", "South Dakota", "Nebraska", "Kansas"];
+const COL = {D1:'#7F77DD', D2:'#1D9E75', D3:'#D85A30'};
+const SCHOOLS = [{"n":"Michigan","d":"D1","c":"Ann Arbor","s":"MI","la":42.281,"lo":-83.743,"r":10},{"n":"Saint Louis (SLU)","d":"D1","c":"St. Louis","s":"MO","la":38.627,"lo":-90.199,"r":24},{"n":"Indiana","d":"D1","c":"Bloomington","s":"IN","la":39.165,"lo":-86.526,"r":25},{"n":"Kansas City (UMKC)","d":"D1","c":"Kansas City","s":"MO","la":39.1,"lo":-94.579,"r":25},{"n":"Bowling Green State","d":"D1","c":"Bowling Green","s":"OH","la":41.375,"lo":-83.651,"r":null},{"n":"Bradley","d":"D1","c":"Peoria","s":"IL","la":40.694,"lo":-89.589,"r":null},{"n":"Butler","d":"D1","c":"Indianapolis","s":"IN","la":39.768,"lo":-86.158,"r":null},{"n":"Chicago State","d":"D1","c":"Chicago","s":"IL","la":41.878,"lo":-87.63,"r":null},{"n":"Cleveland State","d":"D1","c":"Cleveland","s":"OH","la":41.499,"lo":-81.694,"r":null},{"n":"Creighton","d":"D1","c":"Omaha","s":"NE","la":41.257,"lo":-95.934,"r":null},{"n":"Dayton","d":"D1","c":"Dayton","s":"OH","la":39.759,"lo":-84.192,"r":null},{"n":"DePaul","d":"D1","c":"Chicago","s":"IL","la":41.878,"lo":-87.63,"r":null},{"n":"Detroit Mercy","d":"D1","c":"Detroit","s":"MI","la":42.331,"lo":-83.046,"r":null},{"n":"Drake","d":"D1","c":"Des Moines","s":"IA","la":41.587,"lo":-93.625,"r":null},{"n":"Eastern Illinois","d":"D1","c":"Charleston","s":"IL","la":39.496,"lo":-88.176,"r":null},{"n":"Evansville","d":"D1","c":"Evansville","s":"IN","la":37.972,"lo":-87.571,"r":null},{"n":"Illinois Chicago (UIC)","d":"D1","c":"Chicago","s":"IL","la":41.878,"lo":-87.63,"r":null},{"n":"Indiana University Indianapolis (IUI)","d":"D1","c":"Indianapolis","s":"IN","la":39.768,"lo":-86.158,"r":null},{"n":"Lindenwood","d":"D1","c":"St. Charles","s":"MO","la":38.788,"lo":-90.497,"r":null},{"n":"Loyola Chicago","d":"D1","c":"Chicago","s":"IL","la":41.878,"lo":-87.63,"r":null},{"n":"Marquette","d":"D1","c":"Milwaukee","s":"WI","la":43.039,"lo":-87.906,"r":null},{"n":"Michigan State","d":"D1","c":"East Lansing","s":"MI","la":42.737,"lo":-84.484,"r":null},{"n":"Missouri State","d":"D1","c":"Springfield","s":"MO","la":37.209,"lo":-93.292,"r":null},{"n":"Nebraska Omaha","d":"D1","c":"Omaha","s":"NE","la":41.257,"lo":-95.934,"r":null},{"n":"Northern Illinois (NIU)","d":"D1","c":"DeKalb","s":"IL","la":41.929,"lo":-88.751,"r":null},{"n":"Northwestern","d":"D1","c":"Evanston","s":"IL","la":42.045,"lo":-87.688,"r":null},{"n":"Notre Dame","d":"D1","c":"Notre Dame","s":"IN","la":41.702,"lo":-86.239,"r":null},{"n":"Oakland","d":"D1","c":"Rochester","s":"MI","la":42.681,"lo":-83.134,"r":null},{"n":"Ohio State","d":"D1","c":"Columbus","s":"OH","la":39.961,"lo":-82.999,"r":null},{"n":"Purdue Fort Wayne","d":"D1","c":"Fort Wayne","s":"IN","la":41.079,"lo":-85.139,"r":null},{"n":"SIU Edwardsville","d":"D1","c":"Edwardsville","s":"IL","la":38.811,"lo":-89.953,"r":null},{"n":"Southern Indiana","d":"D1","c":"Evansville","s":"IN","la":37.972,"lo":-87.571,"r":null},{"n":"St. Thomas (MN)","d":"D1","c":"Saint Paul","s":"MN","la":44.954,"lo":-93.09,"r":null},{"n":"University of Akron","d":"D1","c":"Akron","s":"OH","la":41.081,"lo":-81.519,"r":null},{"n":"Western Illinois","d":"D1","c":"Macomb","s":"IL","la":40.459,"lo":-90.671,"r":null},{"n":"Western Michigan","d":"D1","c":"Kalamazoo","s":"MI","la":42.292,"lo":-85.587,"r":null},{"n":"Wisconsin","d":"D1","c":"Madison","s":"WI","la":43.073,"lo":-89.401,"r":null},{"n":"Wisconsin-Green Bay","d":"D1","c":"Green Bay","s":"WI","la":44.513,"lo":-88.013,"r":null},{"n":"Wisconsin-Milwaukee","d":"D1","c":"Milwaukee","s":"WI","la":43.039,"lo":-87.906,"r":null},{"n":"Wright State","d":"D1","c":"Dayton","s":"OH","la":39.759,"lo":-84.192,"r":null},{"n":"Xavier","d":"D1","c":"Cincinnati","s":"OH","la":39.103,"lo":-84.512,"r":null},{"n":"Fort Hays State","d":"D2","c":"Hays","s":"KS","la":38.879,"lo":-99.327,"r":3},{"n":"Rockhurst","d":"D2","c":"Kansas City","s":"MO","la":39.1,"lo":-94.579,"r":13},{"n":"Lincoln (MO)","d":"D2","c":"Jefferson City","s":"MO","la":38.577,"lo":-92.174,"r":16},{"n":"Cedarville","d":"D2","c":"Cedarville","s":"OH","la":39.743,"lo":-83.805,"r":21},{"n":"Ashland","d":"D2","c":"Ashland","s":"OH","la":40.869,"lo":-82.318,"r":null},{"n":"Davenport","d":"D2","c":"Grand Rapids","s":"MI","la":42.963,"lo":-85.668,"r":null},{"n":"Drury","d":"D2","c":"Springfield","s":"MO","la":37.209,"lo":-93.292,"r":null},{"n":"Findlay","d":"D2","c":"Findlay","s":"OH","la":41.044,"lo":-83.65,"r":null},{"n":"Illinois Springfield (UIS)","d":"D2","c":"Springfield","s":"IL","la":39.782,"lo":-89.65,"r":null},{"n":"Indianapolis (UIndy)","d":"D2","c":"Indianapolis","s":"IN","la":39.768,"lo":-86.158,"r":null},{"n":"Jamestown (ND)","d":"D2","c":"Jamestown","s":"ND","la":46.91,"lo":-98.708,"r":null},{"n":"Lake Erie","d":"D2","c":"Painesville","s":"OH","la":41.724,"lo":-81.245,"r":null},{"n":"Lewis","d":"D2","c":"Romeoville","s":"IL","la":41.648,"lo":-88.09,"r":null},{"n":"Malone","d":"D2","c":"Canton","s":"OH","la":40.799,"lo":-81.378,"r":null},{"n":"Maryville (MO)","d":"D2","c":"St. Louis","s":"MO","la":38.627,"lo":-90.199,"r":null},{"n":"McKendree","d":"D2","c":"Lebanon","s":"IL","la":38.604,"lo":-89.808,"r":null},{"n":"Missouri S&T","d":"D2","c":"Rolla","s":"MO","la":37.949,"lo":-91.772,"r":null},{"n":"Missouri-St. Louis (UMSL)","d":"D2","c":"St. Louis","s":"MO","la":38.627,"lo":-90.199,"r":null},{"n":"Newman","d":"D2","c":"Wichita","s":"KS","la":37.687,"lo":-97.33,"r":null},{"n":"Northern Michigan","d":"D2","c":"Marquette","s":"MI","la":46.544,"lo":-87.395,"r":null},{"n":"Northwood","d":"D2","c":"Midland","s":"MI","la":43.616,"lo":-84.247,"r":null},{"n":"Ohio Dominican","d":"D2","c":"Columbus","s":"OH","la":39.961,"lo":-82.999,"r":null},{"n":"Purdue Northwest","d":"D2","c":"Hammond","s":"IN","la":41.583,"lo":-87.5,"r":null},{"n":"Quincy","d":"D2","c":"Quincy","s":"IL","la":39.936,"lo":-91.41,"r":null},{"n":"Roosevelt","d":"D2","c":"Chicago","s":"IL","la":41.878,"lo":-87.63,"r":null},{"n":"Saginaw Valley","d":"D2","c":"University Center","s":"MI","la":43.54,"lo":-84.01,"r":null},{"n":"South Dakota Mines","d":"D2","c":"Rapid City","s":"SD","la":44.081,"lo":-103.231,"r":null},{"n":"Southwest Baptist","d":"D2","c":"Bolivar","s":"MO","la":37.615,"lo":-93.41,"r":null},{"n":"St. Cloud State","d":"D2","c":"St. Cloud","s":"MN","la":45.558,"lo":-94.163,"r":null},{"n":"Tiffin","d":"D2","c":"Tiffin","s":"OH","la":41.114,"lo":-83.178,"r":null},{"n":"Truman State","d":"D2","c":"Kirksville","s":"MO","la":40.195,"lo":-92.583,"r":null},{"n":"Upper Iowa","d":"D2","c":"Fayette","s":"IA","la":42.84,"lo":-91.799,"r":null},{"n":"Walsh","d":"D2","c":"North Canton","s":"OH","la":40.876,"lo":-81.402,"r":null},{"n":"William Jewell","d":"D2","c":"Liberty","s":"MO","la":39.246,"lo":-94.419,"r":null},{"n":"Wisconsin-Parkside","d":"D2","c":"Kenosha","s":"WI","la":42.585,"lo":-87.821,"r":null},{"n":"St. Olaf","d":"D3","c":"Northfield","s":"MN","la":44.458,"lo":-93.162,"r":3},{"n":"Macalester","d":"D3","c":"St. Paul","s":"MN","la":44.954,"lo":-93.09,"r":13},{"n":"Adrian","d":"D3","c":"Adrian","s":"MI","la":41.898,"lo":-84.037,"r":null},{"n":"Albion","d":"D3","c":"Albion","s":"MI","la":42.243,"lo":-84.753,"r":null},{"n":"Alma","d":"D3","c":"Alma","s":"MI","la":43.379,"lo":-84.66,"r":null},{"n":"Anderson (IN)","d":"D3","c":"Anderson","s":"IN","la":40.105,"lo":-85.68,"r":null},{"n":"Augsburg","d":"D3","c":"Minneapolis","s":"MN","la":44.978,"lo":-93.265,"r":null},{"n":"Augustana (IL)","d":"D3","c":"Rock Island","s":"IL","la":41.51,"lo":-90.579,"r":null},{"n":"Aurora","d":"D3","c":"Aurora","s":"IL","la":41.761,"lo":-88.32,"r":null},{"n":"Baldwin Wallace","d":"D3","c":"Berea","s":"OH","la":41.366,"lo":-81.854,"r":null},{"n":"Beloit","d":"D3","c":"Beloit","s":"WI","la":42.508,"lo":-89.032,"r":null},{"n":"Benedictine (IL)","d":"D3","c":"Lisle","s":"IL","la":41.801,"lo":-88.082,"r":null},{"n":"Bethany Lutheran","d":"D3","c":"Mankato","s":"MN","la":44.164,"lo":-93.999,"r":null},{"n":"Bethel (MN)","d":"D3","c":"Arden Hills","s":"MN","la":45.061,"lo":-93.157,"r":null},{"n":"Blackburn","d":"D3","c":"Carlinville","s":"IL","la":39.279,"lo":-89.881,"r":null},{"n":"Bluffton","d":"D3","c":"Bluffton","s":"OH","la":40.896,"lo":-83.89,"r":null},{"n":"Buena Vista","d":"D3","c":"Storm Lake","s":"IA","la":42.641,"lo":-95.21,"r":null},{"n":"Calvin","d":"D3","c":"Grand Rapids","s":"MI","la":42.963,"lo":-85.668,"r":null},{"n":"Capital","d":"D3","c":"Bexley","s":"OH","la":39.969,"lo":-82.939,"r":null},{"n":"Carleton","d":"D3","c":"Northfield","s":"MN","la":44.458,"lo":-93.162,"r":null},{"n":"Carroll (WI)","d":"D3","c":"Waukesha","s":"WI","la":43.012,"lo":-88.231,"r":null},{"n":"Carthage","d":"D3","c":"Kenosha","s":"WI","la":42.585,"lo":-87.821,"r":null},{"n":"Case Western Reserve","d":"D3","c":"Cleveland","s":"OH","la":41.499,"lo":-81.694,"r":null},{"n":"Central (IA)","d":"D3","c":"Pella","s":"IA","la":41.408,"lo":-92.917,"r":null},{"n":"Chicago","d":"D3","c":"Chicago","s":"IL","la":41.878,"lo":-87.63,"r":null},{"n":"Coe","d":"D3","c":"Cedar Rapids","s":"IA","la":41.978,"lo":-91.666,"r":null},{"n":"Concordia (MN)","d":"D3","c":"Moorhead","s":"MN","la":46.874,"lo":-96.767,"r":null},{"n":"Concordia Chicago","d":"D3","c":"River Forest","s":"IL","la":41.896,"lo":-87.814,"r":null},{"n":"Concordia Wisconsin","d":"D3","c":"Mequon","s":"WI","la":43.225,"lo":-87.998,"r":null},{"n":"Cornell (IA)","d":"D3","c":"Mount Vernon","s":"IA","la":41.922,"lo":-91.42,"r":null},{"n":"Crown (MN)","d":"D3","c":"St. Bonifacius","s":"MN","la":44.907,"lo":-93.747,"r":null},{"n":"Denison","d":"D3","c":"Granville","s":"OH","la":40.068,"lo":-82.519,"r":null},{"n":"DePauw","d":"D3","c":"Greencastle","s":"IN","la":39.644,"lo":-86.865,"r":null},{"n":"Dominican (IL)","d":"D3","c":"River Forest","s":"IL","la":41.896,"lo":-87.814,"r":null},{"n":"Dubuque","d":"D3","c":"Dubuque","s":"IA","la":42.501,"lo":-90.665,"r":null},{"n":"Earlham","d":"D3","c":"Richmond","s":"IN","la":39.829,"lo":-84.89,"r":null},{"n":"Edgewood","d":"D3","c":"Madison","s":"WI","la":43.073,"lo":-89.401,"r":null},{"n":"Elmhurst","d":"D3","c":"Elmhurst","s":"IL","la":41.9,"lo":-87.94,"r":null},{"n":"Eureka","d":"D3","c":"Eureka","s":"IL","la":40.72,"lo":-89.272,"r":null},{"n":"Franciscan","d":"D3","c":"Steubenville","s":"OH","la":40.37,"lo":-80.633,"r":null},{"n":"Franklin (IN)","d":"D3","c":"Franklin","s":"IN","la":39.481,"lo":-86.055,"r":null},{"n":"Greenville (IL)","d":"D3","c":"Greenville","s":"IL","la":38.892,"lo":-89.413,"r":null},{"n":"Grinnell","d":"D3","c":"Grinnell","s":"IA","la":41.743,"lo":-92.722,"r":null},{"n":"Gustavus Adolphus","d":"D3","c":"St. Peter","s":"MN","la":44.324,"lo":-93.958,"r":null},{"n":"Hamline","d":"D3","c":"St. Paul","s":"MN","la":44.954,"lo":-93.09,"r":null},{"n":"Hanover","d":"D3","c":"Hanover","s":"IN","la":38.716,"lo":-85.473,"r":null},{"n":"Heidelberg","d":"D3","c":"Tiffin","s":"OH","la":41.114,"lo":-83.178,"r":null},{"n":"Hiram","d":"D3","c":"Hiram","s":"OH","la":41.313,"lo":-81.144,"r":null},{"n":"Hope","d":"D3","c":"Holland","s":"MI","la":42.788,"lo":-86.109,"r":null},{"n":"Illinois College","d":"D3","c":"Jacksonville","s":"IL","la":39.734,"lo":-90.229,"r":null},{"n":"Illinois Tech (IIT)","d":"D3","c":"Chicago","s":"IL","la":41.878,"lo":-87.63,"r":null},{"n":"Illinois Wesleyan","d":"D3","c":"Bloomington","s":"IL","la":40.484,"lo":-88.994,"r":null},{"n":"John Carroll","d":"D3","c":"University Heights","s":"OH","la":41.498,"lo":-81.537,"r":null},{"n":"Kalamazoo","d":"D3","c":"Kalamazoo","s":"MI","la":42.292,"lo":-85.587,"r":null},{"n":"Kenyon","d":"D3","c":"Gambier","s":"OH","la":40.376,"lo":-82.399,"r":null},{"n":"Knox","d":"D3","c":"Galesburg","s":"IL","la":40.948,"lo":-90.371,"r":null},{"n":"Lake Forest","d":"D3","c":"Lake Forest","s":"IL","la":42.259,"lo":-87.841,"r":null},{"n":"Lakeland (WI)","d":"D3","c":"Plymouth","s":"WI","la":43.746,"lo":-87.971,"r":null},{"n":"Lawrence","d":"D3","c":"Appleton","s":"WI","la":44.262,"lo":-88.415,"r":null},{"n":"Loras","d":"D3","c":"Dubuque","s":"IA","la":42.501,"lo":-90.665,"r":null},{"n":"Luther","d":"D3","c":"Decorah","s":"IA","la":43.303,"lo":-91.786,"r":null},{"n":"Manchester","d":"D3","c":"North Manchester","s":"IN","la":40.999,"lo":-85.768,"r":null},{"n":"Manhattan Christian","d":"D3","c":"Manhattan","s":"KS","la":39.184,"lo":-96.572,"r":null},{"n":"Marian (WI)","d":"D3","c":"Fond du Lac","s":"WI","la":43.773,"lo":-88.447,"r":null},{"n":"Marietta","d":"D3","c":"Marietta","s":"OH","la":39.414,"lo":-81.455,"r":null},{"n":"Martin Luther","d":"D3","c":"New Ulm","s":"MN","la":44.313,"lo":-94.46,"r":null},{"n":"Millikin","d":"D3","c":"Decatur","s":"IL","la":39.84,"lo":-88.955,"r":null},{"n":"Minnesota-Morris","d":"D3","c":"Morris","s":"MN","la":45.586,"lo":-95.914,"r":null},{"n":"Monmouth (IL)","d":"D3","c":"Monmouth","s":"IL","la":40.911,"lo":-90.647,"r":null},{"n":"Mount Union","d":"D3","c":"Alliance","s":"OH","la":40.914,"lo":-81.106,"r":null},{"n":"MSOE","d":"D3","c":"Milwaukee","s":"WI","la":43.039,"lo":-87.906,"r":null},{"n":"Mt. St. Joseph","d":"D3","c":"Cincinnati","s":"OH","la":39.103,"lo":-84.512,"r":null},{"n":"Muskingum","d":"D3","c":"New Concord","s":"OH","la":39.998,"lo":-81.732,"r":null},{"n":"Nebraska Wesleyan","d":"D3","c":"Lincoln","s":"NE","la":40.814,"lo":-96.703,"r":null},{"n":"North Central (IL)","d":"D3","c":"Naperville","s":"IL","la":41.751,"lo":-88.153,"r":null},{"n":"North Central (MN)","d":"D3","c":"Minneapolis","s":"MN","la":44.978,"lo":-93.265,"r":null},{"n":"North Park","d":"D3","c":"Chicago","s":"IL","la":41.878,"lo":-87.63,"r":null},{"n":"Northwestern (MN)","d":"D3","c":"Roseville","s":"MN","la":45.006,"lo":-93.157,"r":null},{"n":"Oberlin","d":"D3","c":"Oberlin","s":"OH","la":41.294,"lo":-82.217,"r":null},{"n":"Ohio Northern","d":"D3","c":"Ada","s":"OH","la":40.769,"lo":-83.822,"r":null},{"n":"Ohio Wesleyan","d":"D3","c":"Delaware","s":"OH","la":40.299,"lo":-83.068,"r":null},{"n":"Olivet (MI)","d":"D3","c":"Olivet","s":"MI","la":42.446,"lo":-84.918,"r":null},{"n":"Otterbein","d":"D3","c":"Westerville","s":"OH","la":40.126,"lo":-82.929,"r":null},{"n":"Principia","d":"D3","c":"Elsah","s":"IL","la":38.954,"lo":-90.357,"r":null},{"n":"Ripon","d":"D3","c":"Ripon","s":"WI","la":43.842,"lo":-88.835,"r":null},{"n":"Rockford","d":"D3","c":"Rockford","s":"IL","la":42.271,"lo":-89.094,"r":null},{"n":"Rose-Hulman","d":"D3","c":"Terre Haute","s":"IN","la":39.467,"lo":-87.414,"r":null},{"n":"Simpson (IA)","d":"D3","c":"Indianola","s":"IA","la":41.358,"lo":-93.558,"r":null},{"n":"St. John's (MN)","d":"D3","c":"Collegeville","s":"MN","la":45.59,"lo":-94.395,"r":null},{"n":"St. Mary's (MN)","d":"D3","c":"Winona","s":"MN","la":44.05,"lo":-91.64,"r":null},{"n":"St. Norbert","d":"D3","c":"De Pere","s":"WI","la":44.449,"lo":-88.06,"r":null},{"n":"St. Scholastica","d":"D3","c":"Duluth","s":"MN","la":46.787,"lo":-92.1,"r":null},{"n":"Trine","d":"D3","c":"Angola","s":"IN","la":41.635,"lo":-84.999,"r":null},{"n":"Wabash","d":"D3","c":"Crawfordsville","s":"IN","la":40.041,"lo":-86.874,"r":null},{"n":"Wartburg","d":"D3","c":"Waverly","s":"IA","la":42.725,"lo":-92.475,"r":null},{"n":"Washington U. (WashU)","d":"D3","c":"St. Louis","s":"MO","la":38.627,"lo":-90.199,"r":null},{"n":"Webster","d":"D3","c":"Webster Groves","s":"MO","la":38.593,"lo":-90.357,"r":null},{"n":"Westminster (MO)","d":"D3","c":"Fulton","s":"MO","la":38.847,"lo":-91.948,"r":null},{"n":"Wheaton (IL)","d":"D3","c":"Wheaton","s":"IL","la":41.866,"lo":-88.107,"r":null},{"n":"Wilmington (OH)","d":"D3","c":"Wilmington","s":"OH","la":39.445,"lo":-83.828,"r":null},{"n":"Wisconsin Lutheran","d":"D3","c":"Milwaukee","s":"WI","la":43.039,"lo":-87.906,"r":null},{"n":"Wisconsin-Eau Claire","d":"D3","c":"Eau Claire","s":"WI","la":44.811,"lo":-91.499,"r":null},{"n":"Wisconsin-Platteville","d":"D3","c":"Platteville","s":"WI","la":42.734,"lo":-90.478,"r":null},{"n":"Wisconsin-River Falls","d":"D3","c":"River Falls","s":"WI","la":44.861,"lo":-92.624,"r":null},{"n":"Wisconsin-Stevens Point","d":"D3","c":"Stevens Point","s":"WI","la":44.524,"lo":-89.575,"r":null},{"n":"Wisconsin-Stout","d":"D3","c":"Menomonie","s":"WI","la":44.876,"lo":-91.919,"r":null},{"n":"Wisconsin-Superior","d":"D3","c":"Superior","s":"WI","la":46.721,"lo":-92.104,"r":null},{"n":"Wisconsin-Whitewater","d":"D3","c":"Whitewater","s":"WI","la":42.834,"lo":-88.732,"r":null},{"n":"Wittenberg","d":"D3","c":"Springfield","s":"OH","la":39.924,"lo":-83.809,"r":null},{"n":"Wooster","d":"D3","c":"Wooster","s":"OH","la":40.805,"lo":-81.935,"r":null}];
+const USE_ALBERS_USA = false;
+const W = 880, H = 620;
+
+const svg = d3.select('#map');
+const tip = d3.select('#tip');
+
+function showTip(html, evt) {
+  const box = document.getElementById('map-container').getBoundingClientRect();
+  tip.html(html).style('opacity', 1)
+    .style('left', (evt.clientX - box.left + 14) + 'px')
+    .style('top', (evt.clientY - box.top - 8) + 'px');
+}
+
+d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(us => {
+  const allFeatures = topojson.feature(us, us.objects.states).features;
+  const filtered = allFeatures.filter(f => STATES_IN_REGION.includes(f.properties.name));
+  const fc = { type: 'FeatureCollection', features: filtered };
+
+  let projection;
+  if (USE_ALBERS_USA) {
+    projection = d3.geoAlbersUsa();
+    projection.fitSize([W - 40, H - 60], fc);
+  } else {
+    projection = d3.geoMercator().fitSize([W - 40, H - 60], fc);
+  }
+  const path = d3.geoPath(projection);
+
+  const g = svg.append('g').attr('transform', 'translate(20, 30)');
+
+  g.selectAll('path').data(fc.features).join('path')
+    .attr('d', path).attr('fill', '#f3eee0').attr('stroke', '#b8af96').attr('stroke-width', 1);
+
+  g.selectAll('text.state-label').data(fc.features).join('text')
+    .attr('class','state-label')
+    .attr('x', d => path.centroid(d)[0])
+    .attr('y', d => path.centroid(d)[1])
+    .attr('text-anchor','middle')
+    .attr('font-size', 11).attr('font-weight', 500)
+    .attr('fill', '#9a9180').attr('pointer-events','none')
+    .text(d => d.properties.name);
+
+  g.selectAll('circle').data(SCHOOLS).join('circle')
+    .attr('cx', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[0] : -9999;
+    })
+    .attr('cy', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[1] : -9999;
+    })
+    .attr('r', d => d.r ? 6.5 : 4)
+    .attr('fill', d => COL[d.d])
+    .attr('fill-opacity', 0.85)
+    .attr('stroke', d => d.r ? '#111' : 'none')
+    .attr('stroke-width', d => d.r ? 1.5 : 0)
+    .style('cursor', 'pointer')
+    .on('mouseenter', function(e, d) {
+      d3.select(this).attr('r', d.r ? 9 : 6);
+      const rk = d.r ? ' <span style="color:#b88200">#' + d.r + '</span>' : '';
+      showTip('<strong style="font-size:13px">' + d.n + '</strong>' + rk +
+              '<br><span style="color:#6b6b66">' + d.d + ' &middot; ' + d.c + ', ' + d.s + '</span>', e);
+    })
+    .on('mousemove', function(e) { showTip(tip.html(), e); })
+    .on('mouseleave', function(e, d) {
+      d3.select(this).attr('r', d.r ? 6.5 : 4);
+      tip.style('opacity', 0);
+    });
+});
+</script>
+</body>
+</html>

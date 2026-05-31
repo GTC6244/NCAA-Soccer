@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCAA Men's Soccer Programs — U.S. South</title>
+<style>
+  :root {
+    --bg: #fafaf7; --panel: #ffffff; --text: #1a1a1a;
+    --muted: #6b6b66; --border: #e3e0d6;
+    --state-fill: #f3eee0; --state-stroke: #b8af96;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; }
+  .subtitle { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 18px;
+  }
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px;
+    color: var(--muted); margin-bottom: 14px; align-items: center; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .ranked-marker { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--text); background: transparent; }
+  #map-container { position: relative; }
+  svg { width: 100%; height: auto; display: block; }
+  .tooltip {
+    position: absolute; pointer-events: none; background: white;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; font-size: 13px; line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    opacity: 0; transition: opacity .12s; z-index: 10; max-width: 260px;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px; margin-top: 8px;
+  }
+  .stat-card {
+    background: var(--bg); padding: 14px 16px;
+    border-radius: 8px; border: 1px solid var(--border);
+  }
+  .stat-num { font-size: 22px; font-weight: 600; }
+  .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  h2 { font-size: 16px; font-weight: 600; margin: 0 0 12px; }
+  footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 24px; }
+  ul.ranked { margin: 0; padding-left: 18px; font-size: 14px; columns: 2; column-gap: 24px; }
+  ul.ranked li { margin-bottom: 4px; break-inside: avoid; }
+  @media (max-width: 600px) {
+    body { padding: 12px; } h1 { font-size: 20px; }
+    .panel { padding: 14px; } ul.ranked { columns: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NCAA Men's Soccer Programs — U.S. South</h1>
+  <p class="subtitle">116 programs across 10 states &middot; 2025 season</p>
+
+  <div class="panel">
+    <div class="legend">
+      <span class="legend-item"><span class="dot" style="background:#7F77DD"></span>D1 (27)</span>
+      <span class="legend-item"><span class="dot" style="background:#1D9E75"></span>D2 (53)</span>
+      <span class="legend-item"><span class="dot" style="background:#D85A30"></span>D3 (36)</span>
+      <span class="legend-item"><span class="ranked-marker"></span>2025 Top-25 ranked</span>
+    </div>
+    <div id="map-container">
+      <svg id="map" viewBox="0 0 880 520" role="img" aria-label="116 NCAA mens soccer programs"></svg>
+      <div class="tooltip" id="tip"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>By state</h2>
+    <div class="stats-grid"><div class="stat-card"><div class="stat-num">28</div><div class="stat-label">Texas</div></div><div class="stat-card"><div class="stat-num">21</div><div class="stat-label">Florida</div></div><div class="stat-card"><div class="stat-num">16</div><div class="stat-label">Georgia</div></div><div class="stat-card"><div class="stat-num">15</div><div class="stat-label">Tennessee</div></div><div class="stat-card"><div class="stat-num">11</div><div class="stat-label">Kentucky</div></div><div class="stat-card"><div class="stat-num">7</div><div class="stat-label">Alabama</div></div><div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Arkansas</div></div><div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Oklahoma</div></div><div class="stat-card"><div class="stat-num">5</div><div class="stat-label">Mississippi</div></div><div class="stat-card"><div class="stat-num">1</div><div class="stat-label">Louisiana</div></div></div>
+  </div>
+
+  <div class="panel">
+    <h2>2025 ranked programs in this region</h2>
+    <ul class="ranked"><li>D2 #1 Midwestern State (TX) &mdash; <strong>National Champion</strong></li><li>D2 #2 Rollins (FL) &mdash; <strong>Runner-up</strong></li><li>D3 #2 Trinity (TX) &mdash; <strong>Runner-up</strong></li><li>D3 #4 Emory (GA) &mdash; <strong>Semifinalist</strong></li><li>D1 #5 SMU (TX)</li><li>D2 #6 Rogers State (OK)</li><li>D2 #8 Lynn (FL)</li><li>D2 #10 Mississippi College</li><li>D2 #12 Palm Beach Atlantic (FL)</li><li>D2 #15 Flagler (FL)</li><li>D1 #18 Kentucky</li><li>D2 #22 West Florida</li><li>D2 #23 Florida Tech</li><li>D2 #24 Young Harris (GA)</li></ul>
+  </div>
+
+  <footer>
+    Compiled from NCAA.com, United Soccer Coaches, Wikipedia &middot; Map via D3.js + us-atlas
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const STATES_IN_REGION = ["Texas", "Florida", "Georgia", "Tennessee", "Kentucky", "Alabama", "Arkansas", "Oklahoma", "Mississippi", "Louisiana"];
+const COL = {D1:'#7F77DD', D2:'#1D9E75', D3:'#D85A30'};
+const SCHOOLS = [{"n":"SMU","d":"D1","c":"Dallas","s":"TX","la":32.777,"lo":-96.797,"r":5},{"n":"Kentucky","d":"D1","c":"Lexington","s":"KY","la":38.041,"lo":-84.504,"r":18},{"n":"Bellarmine","d":"D1","c":"Louisville","s":"KY","la":38.253,"lo":-85.758,"r":null},{"n":"Belmont","d":"D1","c":"Nashville","s":"TN","la":36.163,"lo":-86.782,"r":null},{"n":"Central Arkansas","d":"D1","c":"Conway","s":"AR","la":35.089,"lo":-92.442,"r":null},{"n":"East Tennessee State","d":"D1","c":"Johnson City","s":"TN","la":36.313,"lo":-82.353,"r":null},{"n":"Florida Atlantic (FAU)","d":"D1","c":"Boca Raton","s":"FL","la":26.368,"lo":-80.129,"r":null},{"n":"Florida Gulf Coast","d":"D1","c":"Fort Myers","s":"FL","la":26.641,"lo":-81.872,"r":null},{"n":"Florida International (FIU)","d":"D1","c":"Miami","s":"FL","la":25.762,"lo":-80.192,"r":null},{"n":"Georgia Southern","d":"D1","c":"Statesboro","s":"GA","la":32.449,"lo":-81.783,"r":null},{"n":"Georgia State","d":"D1","c":"Atlanta","s":"GA","la":33.749,"lo":-84.388,"r":null},{"n":"Houston Christian","d":"D1","c":"Houston","s":"TX","la":29.76,"lo":-95.37,"r":null},{"n":"Incarnate Word","d":"D1","c":"San Antonio","s":"TX","la":29.424,"lo":-98.494,"r":null},{"n":"Jacksonville","d":"D1","c":"Jacksonville","s":"FL","la":30.332,"lo":-81.656,"r":null},{"n":"Lipscomb","d":"D1","c":"Nashville","s":"TN","la":36.163,"lo":-86.782,"r":null},{"n":"Louisville","d":"D1","c":"Louisville","s":"KY","la":38.253,"lo":-85.758,"r":null},{"n":"Memphis","d":"D1","c":"Memphis","s":"TN","la":35.15,"lo":-90.049,"r":null},{"n":"Mercer","d":"D1","c":"Macon","s":"GA","la":32.841,"lo":-83.632,"r":null},{"n":"North Florida (UNF)","d":"D1","c":"Jacksonville","s":"FL","la":30.332,"lo":-81.656,"r":null},{"n":"Northern Kentucky (NKU)","d":"D1","c":"Highland Heights","s":"KY","la":39.03,"lo":-84.459,"r":null},{"n":"Oral Roberts (ORU)","d":"D1","c":"Tulsa","s":"OK","la":36.154,"lo":-95.993,"r":null},{"n":"South Florida (USF)","d":"D1","c":"Tampa","s":"FL","la":27.951,"lo":-82.457,"r":null},{"n":"Stetson","d":"D1","c":"DeLand","s":"FL","la":29.028,"lo":-81.303,"r":null},{"n":"Tulsa","d":"D1","c":"Tulsa","s":"OK","la":36.154,"lo":-95.993,"r":null},{"n":"UAB","d":"D1","c":"Birmingham","s":"AL","la":33.519,"lo":-86.81,"r":null},{"n":"UCF (Central Florida)","d":"D1","c":"Orlando","s":"FL","la":28.538,"lo":-81.379,"r":null},{"n":"UT Rio Grande Valley (UTRGV)","d":"D1","c":"Edinburg","s":"TX","la":26.302,"lo":-98.163,"r":null},{"n":"Midwestern State","d":"D2","c":"Wichita Falls","s":"TX","la":33.914,"lo":-98.493,"r":1},{"n":"Rollins","d":"D2","c":"Winter Park","s":"FL","la":28.6,"lo":-81.339,"r":2},{"n":"Rogers State","d":"D2","c":"Claremore","s":"OK","la":36.313,"lo":-95.616,"r":6},{"n":"Lynn","d":"D2","c":"Boca Raton","s":"FL","la":26.368,"lo":-80.129,"r":8},{"n":"Mississippi College","d":"D2","c":"Clinton","s":"MS","la":32.341,"lo":-90.322,"r":10},{"n":"Palm Beach Atlantic","d":"D2","c":"West Palm Beach","s":"FL","la":26.715,"lo":-80.053,"r":12},{"n":"Flagler","d":"D2","c":"St. Augustine","s":"FL","la":29.901,"lo":-81.312,"r":15},{"n":"West Florida (UWF)","d":"D2","c":"Pensacola","s":"FL","la":30.421,"lo":-87.217,"r":22},{"n":"Florida Tech","d":"D2","c":"Melbourne","s":"FL","la":28.084,"lo":-80.608,"r":23},{"n":"Young Harris","d":"D2","c":"Young Harris","s":"GA","la":34.934,"lo":-83.848,"r":24},{"n":"Alabama-Huntsville (UAH)","d":"D2","c":"Huntsville","s":"AL","la":34.73,"lo":-86.586,"r":null},{"n":"Auburn Montgomery (AUM)","d":"D2","c":"Montgomery","s":"AL","la":32.379,"lo":-86.308,"r":null},{"n":"Barry","d":"D2","c":"Miami Shores","s":"FL","la":25.863,"lo":-80.188,"r":null},{"n":"Carson-Newman","d":"D2","c":"Jefferson City","s":"TN","la":36.123,"lo":-83.492,"r":null},{"n":"Christian Brothers","d":"D2","c":"Memphis","s":"TN","la":35.15,"lo":-90.049,"r":null},{"n":"Clayton State","d":"D2","c":"Morrow","s":"GA","la":33.583,"lo":-84.339,"r":null},{"n":"Dallas Baptist","d":"D2","c":"Dallas","s":"TX","la":32.777,"lo":-96.797,"r":null},{"n":"Delta State","d":"D2","c":"Cleveland","s":"MS","la":33.746,"lo":-90.724,"r":null},{"n":"Eckerd","d":"D2","c":"St. Petersburg","s":"FL","la":27.768,"lo":-82.64,"r":null},{"n":"Embry-Riddle","d":"D2","c":"Daytona Beach","s":"FL","la":29.211,"lo":-81.023,"r":null},{"n":"Emmanuel (GA)","d":"D2","c":"Franklin Springs","s":"GA","la":34.288,"lo":-83.149,"r":null},{"n":"Florida Southern","d":"D2","c":"Lakeland","s":"FL","la":28.04,"lo":-81.95,"r":null},{"n":"Georgia Southwestern","d":"D2","c":"Americus","s":"GA","la":32.073,"lo":-84.233,"r":null},{"n":"Harding","d":"D2","c":"Searcy","s":"AR","la":35.251,"lo":-91.736,"r":null},{"n":"Kentucky Wesleyan","d":"D2","c":"Owensboro","s":"KY","la":37.774,"lo":-87.113,"r":null},{"n":"King (TN)","d":"D2","c":"Bristol","s":"TN","la":36.595,"lo":-82.189,"r":null},{"n":"Lee","d":"D2","c":"Cleveland","s":"TN","la":35.16,"lo":-84.877,"r":null},{"n":"Lincoln Memorial","d":"D2","c":"Harrogate","s":"TN","la":36.585,"lo":-83.653,"r":null},{"n":"Lubbock Christian","d":"D2","c":"Lubbock","s":"TX","la":33.578,"lo":-101.855,"r":null},{"n":"Middle Georgia State","d":"D2","c":"Macon","s":"GA","la":32.841,"lo":-83.632,"r":null},{"n":"Montevallo","d":"D2","c":"Montevallo","s":"AL","la":33.102,"lo":-86.86,"r":null},{"n":"North Georgia","d":"D2","c":"Dahlonega","s":"GA","la":34.532,"lo":-83.985,"r":null},{"n":"Northeastern State","d":"D2","c":"Tahlequah","s":"OK","la":35.916,"lo":-94.97,"r":null},{"n":"Nova Southeastern","d":"D2","c":"Davie","s":"FL","la":26.063,"lo":-80.233,"r":null},{"n":"Oklahoma Christian","d":"D2","c":"Edmond","s":"OK","la":35.653,"lo":-97.478,"r":null},{"n":"Ouachita Baptist","d":"D2","c":"Arkadelphia","s":"AR","la":34.121,"lo":-93.054,"r":null},{"n":"Saint Leo","d":"D2","c":"Saint Leo","s":"FL","la":28.333,"lo":-82.259,"r":null},{"n":"Shorter","d":"D2","c":"Rome","s":"GA","la":34.257,"lo":-85.165,"r":null},{"n":"Southern Nazarene","d":"D2","c":"Bethany","s":"OK","la":35.519,"lo":-97.632,"r":null},{"n":"Spring Hill","d":"D2","c":"Mobile","s":"AL","la":30.695,"lo":-88.04,"r":null},{"n":"St. Edward's","d":"D2","c":"Austin","s":"TX","la":30.267,"lo":-97.743,"r":null},{"n":"St. Mary's (TX)","d":"D2","c":"San Antonio","s":"TX","la":29.424,"lo":-98.494,"r":null},{"n":"Sul Ross State","d":"D2","c":"Alpine","s":"TX","la":30.358,"lo":-103.661,"r":null},{"n":"Tampa","d":"D2","c":"Tampa","s":"FL","la":27.951,"lo":-82.457,"r":null},{"n":"Texas A&M International","d":"D2","c":"Laredo","s":"TX","la":27.531,"lo":-99.48,"r":null},{"n":"Thomas More","d":"D2","c":"Crestview Hills","s":"KY","la":39.033,"lo":-84.587,"r":null},{"n":"Trevecca Nazarene","d":"D2","c":"Nashville","s":"TN","la":36.163,"lo":-86.782,"r":null},{"n":"Tusculum","d":"D2","c":"Tusculum","s":"TN","la":36.173,"lo":-82.751,"r":null},{"n":"Union (TN)","d":"D2","c":"Jackson","s":"TN","la":35.614,"lo":-88.814,"r":null},{"n":"UT Dallas","d":"D2","c":"Richardson","s":"TX","la":32.948,"lo":-96.73,"r":null},{"n":"UT Tyler","d":"D2","c":"Tyler","s":"TX","la":32.351,"lo":-95.301,"r":null},{"n":"West Alabama","d":"D2","c":"Livingston","s":"AL","la":32.585,"lo":-88.187,"r":null},{"n":"West Texas A&M","d":"D2","c":"Canyon","s":"TX","la":34.98,"lo":-101.922,"r":null},{"n":"Trinity (TX)","d":"D3","c":"San Antonio","s":"TX","la":29.424,"lo":-98.494,"r":2},{"n":"Emory","d":"D3","c":"Atlanta","s":"GA","la":33.749,"lo":-84.388,"r":4},{"n":"Asbury","d":"D3","c":"Wilmore","s":"KY","la":37.862,"lo":-84.663,"r":null},{"n":"Austin (TX)","d":"D3","c":"Sherman","s":"TX","la":33.636,"lo":-96.609,"r":null},{"n":"Belhaven","d":"D3","c":"Jackson","s":"MS","la":32.299,"lo":-90.185,"r":null},{"n":"Berea","d":"D3","c":"Berea","s":"KY","la":37.569,"lo":-84.296,"r":null},{"n":"Berry","d":"D3","c":"Mount Berry","s":"GA","la":34.315,"lo":-85.179,"r":null},{"n":"Centenary (LA)","d":"D3","c":"Shreveport","s":"LA","la":32.525,"lo":-93.75,"r":null},{"n":"Centre","d":"D3","c":"Danville","s":"KY","la":37.646,"lo":-84.772,"r":null},{"n":"Concordia Texas","d":"D3","c":"Austin","s":"TX","la":30.267,"lo":-97.743,"r":null},{"n":"Covenant","d":"D3","c":"Lookout Mountain","s":"GA","la":34.974,"lo":-85.353,"r":null},{"n":"Dallas (TX)","d":"D3","c":"Irving","s":"TX","la":32.814,"lo":-96.949,"r":null},{"n":"East Texas Baptist","d":"D3","c":"Marshall","s":"TX","la":32.545,"lo":-94.367,"r":null},{"n":"Hardin-Simmons","d":"D3","c":"Abilene","s":"TX","la":32.449,"lo":-99.733,"r":null},{"n":"Hendrix","d":"D3","c":"Conway","s":"AR","la":35.089,"lo":-92.442,"r":null},{"n":"Howard Payne","d":"D3","c":"Brownwood","s":"TX","la":31.709,"lo":-98.991,"r":null},{"n":"Huntingdon","d":"D3","c":"Montgomery","s":"AL","la":32.379,"lo":-86.308,"r":null},{"n":"LaGrange","d":"D3","c":"LaGrange","s":"GA","la":33.039,"lo":-85.032,"r":null},{"n":"LeTourneau","d":"D3","c":"Longview","s":"TX","la":32.501,"lo":-94.74,"r":null},{"n":"Lyon","d":"D3","c":"Batesville","s":"AR","la":35.77,"lo":-91.641,"r":null},{"n":"Mary Hardin-Baylor","d":"D3","c":"Belton","s":"TX","la":31.056,"lo":-97.464,"r":null},{"n":"Maryville (TN)","d":"D3","c":"Maryville","s":"TN","la":35.757,"lo":-83.971,"r":null},{"n":"McMurry","d":"D3","c":"Abilene","s":"TX","la":32.449,"lo":-99.733,"r":null},{"n":"Millsaps","d":"D3","c":"Jackson","s":"MS","la":32.299,"lo":-90.185,"r":null},{"n":"Mississippi U. for Women (MUW)","d":"D3","c":"Columbus","s":"MS","la":33.496,"lo":-88.427,"r":null},{"n":"Oglethorpe","d":"D3","c":"Atlanta","s":"GA","la":33.749,"lo":-84.388,"r":null},{"n":"Ozarks (AR)","d":"D3","c":"Clarksville","s":"AR","la":35.471,"lo":-93.467,"r":null},{"n":"Piedmont (GA)","d":"D3","c":"Demorest","s":"GA","la":34.568,"lo":-83.547,"r":null},{"n":"Rhodes","d":"D3","c":"Memphis","s":"TN","la":35.15,"lo":-90.049,"r":null},{"n":"Schreiner","d":"D3","c":"Kerrville","s":"TX","la":30.047,"lo":-99.14,"r":null},{"n":"Sewanee","d":"D3","c":"Sewanee","s":"TN","la":35.204,"lo":-85.921,"r":null},{"n":"Southwestern (TX)","d":"D3","c":"Georgetown","s":"TX","la":30.633,"lo":-97.678,"r":null},{"n":"Spalding","d":"D3","c":"Louisville","s":"KY","la":38.253,"lo":-85.758,"r":null},{"n":"St. Thomas (TX)","d":"D3","c":"Houston","s":"TX","la":29.76,"lo":-95.37,"r":null},{"n":"Texas Lutheran","d":"D3","c":"Seguin","s":"TX","la":29.569,"lo":-97.965,"r":null},{"n":"Transylvania","d":"D3","c":"Lexington","s":"KY","la":38.041,"lo":-84.504,"r":null}];
+const USE_ALBERS_USA = false;
+const W = 880, H = 520;
+
+const svg = d3.select('#map');
+const tip = d3.select('#tip');
+
+function showTip(html, evt) {
+  const box = document.getElementById('map-container').getBoundingClientRect();
+  tip.html(html).style('opacity', 1)
+    .style('left', (evt.clientX - box.left + 14) + 'px')
+    .style('top', (evt.clientY - box.top - 8) + 'px');
+}
+
+d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(us => {
+  const allFeatures = topojson.feature(us, us.objects.states).features;
+  const filtered = allFeatures.filter(f => STATES_IN_REGION.includes(f.properties.name));
+  const fc = { type: 'FeatureCollection', features: filtered };
+
+  let projection;
+  if (USE_ALBERS_USA) {
+    projection = d3.geoAlbersUsa();
+    projection.fitSize([W - 40, H - 60], fc);
+  } else {
+    projection = d3.geoMercator().fitSize([W - 40, H - 60], fc);
+  }
+  const path = d3.geoPath(projection);
+
+  const g = svg.append('g').attr('transform', 'translate(20, 30)');
+
+  g.selectAll('path').data(fc.features).join('path')
+    .attr('d', path).attr('fill', '#f3eee0').attr('stroke', '#b8af96').attr('stroke-width', 1);
+
+  g.selectAll('text.state-label').data(fc.features).join('text')
+    .attr('class','state-label')
+    .attr('x', d => path.centroid(d)[0])
+    .attr('y', d => path.centroid(d)[1])
+    .attr('text-anchor','middle')
+    .attr('font-size', 11).attr('font-weight', 500)
+    .attr('fill', '#9a9180').attr('pointer-events','none')
+    .text(d => d.properties.name);
+
+  g.selectAll('circle').data(SCHOOLS).join('circle')
+    .attr('cx', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[0] : -9999;
+    })
+    .attr('cy', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[1] : -9999;
+    })
+    .attr('r', d => d.r ? 6.5 : 4)
+    .attr('fill', d => COL[d.d])
+    .attr('fill-opacity', 0.85)
+    .attr('stroke', d => d.r ? '#111' : 'none')
+    .attr('stroke-width', d => d.r ? 1.5 : 0)
+    .style('cursor', 'pointer')
+    .on('mouseenter', function(e, d) {
+      d3.select(this).attr('r', d.r ? 9 : 6);
+      const rk = d.r ? ' <span style="color:#b88200">#' + d.r + '</span>' : '';
+      showTip('<strong style="font-size:13px">' + d.n + '</strong>' + rk +
+              '<br><span style="color:#6b6b66">' + d.d + ' &middot; ' + d.c + ', ' + d.s + '</span>', e);
+    })
+    .on('mousemove', function(e) { showTip(tip.html(), e); })
+    .on('mouseleave', function(e, d) {
+      d3.select(this).attr('r', d.r ? 6.5 : 4);
+      tip.style('opacity', 0);
+    });
+});
+</script>
+</body>
+</html>

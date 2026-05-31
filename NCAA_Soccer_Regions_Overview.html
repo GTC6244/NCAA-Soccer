@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCAA Men's Soccer Programs by U.S. Region — 2025 Overview</title>
+<style>
+  :root {
+    --bg: #fafaf7; --panel: #ffffff; --text: #1a1a1a;
+    --muted: #6b6b66; --border: #e3e0d6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 28px 24px 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  h1 { font-size: 30px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.3px; }
+  .subtitle { font-size: 15px; color: var(--muted); margin: 0 0 28px; }
+
+  .panel {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px; margin-bottom: 20px;
+  }
+
+  #map-container { position: relative; }
+  svg { width: 100%; height: auto; display: block; cursor: default; }
+
+  .state-shape { stroke: white; stroke-width: 1; transition: filter .15s, opacity .15s; }
+  .state-shape:hover { filter: brightness(1.08); opacity: 0.92; cursor: pointer; }
+
+  .map-legend {
+    display: flex; flex-wrap: wrap; gap: 16px;
+    font-size: 13px; color: var(--muted);
+    margin-top: 14px; align-items: center;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+
+  .tooltip {
+    position: absolute; pointer-events: none; background: white;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 10px 14px; font-size: 13px; line-height: 1.5;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    opacity: 0; transition: opacity .12s; z-index: 10; max-width: 260px;
+  }
+
+  .totals {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+    margin-bottom: 20px;
+  }
+  .total-card {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px 18px;
+  }
+  .total-num { font-size: 28px; font-weight: 600; line-height: 1.1; }
+  .total-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+
+  h2 { font-size: 18px; font-weight: 600; margin: 0 0 14px; }
+
+  .region-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .region-card {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 18px 20px;
+    text-decoration: none; color: var(--text);
+    display: block; transition: transform .15s, box-shadow .15s, border-color .15s;
+    position: relative; overflow: hidden;
+  }
+  .region-card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.06); border-color: #c5beae; }
+  .region-card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    background: var(--accent);
+  }
+  .region-name { font-size: 17px; font-weight: 600; margin: 0 0 4px; }
+  .region-states { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+  .region-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; font-size: 12px; }
+  .region-stat { text-align: center; padding: 6px 4px; border-radius: 6px; background: var(--bg); }
+  .region-stat-num { font-size: 18px; font-weight: 600; color: var(--text); }
+  .region-stat-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.4px; }
+  .region-link { font-size: 13px; color: #555; margin-top: 12px; display: flex; align-items: center; gap: 6px; }
+  .region-link::after { content: '\\2192'; }
+
+  footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 28px; }
+
+  @media (max-width: 720px) {
+    body { padding: 16px 12px 28px; }
+    h1 { font-size: 22px; }
+    .totals { grid-template-columns: repeat(2, 1fr); }
+    .panel { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NCAA Men's Soccer — U.S. Regional Overview</h1>
+  <p class="subtitle">811 programs across 7 regions &middot; 2025 season &middot; Click a region for details</p>
+
+  <div class="totals">
+    <div class="total-card"><div class="total-num">811</div><div class="total-label">Programs total</div></div>
+    <div class="total-card"><div class="total-num">211</div><div class="total-label">Division I</div></div>
+    <div class="total-card"><div class="total-num">203</div><div class="total-label">Division II</div></div>
+    <div class="total-card"><div class="total-num">397</div><div class="total-label">Division III</div></div>
+  </div>
+
+  <div class="panel">
+    <div id="map-container">
+      <svg id="map" viewBox="0 0 1000 600" role="img"
+           aria-label="Map of the United States with all 50 states colored by men's soccer region grouping"></svg>
+      <div class="tooltip" id="tip"></div>
+    </div>
+    <div class="map-legend">
+      <span class="legend-item"><span class="swatch" style="background:#5DA9D4"></span>North West Coast</span>
+      <span class="legend-item"><span class="swatch" style="background:#4DBCA6"></span>West Coast</span>
+      <span class="legend-item"><span class="swatch" style="background:#D4A953"></span>Central</span>
+      <span class="legend-item"><span class="swatch" style="background:#7BAE3F"></span>Mid West</span>
+      <span class="legend-item"><span class="swatch" style="background:#D85A30"></span>South</span>
+      <span class="legend-item"><span class="swatch" style="background:#9180D4"></span>East Coast</span>
+      <span class="legend-item"><span class="swatch" style="background:#D67BA0"></span>North East Coast</span>
+    </div>
+  </div>
+
+  <h2>The seven regions</h2>
+  <div class="region-grid">
+
+    <a class="region-card" style="--accent:#D67BA0" href="North_East_Coast_Region_Soccer_Map.html">
+      <div class="region-name">North East Coast</div>
+      <div class="region-states">8 states &middot; ME, NH, VT, MA, RI, CT, NY, NJ</div>
+      <div class="region-stats">
+        <div class="region-stat"><div class="region-stat-num">210</div><div class="region-stat-label">Total</div></div>
+        <div class="region-stat"><div class="region-stat-num">51</div><div class="region-stat-label">D1</div></div>
+        <div class="region-stat"><div class="region-stat-num">24</div><div class="region-stat-label">D2</div></div>
+        <div class="region-stat"><div class="region-stat-num">135</div><div class="region-stat-label">D3</div></div>
+      </div>
+      <div class="region-link">View region map</div>
+    </a>
+
+    <a class="region-card" style="--accent:#9180D4" href="East_Coast_Region_Soccer_Map.html">
+      <div class="region-name">East Coast (Mid-Atlantic + SE)</div>
+      <div class="region-states">8 states/territories &middot; PA, DE, MD, DC, VA, NC, SC, WV</div>
+      <div class="region-stats">
+        <div class="region-stat"><div class="region-stat-num">205</div><div class="region-stat-label">Total</div></div>
+        <div class="region-stat"><div class="region-stat-num">59</div><div class="region-stat-label">D1</div></div>
+        <div class="region-stat"><div class="region-stat-num">50</div><div class="region-stat-label">D2</div></div>
+        <div class="region-stat"><div class="region-stat-num">96</div><div class="region-stat-label">D3</div></div>
+      </div>
+      <div class="region-link">View region map</div>
+    </a>
+
+    <a class="region-card" style="--accent:#7BAE3F" href="Mid_West_Region_Soccer_Map.html">
+      <div class="region-name">Mid West</div>
+      <div class="region-states">12 states &middot; OH, IN, MI, IL, WI, MN, IA, MO, ND, SD, NE, KS</div>
+      <div class="region-stats">
+        <div class="region-stat"><div class="region-stat-num">186</div><div class="region-stat-label">Total</div></div>
+        <div class="region-stat"><div class="region-stat-num">41</div><div class="region-stat-label">D1</div></div>
+        <div class="region-stat"><div class="region-stat-num">35</div><div class="region-stat-label">D2</div></div>
+        <div class="region-stat"><div class="region-stat-num">110</div><div class="region-stat-label">D3</div></div>
+      </div>
+      <div class="region-link">View region map</div>
+    </a>
+
+    <a class="region-card" style="--accent:#D85A30" href="South_Region_Soccer_Map.html">
+      <div class="region-name">South</div>
+      <div class="region-states">10 states &middot; TX, FL, GA, TN, KY, AL, AR, OK, MS, LA</div>
+      <div class="region-stats">
+        <div class="region-stat"><div class="region-stat-num">116</div><div class="region-stat-label">Total</div></div>
+        <div class="region-stat"><div class="region-stat-num">27</div><div class="region-stat-label">D1</div></div>
+        <div class="region-stat"><div class="region-stat-num">53</div><div class="region-stat-label">D2</div></div>
+        <div class="region-stat"><div class="region-stat-num">36</div><div class="region-stat-label">D3</div></div>
+      </div>
+      <div class="region-link">View region map</div>
+    </a>
+
+    <a class="region-card" style="--accent:#4DBCA6" href="West_Coast_Region_Soccer_Map.html">
+      <div class="region-name">West Coast</div>
+      <div class="region-states">2 states &middot; CA, HI</div>
+      <div class="region-stats">
+        <div class="region-stat"><div class="region-stat-num">57</div><div class="region-stat-label">Total</div></div>
+        <div class="region-stat"><div class="region-stat-num">22</div><div class="region-stat-label">D1</div></div>
+        <div class="region-stat"><div class="region-stat-num">25</div><div class="region-stat-label">D2</div></div>
+        <div class="region-stat"><div class="region-stat-num">10</div><div class="region-stat-label">D3</div></div>
+      </div>
+      <div class="region-link">View region map</div>
+    </a>
+
+    <a class="region-card" style="--accent:#5DA9D4" href="North_West_Coast_Region_Soccer_Map.html">
+      <div class="region-name">North West Coast</div>
+      <div class="region-states">4 states/territories &middot; WA, OR, ID, AK, BC</div>
+      <div class="region-stats">
+        <div class="region-stat"><div class="region-stat-num">20</div><div class="region-stat-label">Total</div></div>
+        <div class="region-stat"><div class="region-stat-num">5</div><div class="region-stat-label">D1</div></div>
+        <div class="region-stat"><div class="region-stat-num">6</div><div class="region-stat-label">D2</div></div>
+        <div class="region-stat"><div class="region-stat-num">9</div><div class="region-stat-label">D3</div></div>
+      </div>
+      <div class="region-link">View region map</div>
+    </a>
+
+    <a class="region-card" style="--accent:#D4A953" href="Central_Region_Soccer_Map.html">
+      <div class="region-name">Central (Mountain West / SW)</div>
+      <div class="region-states">7 states &middot; CO, UT, NV, AZ, NM, WY, MT</div>
+      <div class="region-stats">
+        <div class="region-stat"><div class="region-stat-num">17</div><div class="region-stat-label">Total</div></div>
+        <div class="region-stat"><div class="region-stat-num">6</div><div class="region-stat-label">D1</div></div>
+        <div class="region-stat"><div class="region-stat-num">10</div><div class="region-stat-label">D2</div></div>
+        <div class="region-stat"><div class="region-stat-num">1</div><div class="region-stat-label">D3</div></div>
+      </div>
+      <div class="region-link">View region map</div>
+    </a>
+
+  </div>
+
+  <footer>
+    Compiled from NCAA.com, United Soccer Coaches, Wikipedia &middot; 2025 season &middot; Map via D3.js + us-atlas
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const STATE_REGION = {
+  // North West Coast
+  "Washington": "NW", "Oregon": "NW", "Idaho": "NW", "Alaska": "NW",
+  // West Coast
+  "California": "W", "Hawaii": "W",
+  // Central (Mountain West / SW)
+  "Colorado": "C", "Utah": "C", "Nevada": "C", "Arizona": "C",
+  "New Mexico": "C", "Wyoming": "C", "Montana": "C",
+  // Mid West
+  "Ohio": "MW", "Indiana": "MW", "Michigan": "MW", "Illinois": "MW",
+  "Wisconsin": "MW", "Minnesota": "MW", "Iowa": "MW", "Missouri": "MW",
+  "North Dakota": "MW", "South Dakota": "MW", "Nebraska": "MW", "Kansas": "MW",
+  // South
+  "Texas": "S", "Florida": "S", "Georgia": "S", "Tennessee": "S",
+  "Kentucky": "S", "Alabama": "S", "Arkansas": "S", "Oklahoma": "S",
+  "Mississippi": "S", "Louisiana": "S",
+  // East Coast (Mid-Atlantic + SE)
+  "Pennsylvania": "E", "Delaware": "E", "Maryland": "E", "District of Columbia": "E",
+  "Virginia": "E", "North Carolina": "E", "South Carolina": "E", "West Virginia": "E",
+  // North East Coast
+  "Maine": "NE", "New Hampshire": "NE", "Vermont": "NE", "Massachusetts": "NE",
+  "Rhode Island": "NE", "Connecticut": "NE", "New York": "NE", "New Jersey": "NE",
+};
+
+const REGION_META = {
+  "NW": { name: "North West Coast", color: "#5DA9D4", url: "North_West_Coast_Region_Soccer_Map.html",
+          stats: { total: 20, d1: 5, d2: 6, d3: 9, states: 4 } },
+  "W":  { name: "West Coast",       color: "#4DBCA6", url: "West_Coast_Region_Soccer_Map.html",
+          stats: { total: 57, d1: 22, d2: 25, d3: 10, states: 2 } },
+  "C":  { name: "Central",          color: "#D4A953", url: "Central_Region_Soccer_Map.html",
+          stats: { total: 17, d1: 6, d2: 10, d3: 1, states: 7 } },
+  "MW": { name: "Mid West",         color: "#7BAE3F", url: "Mid_West_Region_Soccer_Map.html",
+          stats: { total: 186, d1: 41, d2: 35, d3: 110, states: 12 } },
+  "S":  { name: "South",            color: "#D85A30", url: "South_Region_Soccer_Map.html",
+          stats: { total: 116, d1: 27, d2: 53, d3: 36, states: 10 } },
+  "E":  { name: "East Coast",       color: "#9180D4", url: "East_Coast_Region_Soccer_Map.html",
+          stats: { total: 205, d1: 59, d2: 50, d3: 96, states: 8 } },
+  "NE": { name: "North East Coast", color: "#D67BA0", url: "North_East_Coast_Region_Soccer_Map.html",
+          stats: { total: 210, d1: 51, d2: 24, d3: 135, states: 8 } },
+};
+
+const svg = d3.select('#map');
+const tip = d3.select('#tip');
+const W = 1000, H = 600;
+
+function showTip(html, evt) {
+  const box = document.getElementById('map-container').getBoundingClientRect();
+  tip.html(html).style('opacity', 1)
+    .style('left', (evt.clientX - box.left + 14) + 'px')
+    .style('top', (evt.clientY - box.top - 8) + 'px');
+}
+
+d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(us => {
+  const features = topojson.feature(us, us.objects.states).features;
+  const projection = d3.geoAlbersUsa().fitSize([W - 40, H - 40], { type: 'FeatureCollection', features });
+  const path = d3.geoPath(projection);
+
+  const g = svg.append('g').attr('transform', 'translate(20, 20)');
+
+  g.selectAll('path').data(features).join('path')
+    .attr('class', 'state-shape')
+    .attr('d', path)
+    .attr('fill', d => {
+      const rk = STATE_REGION[d.properties.name];
+      return rk ? REGION_META[rk].color : '#d8d4c6';
+    })
+    .on('mouseenter', function(e, d) {
+      const rk = STATE_REGION[d.properties.name];
+      if (!rk) return;
+      const m = REGION_META[rk];
+      const html = '<strong style="font-size:14px">' + d.properties.name + '</strong>' +
+                   '<br><span style="color:#6b6b66">' + m.name + ' region</span>' +
+                   '<br><span style="color:#6b6b66; font-size:12px">' +
+                   m.stats.total + ' programs &middot; D1: ' + m.stats.d1 +
+                   ' &middot; D2: ' + m.stats.d2 + ' &middot; D3: ' + m.stats.d3 + '</span>' +
+                   '<br><span style="color:#4a4a44; font-size:11px; margin-top:4px; display:inline-block">Click to open region map</span>';
+      showTip(html, e);
+    })
+    .on('mousemove', function(e) { showTip(tip.html(), e); })
+    .on('mouseleave', function() { tip.style('opacity', 0); })
+    .on('click', function(e, d) {
+      const rk = STATE_REGION[d.properties.name];
+      if (rk) window.location.href = REGION_META[rk].url;
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NCAA Men's Soccer Programs — U.S. East Coast (Mid-Atlantic + SE)</title>
+<style>
+  :root {
+    --bg: #fafaf7; --panel: #ffffff; --text: #1a1a1a;
+    --muted: #6b6b66; --border: #e3e0d6;
+    --state-fill: #f3eee0; --state-stroke: #b8af96;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.5;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; }
+  .subtitle { font-size: 14px; color: var(--muted); margin: 0 0 24px; }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; margin-bottom: 18px;
+  }
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px;
+    color: var(--muted); margin-bottom: 14px; align-items: center; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .ranked-marker { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--text); background: transparent; }
+  #map-container { position: relative; }
+  svg { width: 100%; height: auto; display: block; }
+  .tooltip {
+    position: absolute; pointer-events: none; background: white;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 12px; font-size: 13px; line-height: 1.4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    opacity: 0; transition: opacity .12s; z-index: 10; max-width: 260px;
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px; margin-top: 8px;
+  }
+  .stat-card {
+    background: var(--bg); padding: 14px 16px;
+    border-radius: 8px; border: 1px solid var(--border);
+  }
+  .stat-num { font-size: 22px; font-weight: 600; }
+  .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  h2 { font-size: 16px; font-weight: 600; margin: 0 0 12px; }
+  footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 24px; }
+  ul.ranked { margin: 0; padding-left: 18px; font-size: 14px; columns: 2; column-gap: 24px; }
+  ul.ranked li { margin-bottom: 4px; break-inside: avoid; }
+  @media (max-width: 600px) {
+    body { padding: 12px; } h1 { font-size: 20px; }
+    .panel { padding: 14px; } ul.ranked { columns: 1; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NCAA Men's Soccer Programs — U.S. East Coast (Mid-Atlantic + SE)</h1>
+  <p class="subtitle">205 programs across 8 states &middot; 2025 season</p>
+
+  <div class="panel">
+    <div class="legend">
+      <span class="legend-item"><span class="dot" style="background:#7F77DD"></span>D1 (59)</span>
+      <span class="legend-item"><span class="dot" style="background:#1D9E75"></span>D2 (50)</span>
+      <span class="legend-item"><span class="dot" style="background:#D85A30"></span>D3 (96)</span>
+      <span class="legend-item"><span class="ranked-marker"></span>2025 Top-25 ranked</span>
+    </div>
+    <div id="map-container">
+      <svg id="map" viewBox="0 0 700 760" role="img" aria-label="205 NCAA mens soccer programs"></svg>
+      <div class="tooltip" id="tip"></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>By state</h2>
+    <div class="stats-grid"><div class="stat-card"><div class="stat-num">90</div><div class="stat-label">Pennsylvania</div></div><div class="stat-card"><div class="stat-num">32</div><div class="stat-label">North Carolina</div></div><div class="stat-card"><div class="stat-num">30</div><div class="stat-label">Virginia</div></div><div class="stat-card"><div class="stat-num">18</div><div class="stat-label">South Carolina</div></div><div class="stat-card"><div class="stat-num">14</div><div class="stat-label">Maryland</div></div><div class="stat-card"><div class="stat-num">11</div><div class="stat-label">West Virginia</div></div><div class="stat-card"><div class="stat-num">7</div><div class="stat-label">DC</div></div><div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Delaware</div></div></div>
+  </div>
+
+  <div class="panel">
+    <h2>2025 ranked programs in this region</h2>
+    <ul class="ranked"><li>D1 NC State &mdash; <strong>Runner-up</strong></li><li>D1 #1 Maryland &mdash; <strong>Quarterfinalist</strong></li><li>D1 #4 Virginia &mdash; <strong>Round of 32</strong></li><li>D1 #11 Georgetown (DC) &mdash; <strong>Quarterfinalist</strong></li><li>D1 #12 High Point (NC) &mdash; <strong>Round of 16</strong></li><li>D1 #16 Furman (SC) &mdash; <strong>Semifinalist</strong></li><li>D1 #20 UNC Greensboro &mdash; <strong>Round of 16</strong></li><li>D3 #6 Dickinson (PA) &mdash; <strong>Quarterfinalist</strong></li><li>D3 #17 Scranton (PA)</li><li>D3 #24 Christopher Newport (VA)</li><li>D2 #9 Charleston (WV)</li><li>D2 #11 Gannon (PA)</li></ul>
+  </div>
+
+  <footer>
+    Compiled from NCAA.com, United Soccer Coaches, Wikipedia &middot; Map via D3.js + us-atlas
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const STATES_IN_REGION = ["Pennsylvania", "Delaware", "Maryland", "District of Columbia", "Virginia", "North Carolina", "South Carolina", "West Virginia"];
+const COL = {D1:'#7F77DD', D2:'#1D9E75', D3:'#D85A30'};
+const SCHOOLS = [{"n":"Maryland","d":"D1","c":"College Park","s":"MD","la":38.99,"lo":-76.938,"r":1},{"n":"Virginia","d":"D1","c":"Charlottesville","s":"VA","la":38.029,"lo":-78.477,"r":4},{"n":"Georgetown","d":"D1","c":"Washington","s":"DC","la":38.907,"lo":-77.037,"r":11},{"n":"High Point","d":"D1","c":"High Point","s":"NC","la":35.956,"lo":-80.005,"r":12},{"n":"NC State","d":"D1","c":"Raleigh","s":"NC","la":35.78,"lo":-78.638,"r":15},{"n":"Furman","d":"D1","c":"Greenville","s":"SC","la":34.853,"lo":-82.394,"r":16},{"n":"West Virginia","d":"D1","c":"Morgantown","s":"WV","la":39.63,"lo":-79.956,"r":16},{"n":"Marshall","d":"D1","c":"Huntington","s":"WV","la":38.419,"lo":-82.445,"r":17},{"n":"UNC Greensboro","d":"D1","c":"Greensboro","s":"NC","la":36.073,"lo":-79.792,"r":20},{"n":"American University","d":"D1","c":"Washington","s":"DC","la":38.907,"lo":-77.037,"r":null},{"n":"Bucknell","d":"D1","c":"Lewisburg","s":"PA","la":40.965,"lo":-76.886,"r":null},{"n":"Campbell","d":"D1","c":"Buies Creek","s":"NC","la":35.413,"lo":-78.734,"r":null},{"n":"Clemson","d":"D1","c":"Clemson","s":"SC","la":34.683,"lo":-82.837,"r":null},{"n":"Coastal Carolina","d":"D1","c":"Conway","s":"SC","la":33.836,"lo":-79.048,"r":null},{"n":"College of Charleston","d":"D1","c":"Charleston","s":"SC","la":32.776,"lo":-79.931,"r":null},{"n":"Davidson","d":"D1","c":"Davidson","s":"NC","la":35.499,"lo":-80.849,"r":null},{"n":"Delaware","d":"D1","c":"Newark","s":"DE","la":39.684,"lo":-75.75,"r":null},{"n":"Drexel","d":"D1","c":"Philadelphia","s":"PA","la":39.953,"lo":-75.165,"r":null},{"n":"Duke","d":"D1","c":"Durham","s":"NC","la":35.994,"lo":-78.899,"r":null},{"n":"Duquesne","d":"D1","c":"Pittsburgh","s":"PA","la":40.441,"lo":-79.996,"r":null},{"n":"Elon","d":"D1","c":"Elon","s":"NC","la":36.101,"lo":-79.508,"r":null},{"n":"Gardner-Webb","d":"D1","c":"Boiling Springs","s":"NC","la":35.254,"lo":-81.668,"r":null},{"n":"George Mason","d":"D1","c":"Fairfax","s":"VA","la":38.846,"lo":-77.306,"r":null},{"n":"George Washington","d":"D1","c":"Washington","s":"DC","la":38.907,"lo":-77.037,"r":null},{"n":"Howard","d":"D1","c":"Washington","s":"DC","la":38.907,"lo":-77.037,"r":null},{"n":"James Madison","d":"D1","c":"Harrisonburg","s":"VA","la":38.45,"lo":-78.869,"r":null},{"n":"La Salle","d":"D1","c":"Philadelphia","s":"PA","la":39.953,"lo":-75.165,"r":null},{"n":"Lafayette","d":"D1","c":"Easton","s":"PA","la":40.688,"lo":-75.221,"r":null},{"n":"Lehigh","d":"D1","c":"Bethlehem","s":"PA","la":40.626,"lo":-75.37,"r":null},{"n":"Liberty","d":"D1","c":"Lynchburg","s":"VA","la":37.414,"lo":-79.142,"r":null},{"n":"Longwood","d":"D1","c":"Farmville","s":"VA","la":37.302,"lo":-78.392,"r":null},{"n":"Loyola Maryland","d":"D1","c":"Baltimore","s":"MD","la":39.29,"lo":-76.612,"r":null},{"n":"Maryland Baltimore County (UMBC)","d":"D1","c":"Baltimore","s":"MD","la":39.29,"lo":-76.612,"r":null},{"n":"Mercyhurst","d":"D1","c":"Erie","s":"PA","la":42.129,"lo":-80.085,"r":null},{"n":"Mount St. Mary's","d":"D1","c":"Emmitsburg","s":"MD","la":39.704,"lo":-77.328,"r":null},{"n":"Navy","d":"D1","c":"Annapolis","s":"MD","la":38.978,"lo":-76.492,"r":null},{"n":"North Carolina (UNC)","d":"D1","c":"Chapel Hill","s":"NC","la":35.913,"lo":-79.056,"r":null},{"n":"Old Dominion","d":"D1","c":"Norfolk","s":"VA","la":36.851,"lo":-76.286,"r":null},{"n":"Penn","d":"D1","c":"Philadelphia","s":"PA","la":39.953,"lo":-75.165,"r":null},{"n":"Penn State","d":"D1","c":"University Park","s":"PA","la":40.798,"lo":-77.86,"r":null},{"n":"Pittsburgh","d":"D1","c":"Pittsburgh","s":"PA","la":40.441,"lo":-79.996,"r":null},{"n":"Presbyterian","d":"D1","c":"Clinton","s":"SC","la":34.471,"lo":-81.873,"r":null},{"n":"Queens (Charlotte)","d":"D1","c":"Charlotte","s":"NC","la":35.227,"lo":-80.843,"r":null},{"n":"Radford","d":"D1","c":"Radford","s":"VA","la":37.132,"lo":-80.576,"r":null},{"n":"Robert Morris","d":"D1","c":"Moon Township","s":"PA","la":40.51,"lo":-80.224,"r":null},{"n":"Saint Francis (PA)","d":"D1","c":"Loretto","s":"PA","la":40.51,"lo":-78.634,"r":null},{"n":"Saint Joseph's","d":"D1","c":"Philadelphia","s":"PA","la":39.953,"lo":-75.165,"r":null},{"n":"South Carolina","d":"D1","c":"Columbia","s":"SC","la":34.001,"lo":-81.035,"r":null},{"n":"Temple","d":"D1","c":"Philadelphia","s":"PA","la":39.953,"lo":-75.165,"r":null},{"n":"UNC Asheville","d":"D1","c":"Asheville","s":"NC","la":35.595,"lo":-82.552,"r":null},{"n":"UNC Charlotte","d":"D1","c":"Charlotte","s":"NC","la":35.227,"lo":-80.843,"r":null},{"n":"UNC Wilmington","d":"D1","c":"Wilmington","s":"NC","la":34.226,"lo":-77.945,"r":null},{"n":"VCU","d":"D1","c":"Richmond","s":"VA","la":37.541,"lo":-77.436,"r":null},{"n":"Villanova","d":"D1","c":"Villanova","s":"PA","la":40.038,"lo":-75.343,"r":null},{"n":"Virginia Tech","d":"D1","c":"Blacksburg","s":"VA","la":37.23,"lo":-80.414,"r":null},{"n":"VMI","d":"D1","c":"Lexington","s":"VA","la":37.784,"lo":-79.443,"r":null},{"n":"Wake Forest","d":"D1","c":"Winston-Salem","s":"NC","la":36.1,"lo":-80.244,"r":null},{"n":"William & Mary","d":"D1","c":"Williamsburg","s":"VA","la":37.271,"lo":-76.707,"r":null},{"n":"Wofford","d":"D1","c":"Spartanburg","s":"SC","la":34.95,"lo":-81.932,"r":null},{"n":"Charleston (WV)","d":"D2","c":"Charleston","s":"WV","la":38.35,"lo":-81.633,"r":9},{"n":"Gannon","d":"D2","c":"Erie","s":"PA","la":42.129,"lo":-80.085,"r":11},{"n":"Anderson (SC)","d":"D2","c":"Anderson","s":"SC","la":34.503,"lo":-82.65,"r":17},{"n":"Barton","d":"D2","c":"Wilson","s":"NC","la":35.721,"lo":-77.916,"r":null},{"n":"Belmont Abbey","d":"D2","c":"Belmont","s":"NC","la":35.243,"lo":-81.038,"r":null},{"n":"Bloomsburg (Commonwealth U.)","d":"D2","c":"Bloomsburg","s":"PA","la":41.004,"lo":-76.455,"r":null},{"n":"Bluefield State","d":"D2","c":"Bluefield","s":"WV","la":37.269,"lo":-81.222,"r":null},{"n":"Catawba","d":"D2","c":"Salisbury","s":"NC","la":35.671,"lo":-80.474,"r":null},{"n":"Chestnut Hill","d":"D2","c":"Philadelphia","s":"PA","la":39.953,"lo":-75.165,"r":null},{"n":"Chowan","d":"D2","c":"Murfreesboro","s":"NC","la":36.444,"lo":-77.097,"r":null},{"n":"Coker","d":"D2","c":"Hartsville","s":"SC","la":34.374,"lo":-80.073,"r":null},{"n":"Concord","d":"D2","c":"Athens","s":"WV","la":37.423,"lo":-81.014,"r":null},{"n":"Converse","d":"D2","c":"Spartanburg","s":"SC","la":34.95,"lo":-81.932,"r":null},{"n":"Davis & Elkins","d":"D2","c":"Elkins","s":"WV","la":38.926,"lo":-79.847,"r":null},{"n":"District of Columbia (UDC)","d":"D2","c":"Washington","s":"DC","la":38.907,"lo":-77.037,"r":null},{"n":"East Stroudsburg","d":"D2","c":"East Stroudsburg","s":"PA","la":41.002,"lo":-75.183,"r":null},{"n":"Emory & Henry","d":"D2","c":"Emory","s":"VA","la":36.796,"lo":-81.816,"r":null},{"n":"Erskine","d":"D2","c":"Due West","s":"SC","la":34.333,"lo":-82.389,"r":null},{"n":"Ferrum","d":"D2","c":"Ferrum","s":"VA","la":36.924,"lo":-80.017,"r":null},{"n":"Francis Marion","d":"D2","c":"Florence","s":"SC","la":34.195,"lo":-79.763,"r":null},{"n":"Frostburg State","d":"D2","c":"Frostburg","s":"MD","la":39.658,"lo":-78.928,"r":null},{"n":"Goldey-Beacom","d":"D2","c":"Wilmington","s":"DE","la":39.739,"lo":-75.54,"r":null},{"n":"Holy Family","d":"D2","c":"Philadelphia","s":"PA","la":39.953,"lo":-75.165,"r":null},{"n":"Jefferson","d":"D2","c":"Philadelphia","s":"PA","la":39.953,"lo":-75.165,"r":null},{"n":"Lander","d":"D2","c":"Greenwood","s":"SC","la":34.195,"lo":-82.161,"r":null},{"n":"Lees-McRae","d":"D2","c":"Banner Elk","s":"NC","la":36.164,"lo":-81.872,"r":null},{"n":"Lenoir-Rhyne","d":"D2","c":"Hickory","s":"NC","la":35.734,"lo":-81.344,"r":null},{"n":"Lincoln (PA)","d":"D2","c":"Lincoln University","s":"PA","la":39.804,"lo":-75.935,"r":null},{"n":"Lock Haven (Commonwealth U.)","d":"D2","c":"Lock Haven","s":"PA","la":41.137,"lo":-77.447,"r":null},{"n":"Mars Hill","d":"D2","c":"Mars Hill","s":"NC","la":35.827,"lo":-82.548,"r":null},{"n":"Millersville","d":"D2","c":"Millersville","s":"PA","la":39.998,"lo":-76.355,"r":null},{"n":"Mount Olive","d":"D2","c":"Mount Olive","s":"NC","la":35.197,"lo":-78.066,"r":null},{"n":"Newberry","d":"D2","c":"Newberry","s":"SC","la":34.275,"lo":-81.619,"r":null},{"n":"North Greenville","d":"D2","c":"Tigerville","s":"SC","la":35.047,"lo":-82.374,"r":null},{"n":"PennWest California","d":"D2","c":"California","s":"PA","la":40.065,"lo":-79.896,"r":null},{"n":"Pitt-Johnstown","d":"D2","c":"Johnstown","s":"PA","la":40.327,"lo":-78.922,"r":null},{"n":"Point Park","d":"D2","c":"Pittsburgh","s":"PA","la":40.441,"lo":-79.996,"r":null},{"n":"Seton Hill","d":"D2","c":"Greensburg","s":"PA","la":40.301,"lo":-79.539,"r":null},{"n":"Shepherd","d":"D2","c":"Shepherdstown","s":"WV","la":39.431,"lo":-77.804,"r":null},{"n":"Shippensburg","d":"D2","c":"Shippensburg","s":"PA","la":40.051,"lo":-77.521,"r":null},{"n":"Slippery Rock","d":"D2","c":"Slippery Rock","s":"PA","la":41.063,"lo":-80.056,"r":null},{"n":"Southern Wesleyan","d":"D2","c":"Central","s":"SC","la":34.723,"lo":-82.78,"r":null},{"n":"USC Aiken","d":"D2","c":"Aiken","s":"SC","la":33.56,"lo":-81.719,"r":null},{"n":"Virginia State","d":"D2","c":"Petersburg","s":"VA","la":37.228,"lo":-77.402,"r":null},{"n":"West Chester","d":"D2","c":"West Chester","s":"PA","la":39.96,"lo":-75.606,"r":null},{"n":"West Liberty","d":"D2","c":"West Liberty","s":"WV","la":40.168,"lo":-80.598,"r":null},{"n":"West Virginia Wesleyan","d":"D2","c":"Buckhannon","s":"WV","la":38.993,"lo":-80.232,"r":null},{"n":"Wheeling","d":"D2","c":"Wheeling","s":"WV","la":40.064,"lo":-80.721,"r":null},{"n":"Wilmington (DE)","d":"D2","c":"New Castle","s":"DE","la":39.662,"lo":-75.566,"r":null},{"n":"Wingate","d":"D2","c":"Wingate","s":"NC","la":34.985,"lo":-80.45,"r":null},{"n":"Dickinson","d":"D3","c":"Carlisle","s":"PA","la":40.202,"lo":-77.189,"r":6},{"n":"Scranton","d":"D3","c":"Scranton","s":"PA","la":41.409,"lo":-75.662,"r":17},{"n":"Christopher Newport","d":"D3","c":"Newport News","s":"VA","la":37.087,"lo":-76.473,"r":24},{"n":"Albright","d":"D3","c":"Reading","s":"PA","la":40.336,"lo":-75.927,"r":null},{"n":"Allegheny","d":"D3","c":"Meadville","s":"PA","la":41.641,"lo":-80.152,"r":null},{"n":"Alvernia","d":"D3","c":"Reading","s":"PA","la":40.336,"lo":-75.927,"r":null},{"n":"Arcadia","d":"D3","c":"Glenside","s":"PA","la":40.102,"lo":-75.152,"r":null},{"n":"Averett","d":"D3","c":"Danville","s":"VA","la":36.586,"lo":-79.395,"r":null},{"n":"Bethany (WV)","d":"D3","c":"Bethany","s":"WV","la":40.209,"lo":-80.556,"r":null},{"n":"Bob Jones","d":"D3","c":"Greenville","s":"SC","la":34.853,"lo":-82.394,"r":null},{"n":"Brevard","d":"D3","c":"Brevard","s":"NC","la":35.233,"lo":-82.734,"r":null},{"n":"Bridgewater (VA)","d":"D3","c":"Bridgewater","s":"VA","la":38.38,"lo":-78.975,"r":null},{"n":"Cairn","d":"D3","c":"Langhorne","s":"PA","la":40.175,"lo":-74.922,"r":null},{"n":"Cairn (UE)","d":"D3","c":"Langhorne","s":"PA","la":40.175,"lo":-74.922,"r":null},{"n":"Carlow","d":"D3","c":"Pittsburgh","s":"PA","la":40.441,"lo":-79.996,"r":null},{"n":"Carnegie Mellon","d":"D3","c":"Pittsburgh","s":"PA","la":40.441,"lo":-79.996,"r":null},{"n":"Catholic","d":"D3","c":"Washington","s":"DC","la":38.907,"lo":-77.037,"r":null},{"n":"Chatham","d":"D3","c":"Pittsburgh","s":"PA","la":40.441,"lo":-79.996,"r":null},{"n":"Delaware Valley","d":"D3","c":"Doylestown","s":"PA","la":40.31,"lo":-75.13,"r":null},{"n":"DeSales","d":"D3","c":"Center Valley","s":"PA","la":40.535,"lo":-75.407,"r":null},{"n":"Eastern (PA)","d":"D3","c":"St. Davids","s":"PA","la":40.044,"lo":-75.374,"r":null},{"n":"Eastern Mennonite","d":"D3","c":"Harrisonburg","s":"VA","la":38.45,"lo":-78.869,"r":null},{"n":"Elizabethtown","d":"D3","c":"Elizabethtown","s":"PA","la":40.152,"lo":-76.608,"r":null},{"n":"Franklin & Marshall","d":"D3","c":"Lancaster","s":"PA","la":40.038,"lo":-76.305,"r":null},{"n":"Gallaudet","d":"D3","c":"Washington","s":"DC","la":38.907,"lo":-77.037,"r":null},{"n":"Geneva","d":"D3","c":"Beaver Falls","s":"PA","la":40.752,"lo":-80.32,"r":null},{"n":"Gettysburg","d":"D3","c":"Gettysburg","s":"PA","la":39.831,"lo":-77.231,"r":null},{"n":"Goucher","d":"D3","c":"Baltimore","s":"MD","la":39.29,"lo":-76.612,"r":null},{"n":"Greensboro College","d":"D3","c":"Greensboro","s":"NC","la":36.073,"lo":-79.792,"r":null},{"n":"Grove City","d":"D3","c":"Grove City","s":"PA","la":41.158,"lo":-80.088,"r":null},{"n":"Guilford","d":"D3","c":"Greensboro","s":"NC","la":36.073,"lo":-79.792,"r":null},{"n":"Gwynedd Mercy","d":"D3","c":"Gwynedd Valley","s":"PA","la":40.198,"lo":-75.248,"r":null},{"n":"Hampden-Sydney","d":"D3","c":"Hampden Sydney","s":"VA","la":37.242,"lo":-78.459,"r":null},{"n":"Haverford","d":"D3","c":"Haverford","s":"PA","la":40.015,"lo":-75.307,"r":null},{"n":"Hood","d":"D3","c":"Frederick","s":"MD","la":39.414,"lo":-77.41,"r":null},{"n":"Immaculata","d":"D3","c":"Immaculata","s":"PA","la":40.047,"lo":-75.609,"r":null},{"n":"Johns Hopkins","d":"D3","c":"Baltimore","s":"MD","la":39.29,"lo":-76.612,"r":null},{"n":"Johnson & Wales (Charlotte)","d":"D3","c":"Charlotte","s":"NC","la":35.227,"lo":-80.843,"r":null},{"n":"Juniata","d":"D3","c":"Huntingdon","s":"PA","la":40.484,"lo":-78.01,"r":null},{"n":"Keystone","d":"D3","c":"La Plume","s":"PA","la":41.568,"lo":-75.768,"r":null},{"n":"King's (PA)","d":"D3","c":"Wilkes-Barre","s":"PA","la":41.246,"lo":-75.881,"r":null},{"n":"La Roche","d":"D3","c":"Pittsburgh","s":"PA","la":40.441,"lo":-79.996,"r":null},{"n":"Lancaster Bible","d":"D3","c":"Lancaster","s":"PA","la":40.038,"lo":-76.305,"r":null},{"n":"Lebanon Valley","d":"D3","c":"Annville","s":"PA","la":40.329,"lo":-76.511,"r":null},{"n":"Lycoming","d":"D3","c":"Williamsport","s":"PA","la":41.241,"lo":-77.001,"r":null},{"n":"Lynchburg","d":"D3","c":"Lynchburg","s":"VA","la":37.414,"lo":-79.142,"r":null},{"n":"Mary Washington","d":"D3","c":"Fredericksburg","s":"VA","la":38.303,"lo":-77.46,"r":null},{"n":"Marymount (VA)","d":"D3","c":"Arlington","s":"VA","la":38.878,"lo":-77.113,"r":null},{"n":"Marywood","d":"D3","c":"Scranton","s":"PA","la":41.409,"lo":-75.662,"r":null},{"n":"McDaniel","d":"D3","c":"Westminster","s":"MD","la":39.575,"lo":-76.996,"r":null},{"n":"Messiah","d":"D3","c":"Grantham","s":"PA","la":40.142,"lo":-77.037,"r":null},{"n":"Methodist","d":"D3","c":"Fayetteville","s":"NC","la":35.053,"lo":-78.878,"r":null},{"n":"Misericordia","d":"D3","c":"Dallas","s":"PA","la":41.344,"lo":-75.966,"r":null},{"n":"Moravian","d":"D3","c":"Bethlehem","s":"PA","la":40.626,"lo":-75.37,"r":null},{"n":"Mount Aloysius","d":"D3","c":"Cresson","s":"PA","la":40.458,"lo":-78.59,"r":null},{"n":"Muhlenberg","d":"D3","c":"Allentown","s":"PA","la":40.608,"lo":-75.49,"r":null},{"n":"NC Wesleyan","d":"D3","c":"Rocky Mount","s":"NC","la":35.938,"lo":-77.79,"r":null},{"n":"Neumann","d":"D3","c":"Aston","s":"PA","la":39.863,"lo":-75.434,"r":null},{"n":"Penn College","d":"D3","c":"Williamsport","s":"PA","la":41.241,"lo":-77.001,"r":null},{"n":"Penn State Abington","d":"D3","c":"Abington","s":"PA","la":40.119,"lo":-75.12,"r":null},{"n":"Penn State Altoona","d":"D3","c":"Altoona","s":"PA","la":40.519,"lo":-78.395,"r":null},{"n":"Penn State Behrend","d":"D3","c":"Erie","s":"PA","la":42.129,"lo":-80.085,"r":null},{"n":"Penn State Berks","d":"D3","c":"Reading","s":"PA","la":40.336,"lo":-75.927,"r":null},{"n":"Penn State Brandywine","d":"D3","c":"Media","s":"PA","la":39.917,"lo":-75.388,"r":null},{"n":"Penn State Harrisburg","d":"D3","c":"Middletown","s":"PA","la":40.2,"lo":-76.734,"r":null},{"n":"Pfeiffer","d":"D3","c":"Misenheimer","s":"NC","la":35.481,"lo":-80.314,"r":null},{"n":"Pitt-Bradford","d":"D3","c":"Bradford","s":"PA","la":41.959,"lo":-78.639,"r":null},{"n":"Pitt-Greensburg","d":"D3","c":"Greensburg","s":"PA","la":40.301,"lo":-79.539,"r":null},{"n":"Randolph","d":"D3","c":"Lynchburg","s":"VA","la":37.414,"lo":-79.142,"r":null},{"n":"Randolph-Macon","d":"D3","c":"Ashland","s":"VA","la":37.759,"lo":-77.479,"r":null},{"n":"Regent","d":"D3","c":"Virginia Beach","s":"VA","la":36.853,"lo":-75.978,"r":null},{"n":"Roanoke","d":"D3","c":"Salem","s":"VA","la":37.294,"lo":-80.055,"r":null},{"n":"Rosemont","d":"D3","c":"Rosemont","s":"PA","la":40.015,"lo":-75.324,"r":null},{"n":"Saint Vincent","d":"D3","c":"Latrobe","s":"PA","la":40.321,"lo":-79.379,"r":null},{"n":"Salisbury","d":"D3","c":"Salisbury","s":"MD","la":38.361,"lo":-75.599,"r":null},{"n":"Shenandoah","d":"D3","c":"Winchester","s":"VA","la":39.186,"lo":-78.163,"r":null},{"n":"Southern Virginia","d":"D3","c":"Buena Vista","s":"VA","la":37.734,"lo":-79.354,"r":null},{"n":"St. Mary's (MD)","d":"D3","c":"St. Mary's City","s":"MD","la":38.188,"lo":-76.436,"r":null},{"n":"Stevenson","d":"D3","c":"Stevenson","s":"MD","la":39.403,"lo":-76.741,"r":null},{"n":"Susquehanna","d":"D3","c":"Selinsgrove","s":"PA","la":40.8,"lo":-76.864,"r":null},{"n":"Swarthmore","d":"D3","c":"Swarthmore","s":"PA","la":39.902,"lo":-75.35,"r":null},{"n":"Thiel","d":"D3","c":"Greenville","s":"PA","la":41.404,"lo":-80.391,"r":null},{"n":"Ursinus","d":"D3","c":"Collegeville","s":"PA","la":40.185,"lo":-75.453,"r":null},{"n":"Valley Forge","d":"D3","c":"Phoenixville","s":"PA","la":40.13,"lo":-75.515,"r":null},{"n":"Virginia Wesleyan","d":"D3","c":"Virginia Beach","s":"VA","la":36.853,"lo":-75.978,"r":null},{"n":"Warren Wilson","d":"D3","c":"Swannanoa","s":"NC","la":35.599,"lo":-82.401,"r":null},{"n":"Washington & Jefferson","d":"D3","c":"Washington","s":"PA","la":40.174,"lo":-80.246,"r":null},{"n":"Washington & Lee","d":"D3","c":"Lexington","s":"VA","la":37.784,"lo":-79.443,"r":null},{"n":"Washington College","d":"D3","c":"Chestertown","s":"MD","la":39.209,"lo":-76.07,"r":null},{"n":"Waynesburg","d":"D3","c":"Waynesburg","s":"PA","la":39.897,"lo":-80.18,"r":null},{"n":"Westminster (PA)","d":"D3","c":"New Wilmington","s":"PA","la":41.122,"lo":-80.333,"r":null},{"n":"Widener","d":"D3","c":"Chester","s":"PA","la":39.85,"lo":-75.356,"r":null},{"n":"Wilkes","d":"D3","c":"Wilkes-Barre","s":"PA","la":41.246,"lo":-75.881,"r":null},{"n":"William Peace","d":"D3","c":"Raleigh","s":"NC","la":35.78,"lo":-78.638,"r":null},{"n":"Wilson (PA)","d":"D3","c":"Chambersburg","s":"PA","la":39.938,"lo":-77.661,"r":null},{"n":"York (PA)","d":"D3","c":"York","s":"PA","la":39.963,"lo":-76.728,"r":null}];
+const USE_ALBERS_USA = false;
+const W = 700, H = 760;
+
+const svg = d3.select('#map');
+const tip = d3.select('#tip');
+
+function showTip(html, evt) {
+  const box = document.getElementById('map-container').getBoundingClientRect();
+  tip.html(html).style('opacity', 1)
+    .style('left', (evt.clientX - box.left + 14) + 'px')
+    .style('top', (evt.clientY - box.top - 8) + 'px');
+}
+
+d3.json('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(us => {
+  const allFeatures = topojson.feature(us, us.objects.states).features;
+  const filtered = allFeatures.filter(f => STATES_IN_REGION.includes(f.properties.name));
+  const fc = { type: 'FeatureCollection', features: filtered };
+
+  let projection;
+  if (USE_ALBERS_USA) {
+    projection = d3.geoAlbersUsa();
+    projection.fitSize([W - 40, H - 60], fc);
+  } else {
+    projection = d3.geoMercator().fitSize([W - 40, H - 60], fc);
+  }
+  const path = d3.geoPath(projection);
+
+  const g = svg.append('g').attr('transform', 'translate(20, 30)');
+
+  g.selectAll('path').data(fc.features).join('path')
+    .attr('d', path).attr('fill', '#f3eee0').attr('stroke', '#b8af96').attr('stroke-width', 1);
+
+  g.selectAll('text.state-label').data(fc.features).join('text')
+    .attr('class','state-label')
+    .attr('x', d => path.centroid(d)[0])
+    .attr('y', d => path.centroid(d)[1])
+    .attr('text-anchor','middle')
+    .attr('font-size', 11).attr('font-weight', 500)
+    .attr('fill', '#9a9180').attr('pointer-events','none')
+    .text(d => d.properties.name);
+
+  g.selectAll('circle').data(SCHOOLS).join('circle')
+    .attr('cx', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[0] : -9999;
+    })
+    .attr('cy', d => {
+      const p = projection([d.lo, d.la]);
+      return p ? p[1] : -9999;
+    })
+    .attr('r', d => d.r ? 6.5 : 4)
+    .attr('fill', d => COL[d.d])
+    .attr('fill-opacity', 0.85)
+    .attr('stroke', d => d.r ? '#111' : 'none')
+    .attr('stroke-width', d => d.r ? 1.5 : 0)
+    .style('cursor', 'pointer')
+    .on('mouseenter', function(e, d) {
+      d3.select(this).attr('r', d.r ? 9 : 6);
+      const rk = d.r ? ' <span style="color:#b88200">#' + d.r + '</span>' : '';
+      showTip('<strong style="font-size:13px">' + d.n + '</strong>' + rk +
+              '<br><span style="color:#6b6b66">' + d.d + ' &middot; ' + d.c + ', ' + d.s + '</span>', e);
+    })
+    .on('mousemove', function(e) { showTip(tip.html(), e); })
+    .on('mouseleave', function(e, d) {
+      d3.select(this).attr('r', d.r ? 6.5 : 4);
+      tip.style('opacity', 0);
+    });
+});
+</script>
+</body>
+</html>
