@@ -1,0 +1,1216 @@
+{
+  "generated": "2026-09-17",
+  "description": "Men's college soccer recruiting research: NCAA D1/D2, NAIA and U SPORTS programs.",
+  "caveats": [
+    "Enrolment figures are approximate and not drawn from official fact books.",
+    "Coaching staffs change frequently. Verify before contacting.",
+    "Several schools still need a coach-contact sweep.",
+    "Kennesaw State is a partial profile: the program exists but no public staff information could be retrieved."
+  ],
+  "schools": [
+    {
+      "id": "smu",
+      "name": "SMU",
+      "tier": "core",
+      "city": "Dallas, Texas",
+      "conference": "ACC",
+      "division": "NCAA D1",
+      "enrollment": 12000,
+      "student_faculty_ratio": "11:1",
+      "acceptance_rate": "~53%",
+      "out_of_state_cost": "$69,722",
+      "out_of_state_cost_usd": 69722,
+      "drive_to_canadian_border": "21–22 hr",
+      "drive_hours": 21.5,
+      "us_news_rank": "#88",
+      "head_coach": "Kevin Hudson",
+      "contact": "khudson@smu.edu",
+      "questionnaire": null,
+      "summary": "Defending ACC champions, and the one big-name school where CS isn't gated.",
+      "verdict": "Blue-chip soccer, elite teaching ratios, unrestricted CS. The cost is the barrier at nearly $70,000.",
+      "program_notes": [
+        "Founded 1975. Fourth head coach in program history; Hudson is 115-44-23 across 11 seasons.",
+        "Won the <b>first ACC tournament title in program history</b> in 2025 and opened 2026 at 5-0-1, ranked No. 7.",
+        "37 NCAA appearances, College Cups in 2000 and 2005, Elite Eights in 2010, 2019 and 2024.",
+        "The 2023 side produced four All-Americans — most of any Division I program that year.",
+        "Washburne Stadium, capacity 2,577. Dedicated soccer venue, ten home matches."
+      ],
+      "academic_notes": [
+        "<b>11:1 ratio, average class size 22</b>, 70% of classes at 25 or fewer. Best-in-class teaching for a school this size.",
+        "Cox School of Business ranked <b>#25 nationally</b> — but direct-admit, so you must name business as your primary interest on the application.",
+        "<b>Computer science is not a restricted major.</b> A real edge over Penn State, Ohio State, UCSB and NJIT, which all gate it behind a second application."
+      ],
+      "geography_notes": [
+        "Not a college town. 234 walkable acres in University Park, an affluent enclave inside Dallas.",
+        "<b>Two airports</b>: Love Field 15 minutes, DFW 30–35. Strong routing for a Canadian family.",
+        "Residential Commons system, two years on campus required."
+      ],
+      "known_for": "George W. Bush Presidential Center is on campus. Peruna, a live Shetland pony, is the mascot. Only school ever given the NCAA death penalty (football, 1987).",
+      "profile_complete": true
+    },
+    {
+      "id": "ucf",
+      "name": "UCF",
+      "tier": "core",
+      "city": "Orlando, Florida",
+      "conference": "Sun Belt",
+      "division": "NCAA D1",
+      "enrollment": 69000,
+      "student_faculty_ratio": "28:1",
+      "acceptance_rate": "40%",
+      "out_of_state_cost": "$24,076",
+      "out_of_state_cost_usd": 24076,
+      "drive_to_canadian_border": "20–21 hr",
+      "drive_hours": 20.5,
+      "us_news_rank": "#117",
+      "head_coach": "Scott Calabrese",
+      "contact": "anyquist@athletics.ucf.edu",
+      "questionnaire": "Recruit Questionnaire in the men's soccer nav",
+      "summary": "Reigning Sun Belt champions who beat Kentucky and Marshall on the road to get there.",
+      "verdict": "Cheap, warm, winning, and one flight from Toronto. The class sizes are the honest cost.",
+      "program_notes": [
+        "Calabrese is in his 10th season. Won the <b>first Sun Belt tournament title</b> in program history in 2025.",
+        "That run was entirely away: 3-2 in 2OT at Georgia Southern, 1-0 at top-seeded Kentucky, then Marshall — the Herd's first home loss in 721 days.",
+        "In their first-ever Sun Belt match (2023) they won 2-1 at then-No. 9 Clemson. Clemson won the national title that year.",
+        "<b>Built on the back line.</b> Preseason All-Sun Belt: GK Matisse Hébert (preseason Goalkeeper of the Year), defender Takahiro Fujita (second straight preseason Defensive POY), defender Jem Hewlett.",
+        "Round of 16 in 2019 and 2020. Twelve NCAA appearances."
+      ],
+      "academic_notes": [
+        "<b>Largest university in Florida</b> — 70,674 students, 59,649 undergraduates.",
+        "The trade-off is scale: <b>28:1 ratio, only 28% of classes under 20 students</b>. The inverse of SMU.",
+        "Out-of-state is $24,076, roughly a third of SMU. Verify international rates separately."
+      ],
+      "geography_notes": [
+        "1,420 acres, 13 miles east of downtown Orlando. Large and spread out, ringed by student apartments.",
+        "<b>Orlando International is 20–25 minutes with direct Toronto service</b> — one of the best air links here.",
+        "~12,140 beds on campus, mostly first-years. Huge adjacent rental market."
+      ],
+      "known_for": "Deep ties to the space and simulation industries. Rosen College of Hospitality is nationally leading. Knightro the knight.",
+      "profile_complete": true
+    },
+    {
+      "id": "usf",
+      "name": "USF",
+      "tier": "core",
+      "city": "Tampa, Florida",
+      "conference": "American",
+      "division": "NCAA D1",
+      "enrollment": 50000,
+      "student_faculty_ratio": "21:1",
+      "acceptance_rate": "43%",
+      "out_of_state_cost": "—",
+      "out_of_state_cost_usd": null,
+      "drive_to_canadian_border": "22 hr",
+      "drive_hours": 22,
+      "us_news_rank": "#88",
+      "head_coach": "George Kiefer",
+      "contact": "gkiefer@usf.edu",
+      "questionnaire": "college.jumpforward.com/questionnaire.aspx?iid=1625&sportid=21",
+      "summary": "The strongest MLS pipeline on the list, mid-rebuild with 22 newcomers.",
+      "verdict": "A brand-new staff rebuilding from scratch is the most open door on the Core 12 — and the most uncertain.",
+      "program_notes": [
+        "<b>USF's oldest varsity program</b> — played the school's first-ever intercollegiate contest on 25 September 1965.",
+        "<b>31 MLS draft picks</b>, including two-time Golden Boot winner Jeff Cunningham, World Cup international Roy Wegerle and MLS Cup winner Dom Dwyer.",
+        "14 conference tournament titles, 22 NCAA appearances, Elite Eights in 1997, 2008 and 2011.",
+        "<b>2026 is a full reset.</b> Kiefer returned in December 2025 for a second tenure and brought in 22 newcomers — eight from Grand Canyon — with only six players returning. Opened 1-3.",
+        "Corbett Stadium, capacity 4,000 — largest dedicated venue among the Core 12."
+      ],
+      "academic_notes": [
+        "AAU member, ranked <b>#88 nationally</b> — level with SMU and 29 places above UCF.",
+        "21:1 ratio. Better than UCF, well short of SMU.",
+        "Muma College of Business and the Pippenger School of Accountancy are <b>separately AACSB-accredited — one of only 194 institutions worldwide</b>."
+      ],
+      "geography_notes": [
+        "1,562 acres in north Tampa, ten miles from downtown. Suburban and spread out.",
+        "Tampa International 20–25 minutes, consistently rated among the best US airports.",
+        "Busch Gardens is adjacent. Gulf beaches 35–45 minutes."
+      ],
+      "known_for": "The Rowdies Cup — the winner keeps the actual 1975 Soccer Bowl trophy until the next meeting. Rocky D. Bull.",
+      "profile_complete": true
+    },
+    {
+      "id": "south-carolina",
+      "name": "South Carolina",
+      "tier": "core",
+      "city": "Columbia, South Carolina",
+      "conference": "Sun Belt",
+      "division": "NCAA D1",
+      "enrollment": 36000,
+      "student_faculty_ratio": "19:1",
+      "acceptance_rate": "~64%",
+      "out_of_state_cost": "$37,376",
+      "out_of_state_cost_usd": 37376,
+      "drive_to_canadian_border": "14 hr",
+      "drive_hours": 14,
+      "us_news_rank": "#127",
+      "head_coach": "Tony Annan",
+      "contact": "Not published",
+      "questionnaire": "gamecocksonline.com/news/2018/06/21/ot-recruiting-questionnaires-html",
+      "summary": "Ranked No. 6 nationally, and the best crowds in American college soccer.",
+      "verdict": "A top-six program, the best atmosphere in the country, the top-ranked international business degree, and forgiving admissions. The airport is the only real weakness.",
+      "program_notes": [
+        "<b>5-0 and ranked No. 6 nationally</b> as of mid-September 2026 — one of only seven unbeaten sides in Division I.",
+        "<b>Led the nation in attendance four straight seasons.</b> The Clemson match on 28 August drew 7,671, the largest crowd in program history.",
+        "First program to lead attendance four years running since UCSB's 2007–2015 streak.",
+        "1993 national runner-up. College Cups in 1988 and 1993, 22 NCAA appearances.",
+        "Annan directed the Atlanta United academy before this — a developer, not just a recruiter. He succeeded Mark Berson, who held the job for 43 years.",
+        "Stone Stadium, capacity 5,700, known as <b>The Graveyard</b> for the cemetery next door."
+      ],
+      "academic_notes": [
+        "Founded 1801, one of the oldest public universities in the US. 19:1 ratio.",
+        "<b>Darla Moore's undergraduate International Business program has been ranked No. 1 in the US for 27 consecutive years.</b>",
+        "~64% acceptance with an average SAT of 1280 — <b>the most accessible admission of any top-25 program here</b>."
+      ],
+      "geography_notes": [
+        "444 acres in downtown Columbia. <b>The closest thing to a real college town among the Core 12</b>, woven into a city of 140,000.",
+        "<b>Weakest air link of the Core 12.</b> Columbia Metropolitan is small; most routing goes via Charlotte or Atlanta. Charlotte Douglas is 90 minutes by car.",
+        "~900 miles to the border — the first school where driving is conceivable."
+      ],
+      "known_for": "The Horseshoe, the 1801 campus core. SEC athletics culture — though men's soccer plays in the Sun Belt. Cocky the mascot.",
+      "profile_complete": true
+    },
+    {
+      "id": "ohio-state",
+      "name": "Ohio State",
+      "tier": "core",
+      "city": "Columbus, Ohio",
+      "conference": "Big Ten",
+      "division": "NCAA D1",
+      "enrollment": 66000,
+      "student_faculty_ratio": "14:1",
+      "acceptance_rate": "35–40% out-of-state",
+      "out_of_state_cost": "$42,423",
+      "out_of_state_cost_usd": 42423,
+      "drive_to_canadian_border": "3–3.5 hr",
+      "drive_hours": 3.25,
+      "us_news_rank": "#41",
+      "head_coach": "Brian Maisonneuve",
+      "contact": "maisonneuve.2@osu.edu",
+      "questionnaire": "ohiostatebuckeyes.com/feature/recruiting",
+      "summary": "Best-balanced school on the list — top-five soccer, top-15 public, three hours from the border.",
+      "verdict": "If one school has to balance soccer, academics and travel, this is it.",
+      "program_notes": [
+        "<b>Ranked No. 4 and 3-0</b>, outscoring opponents 9-0 and outshooting them 70-14.",
+        "<b>No. 1 overall seed in the 2024 NCAA tournament</b> — highest in program history — reaching the College Cup semifinal.",
+        "Maisonneuve inherited a 1-15-2 team in 2018 and built this. He played for the Columbus Crew 1996–2004.",
+        "Four Big Ten regular-season titles and four tournament titles. 2007 national runner-up.",
+        "The 2025 squad posted a <b>team GPA of 3.31</b> and a United Soccer Coaches Academic Award.",
+        "Jesse Owens Memorial Stadium, natural grass, ~4,518 for soccer."
+      ],
+      "academic_notes": [
+        "<b>#41 nationally and #15 among publics</b> — highest-ranked school on the Core 12.",
+        "<b>14:1 ratio</b>, better than any other large public here. 93% retention.",
+        "<b>Computer science is a restricted major</b> — CSE ranks #38 nationally but requires a separate competitive application.",
+        "Out-of-state admission runs 35–40%, well below the headline rate. International applicants sit in that harder pool."
+      ],
+      "geography_notes": [
+        "<b>A true college town inside a real city.</b> Columbus is the 14th-largest US city, but the university owns its district. High Street runs the length of campus.",
+        "<b>Roughly 190 miles to Detroit–Windsor, about 3 to 3.5 hours.</b> By far the best border proximity on the Core 12 — parents can drive to matches.",
+        "Two-year live-on requirement backed by one of the largest residence systems in the country."
+      ],
+      "known_for": "Ohio Stadium holds over 100,000. Fisher College of Business. The Wexner Center for the Arts. Brutus Buckeye.",
+      "profile_complete": true
+    },
+    {
+      "id": "penn-state",
+      "name": "Penn State",
+      "tier": "core",
+      "city": "University Park, Pennsylvania",
+      "conference": "Big Ten",
+      "division": "NCAA D1",
+      "enrollment": 48000,
+      "student_faculty_ratio": "15:1",
+      "acceptance_rate": "54–61%",
+      "out_of_state_cost": "$43,490",
+      "out_of_state_cost_usd": 43490,
+      "drive_to_canadian_border": "4.5 hr",
+      "drive_hours": 4.5,
+      "us_news_rank": "#59",
+      "head_coach": "Rob Dow",
+      "contact": "msoc@athletics.psu.edu",
+      "questionnaire": "gopsusports.com/prospective-athlete-forms",
+      "summary": "A Canadian national-championship coach in year one of a rebuild.",
+      "verdict": "Highest-upside situation on the Core 12. A championship coach who needs players will give minutes — if you can absorb a three-year rebuild.",
+      "program_notes": [
+        "<b>Rob Dow was born in Cole Harbour, Nova Scotia.</b> He will read a Canadian player's background with more context than most.",
+        "At Vermont he went 129-41-21, made <b>five consecutive NCAA tournaments</b> and <b>won the 2024 national championship</b> — the only America East coach ever to do it.",
+        "Penn State puts him at the <b>ninth-best win percentage among active Division I men's coaches</b>.",
+        "<b>He inherited a hard job.</b> Penn State finished last in the Big Ten in each of the past two seasons — 5-8-4 overall, 1-6-3 in conference last year.",
+        "The program was strong recently: Big Ten tournament champions in 2019 and 2020, ranked as high as No. 11.",
+        "Jeffrey Field. Crowds are modest — a few hundred for conference matches."
+      ],
+      "academic_notes": [
+        "<b>#59 nationally, #26 among publics.</b> 7,958 acres, the largest campus here.",
+        "<b>89% of faculty are full-time against a 47% national average.</b> But intro courses run in 300-seat lecture halls.",
+        "<b>Smeal Business, Engineering and Schreyer Honors are direct-admit and far more selective</b> than the university's headline rate. Computer science sits inside Engineering, so it carries that bar."
+      ],
+      "geography_notes": [
+        "<b>The most genuine college town on either list, and the most isolated.</b> State College is 42,000 people existing because of the university.",
+        "<b>~250 miles to Buffalo–Niagara, about 4.5 hours.</b> Second-best border access on the Core 12. Toronto is about 6 hours.",
+        "University Park Airport is 10 minutes but small, with no direct international service. Pittsburgh is 2.5 hours."
+      ],
+      "known_for": "One of the largest alumni networks in the world. THON, the largest student philanthropy anywhere. Beaver Stadium holds 106,000. The Nittany Lion.",
+      "profile_complete": true
+    },
+    {
+      "id": "boston-university",
+      "name": "Boston University",
+      "tier": "core",
+      "city": "Boston, Massachusetts",
+      "conference": "Patriot League",
+      "division": "NCAA D1",
+      "enrollment": 37000,
+      "student_faculty_ratio": "10:1",
+      "acceptance_rate": "11%",
+      "out_of_state_cost": "$71,372",
+      "out_of_state_cost_usd": 71372,
+      "drive_to_canadian_border": "5 hr",
+      "drive_hours": 5,
+      "us_news_rank": "#42",
+      "head_coach": "Kevin Nylen",
+      "contact": "knylen@bu.edu",
+      "questionnaire": "questionnaires.armssoftware.com/3585708e2ece",
+      "summary": "Best teaching ratio on the list, and the most reachable coaching staff.",
+      "verdict": "Small classes, real soccer, an easy staff to contact. The price and the admission rate are the gates.",
+      "program_notes": [
+        "<b>The only Patriot League team to reach the semifinals in each of the last four seasons.</b>",
+        "2023 was the best season ever: swept the regular season and tournament titles, 12-4-4, first All-America honour in 18 years, an MLS SuperDraft pick.",
+        "Regular-season champions in 2023 and 2024. The frustration is two straight 1-0 semifinal losses.",
+        "Led the Patriot League in points, goals and assists last season on a 10-8 record.",
+        "<b>All four coaches publish direct emails</b> — among the easiest staffs here to approach.",
+        "Nickerson Field, capacity 9,871, opened 1915 on the site of Braves Field."
+      ],
+      "academic_notes": [
+        "<b>10:1 student-faculty ratio — the best on the entire Core 12</b>, with 60% of classes under 20 students.",
+        "#42 nationally. Questrom School of Business; the College of Communication is among the country's strongest.",
+        "<b>Admission is hard: 11.1% for the Class of 2028.</b> Tuition $71,372, the most expensive here."
+      ],
+      "geography_notes": [
+        "<b>No traditional quad.</b> The campus runs a mile and a half along Commonwealth Avenue, bisected by the Green Line.",
+        "<b>Logan International 20–30 minutes with frequent direct Toronto flights.</b> Best air link alongside Orlando.",
+        "~300 miles to Derby Line, Vermont — about 5 hours. Montreal is roughly the same."
+      ],
+      "known_for": "Elite men's ice hockey and the Beanpot. Martin Luther King Jr. earned his doctorate here. Rhett the Boston Terrier.",
+      "profile_complete": true
+    },
+    {
+      "id": "northeastern",
+      "name": "Northeastern",
+      "tier": "core",
+      "city": "Boston, Massachusetts",
+      "conference": "CAA",
+      "division": "NCAA D1",
+      "enrollment": 30000,
+      "student_faculty_ratio": "16:1",
+      "acceptance_rate": "5.2%",
+      "out_of_state_cost": "$69,289",
+      "out_of_state_cost_usd": 69289,
+      "drive_to_canadian_border": "5 hr",
+      "drive_hours": 5,
+      "us_news_rank": "#46",
+      "head_coach": "Jeremy Bonomo",
+      "contact": "Not published",
+      "questionnaire": "nuhuskies.com/sports/2012/8/16/GEN_0816125026.aspx",
+      "summary": "Strongest academics on either list, weakest soccer on the Core 12. That trade is the whole story.",
+      "verdict": "If soccer is the route into an institution otherwise out of reach, this is the clearest example of that trade anywhere here.",
+      "program_notes": [
+        "<b>The weakest program on the Core 12 by record</b> — all-time 285-387-87, two NCAA appearances ever (2002, 2012).",
+        "Bonomo's three seasons have been roughly flat: 4-5-7, 4-7-4, and about 3-2-2 so far.",
+        "<b>But his credential is recruiting.</b> At Cincinnati he brought in six top-100 recruits, five high-school All-Americans and two youth internationals. A coach who built his name recruiting answers enquiries.",
+        "He won the 2023 Horizon League title at Green Bay — that program's first NCAA berth in over a decade.",
+        "<b>Parsons Field is in Brookline, two miles off campus</b> — a daily commute BU players don't have."
+      ],
+      "academic_notes": [
+        "<b>5.2% acceptance rate</b> for the Class of 2028, from roughly 105,000 applications. <b>The most applied-to private university in the United States.</b>",
+        "#46 nationally, <b>#5 for Most Innovative</b>, #9 for undergraduate international business. D'Amore-McKim ranked #20; its own admit rate is 6%.",
+        "<b>Co-op is the whole proposition</b>: 95.5% of 2025 business graduates completed an internship before graduating; 91.7% employed within three months.",
+        "<b>Campuses in Toronto and Vancouver</b> — unique on this list for a Canadian family."
+      ],
+      "geography_notes": [
+        "73 acres in the Fenway district — the most compact urban campus here.",
+        "Logan International 20 minutes, frequent direct Toronto service.",
+        "~300 miles to Derby Line, Vermont, about 5 hours."
+      ],
+      "known_for": "Khoury College is one of the oldest dedicated computer science colleges in the country. One of the sharpest reputational climbs in American higher education. Paws the husky.",
+      "profile_complete": true
+    },
+    {
+      "id": "ucsb",
+      "name": "UC Santa Barbara",
+      "tier": "core",
+      "city": "Goleta, California",
+      "conference": "Big West → West Coast 2027",
+      "division": "NCAA D1",
+      "enrollment": 26000,
+      "student_faculty_ratio": "17:1",
+      "acceptance_rate": "~32% (51% out-of-state)",
+      "out_of_state_cost": "~$80,000 all-in",
+      "out_of_state_cost_usd": 80000,
+      "drive_to_canadian_border": "18–19 hr",
+      "drive_hours": 18.5,
+      "us_news_rank": "#40",
+      "head_coach": "Tim Vom Steeg",
+      "contact": "menssoccer@athletics.ucsb.edu",
+      "questionnaire": "ucsbmenssoccer.exposure.co",
+      "summary": "The only national champion here — and the only school that fails the business requirement outright.",
+      "verdict": "The best soccer pedigree available — unless a business degree is a requirement, in which case it's out.",
+      "program_notes": [
+        "<b>2006 NCAA national champions</b>, 2004 runners-up. The only national champion on either list.",
+        "<b>Over 60 players have gone professional or represented senior national teams</b> — the best conversion rate in this research.",
+        "<b>NCAA attendance champions nine straight years, 2007–2015</b> — the longest streak in the record books. They hold the top six all-time on-campus attendance records.",
+        "Peak crowd: <b>15,896 against UCLA in 2010</b>, a night the fire marshal turned fans away.",
+        "Vom Steeg is in his 25th season. Harder Stadium holds <b>17,000 — the largest venue on either list</b>.",
+        "<b>Planning note: UCSB leaves the Big West for the West Coast Conference after 2026–27.</b>"
+      ],
+      "academic_notes": [
+        "<b>#40 nationally, #14 among publics.</b> 56.5% of classes under 20. <b>85% four-year graduation — the highest here.</b>",
+        "<b>No undergraduate business administration major.</b> Economics &amp; Accounting and Technology Management only. The one hard disqualifier on the Core 12.",
+        "Physics is world class — the Kavli Institute, where six Nobel laureates have worked. CS ranks #35 but is a restricted major.",
+        "<b>Quarter system, not semesters.</b> And the UC system is <b>test-blind</b> — scores are not considered at all."
+      ],
+      "geography_notes": [
+        "<b>Literally on the beach</b> — a bluff above the Pacific with ocean on two sides and a lagoon through the middle.",
+        "Isla Vista, the adjacent student town, is one of the densest residential communities in the US — convenient, and with a party reputation worth discussing openly.",
+        "Santa Barbara airport is small; LAX is two hours. <b>~1,200 miles to the border, 18–19 hours.</b>"
+      ],
+      "known_for": "Kavli Institute for Theoretical Physics. One of the most beautiful campuses in the country. The College of Creative Studies. Michael Douglas is an alumnus.",
+      "profile_complete": true
+    },
+    {
+      "id": "njit",
+      "name": "NJIT",
+      "tier": "core",
+      "city": "Newark, New Jersey",
+      "conference": "America East",
+      "division": "NCAA D1",
+      "enrollment": 12000,
+      "student_faculty_ratio": "16:1",
+      "acceptance_rate": "65%",
+      "out_of_state_cost": "$39,912",
+      "out_of_state_cost_usd": 39912,
+      "drive_to_canadian_border": "7 hr",
+      "drive_hours": 7,
+      "us_news_rank": "#80",
+      "head_coach": "Fernando Barboto",
+      "contact": "barboto@njit.edu",
+      "questionnaire": "njithighlanders.com/sports/2008/8/28/compliance_rules_prospective_SA",
+      "summary": "Best financial outcome on the Core 12, and the best airport access.",
+      "verdict": "Best return on investment here, if the subject fit is right and you can finish the degree.",
+      "program_notes": [
+        "America East, with a <b>17-match slate and ten home games</b> in 2026 — unusually home-heavy.",
+        "Opened against Siena, the 2025 MAAC champions and an NCAA tournament side.",
+        "The America East is competitive: Vermont won the 2024 national championship out of it.",
+        "Small-crowd college soccer — adult tickets are $10.",
+        "Three of four coaches publish direct emails."
+      ],
+      "academic_notes": [
+        "<b>Median salary six years after graduation is $69,591 — the highest on the Core 12.</b> IU Indianapolis is $47,173.",
+        "#80 nationally, <b>#34 for social mobility</b>. Money rated it the top public university in New Jersey.",
+        "<b>65% acceptance but only a 51% four-year graduation rate</b> — easy to enter, hard to finish.",
+        "<b>Narrow by design.</b> An engineering and computing institute. CS is a restricted major. Wrong school if interests might shift to humanities."
+      ],
+      "geography_notes": [
+        "48 dense urban acres in Newark's University Heights — the smallest campus on the Core 12, crossable in ten minutes.",
+        "<b>Newark Liberty International is 10–15 minutes with frequent direct Toronto flights — the best airport access on the Core 12.</b>",
+        "<b>Manhattan is 20–30 minutes by PATH train.</b> A world city on a commuter ticket."
+      ],
+      "known_for": "Engineering, computing and architecture. Strong social mobility outcomes. A rigorous, no-frills, career-focused environment. The Highlander.",
+      "profile_complete": true
+    },
+    {
+      "id": "umass-lowell",
+      "name": "UMass Lowell",
+      "tier": "core",
+      "city": "Lowell, Massachusetts",
+      "conference": "America East",
+      "division": "NCAA D1",
+      "enrollment": 18000,
+      "student_faculty_ratio": "17:1",
+      "acceptance_rate": "83%",
+      "out_of_state_cost": "$37,460",
+      "out_of_state_cost_usd": 37460,
+      "drive_to_canadian_border": "3.5–4 hr",
+      "drive_hours": 3.75,
+      "us_news_rank": "#151",
+      "head_coach": "Kyle Zenoni",
+      "contact": "Kyle_Zenoni@uml.edu",
+      "questionnaire": "goriverhawks.com/sports/2014/7/25/general_0725144713",
+      "summary": "Easiest door on the Core 12, and closer to the border than either Boston school.",
+      "verdict": "The value and access play. Modest soccer, cheap housing, and a realistic drive home.",
+      "program_notes": [
+        "The most modest soccer proposition on the Core 12 — little NCAA history, lower half of a competitive America East.",
+        "<b>Where it competes is access</b>: the easiest Core 12 school for both a roster spot and admission.",
+        "<b>Every coach publishes a direct email and phone number</b> — one of only six programs here that does.",
+        "Cushing Field Complex."
+      ],
+      "academic_notes": [
+        "<b>83% acceptance — by far the most accessible on the Core 12.</b> Test-optional; only 27% of admits submitted scores.",
+        "<b>Average net price $18,281</b>, so the $37,460 sticker substantially overstates what most pay.",
+        "44% four-year graduation, second-lowest here. Median salary $61,467 — well above IU Indy, below NJIT.",
+        "Plastics engineering is close to unique in American higher education. Manning School of Business covers the business requirement."
+      ],
+      "geography_notes": [
+        "A former mill city on the Merrimack, 30 minutes north of Boston. Campus splits across three sites connected by shuttle.",
+        "<b>~200–230 miles to Derby Line, about 3.5 to 4 hours</b> — better placed for a drive north than BU or Northeastern, and third-best on the Core 12.",
+        "Logan is 45 minutes; Manchester, New Hampshire is 35. Housing is markedly cheaper than Boston."
+      ],
+      "known_for": "Engineering, particularly plastics and materials. Division I ice hockey is the flagship sport. Rowdy the River Hawk.",
+      "profile_complete": true
+    },
+    {
+      "id": "iu-indianapolis",
+      "name": "IU Indianapolis",
+      "tier": "core",
+      "city": "Indianapolis, Indiana",
+      "conference": "Horizon League",
+      "division": "NCAA D1",
+      "enrollment": 19000,
+      "student_faculty_ratio": "13:1",
+      "acceptance_rate": "—",
+      "out_of_state_cost": "$35,227",
+      "out_of_state_cost_usd": 35227,
+      "drive_to_canadian_border": "5–5.5 hr",
+      "drive_hours": 5.25,
+      "us_news_rank": "#192",
+      "head_coach": "Keegan Boom",
+      "contact": "kboom@iu.edu",
+      "questionnaire": "Recruiting guide PDF on iuindyjags.com",
+      "summary": "A defensive side that scores from penalties — ideal for a defender, a question mark for a forward.",
+      "verdict": "Cheapest option with the second-best teaching ratio. The graduation and earnings numbers are the honest counterweight.",
+      "program_notes": [
+        "Keegan Boom was elevated to head coach in <b>June 2026</b>. Entirely new staff, actively recruiting.",
+        "Opened 2026 with <b>three consecutive 1-0 wins</b> over Lindenwood, Bowling Green and an unbeaten Southern Indiana.",
+        "Freshman goalkeeper Peter Field ran a 0.50 goals-against average with three shutouts. Three defenders played every minute of all three matches.",
+        "<b>But three of four goals came from penalties</b>, with one from open play. This is a defensively organised side that hasn't solved attacking.",
+        "<b>Great fit for a defender or keeper. Forwards should ask directly how they intend to create chances.</b>",
+        "All three coaches publish direct emails. Michael A. Carroll Stadium."
+      ],
+      "academic_notes": [
+        "<b>13:1 ratio — second-best on the Core 12</b>, behind only BU. Notable for a school ranked #192.",
+        "<b>Cheapest on the Core 12</b>: in-state $10,762, and an average net price of $11,577 — the lowest here.",
+        "<b>39% four-year graduation and $47,173 median salary — both the lowest on the Core 12.</b> Largely a commuter population.",
+        "Kelley School of Business carries the Indiana University brand. IU School of Medicine is on campus."
+      ],
+      "geography_notes": [
+        "539 acres immediately west of downtown Indianapolis, walking distance to the city centre.",
+        "Indianapolis International is 20 minutes. <b>~350 miles to Detroit–Windsor, 5 to 5.5 hours</b> — fourth-best here.",
+        "Historically commuter. Ask directly where the team actually lives."
+      ],
+      "known_for": "Health sciences and the IU School of Medicine. Indianapolis is a serious sports city — the Indy 500, NCAA headquarters. Jawz the Jaguar.",
+      "profile_complete": true
+    },
+    {
+      "id": "fiu",
+      "name": "FIU",
+      "tier": "extra",
+      "city": "Miami, Florida",
+      "conference": "American",
+      "division": "NCAA D1",
+      "enrollment": 54700,
+      "student_faculty_ratio": "22:1",
+      "acceptance_rate": "55%",
+      "out_of_state_cost": "$18,964",
+      "out_of_state_cost_usd": 18964,
+      "drive_to_canadian_border": "23 hr",
+      "drive_hours": 23,
+      "us_news_rank": "#97",
+      "head_coach": "Kyle Russell",
+      "contact": "krussell@fiu.edu",
+      "questionnaire": "college.jumpforward.com/questionnaire.aspx?iid=376&sportid=21",
+      "summary": "Cheapest out-of-state tuition in the entire research, by a wide margin.",
+      "verdict": "If cost is a live constraint, this reshapes the list. Verify international rates separately.",
+      "program_notes": [
+        "<b>Two NCAA Division II national championships (1982, 1984)</b> and D2 runners-up twice more. Moved to D1 in 1987.",
+        "<b>Division I national runners-up in 1996.</b> Eight D1 NCAA appearances.",
+        "Coming off a <b>second consecutive American Conference Championship appearance</b>, third in four seasons.",
+        "Three preseason All-Conference players return: forwards Pasquale Capriati and Johan Helan, defender Alfonso Gilleard-Soriano.",
+        "<b>Note the conference:</b> FIU plays men's soccer in the American, not Conference USA, despite being a C-USA member in other sports."
+      ],
+      "academic_notes": [
+        "<b>Out-of-state tuition $18,964 — the cheapest of any school in this research.</b> NC State at $33,993 is next.",
+        "<b>Ranked #1 in the United States for social mobility</b>, #97 nationally. 74% six-year graduation.",
+        "22–24:1 ratio; intro classes are lecture-sized. CS ranks #106, engineering #97 — solid rather than elite."
+      ],
+      "geography_notes": [
+        "344 acres in University Park, ten miles west of downtown Miami. Heavily commuter — ~18,000 attend part-time.",
+        "<b>Miami International 15–20 minutes with frequent direct Toronto service.</b>",
+        "<b>~1,500 miles, about 23 hours — the longest drive of anything on either list.</b>"
+      ],
+      "known_for": "Largest Hispanic-serving institution here. Deep Latin American and Caribbean ties. Roary the Panther.",
+      "profile_complete": true
+    },
+    {
+      "id": "georgia-state",
+      "name": "Georgia State",
+      "tier": "extra",
+      "city": "Atlanta, Georgia",
+      "conference": "Sun Belt",
+      "division": "NCAA D1",
+      "enrollment": 51000,
+      "student_faculty_ratio": "25:1",
+      "acceptance_rate": "—",
+      "out_of_state_cost": "$31,320",
+      "out_of_state_cost_usd": 31320,
+      "drive_to_canadian_border": "13–14 hr",
+      "drive_hours": 13.5,
+      "us_news_rank": "#198",
+      "head_coach": "Brett Surrency",
+      "contact": "bsurrency@gsu.edu",
+      "questionnaire": "None posted — email direct",
+      "summary": "Seventeen years of coaching stability and the best airport on either list.",
+      "verdict": "Buy the coaching stability and the airport. Confirm what campus life actually looks like.",
+      "program_notes": [
+        "<b>Surrency is in his 17th season</b> — since 2010. The coach who signs you will still be there when you graduate.",
+        "Three NCAA tournament appearances and a Sun Belt Championship.",
+        "<b>All three coaches publish direct emails.</b> Office line 404-413-4002.",
+        "<b>The 2026 schedule is punishing</b>: West Virginia, Georgia Southern, South Carolina, Marshall and UCF inside six weeks, plus a preseason trip to Clemson.",
+        "Home matches are at Panthersville in Decatur, about 15 minutes from the downtown campus."
+      ],
+      "academic_notes": [
+        "<b>#198 nationally but #5 in the United States for Best Undergraduate Teaching.</b> Those measure different things.",
+        "<b>Not test-optional</b> — SAT or ACT required for Fall 2026, minimum 480 EBRW / 440 maths, minimum GPA 2.75.",
+        "<b>Weakest outcomes here: 33% four-year graduation and $37,844 median salary.</b>",
+        "Robinson is the largest business school in the South — 8,000 students, 80,000 alumni."
+      ],
+      "geography_notes": [
+        "<b>Not a campus so much as downtown Atlanta.</b> Converted commercial buildings across city blocks, no quad. Primarily a commuter school.",
+        "<b>Hartsfield-Jackson — the busiest airport in the world — is 20 minutes by MARTA, with multiple direct Toronto flights daily. The best air connection on either list.</b>",
+        "~900 miles to Detroit–Windsor, 13–14 hours."
+      ],
+      "known_for": "Nationally studied for raising graduation rates and closing achievement gaps. Pounce the Panther.",
+      "profile_complete": true
+    },
+    {
+      "id": "kennesaw-state",
+      "name": "Kennesaw State",
+      "tier": "extra",
+      "city": "Kennesaw, Georgia",
+      "conference": "Conference USA",
+      "division": "NCAA D1",
+      "enrollment": 47000,
+      "student_faculty_ratio": "23:1",
+      "acceptance_rate": "68–69%",
+      "out_of_state_cost": "$22,278",
+      "out_of_state_cost_usd": 22278,
+      "drive_to_canadian_border": "13–14 hr",
+      "drive_hours": 13.5,
+      "us_news_rank": "#373",
+      "head_coach": "Not found — call the athletics department",
+      "contact": "Not found",
+      "questionnaire": "Not found",
+      "summary": "Program confirmed to exist, but no public information about it. Phone them.",
+      "verdict": "Cheap and confirmed, but unknowable from a desk. Low priority until you've spoken to someone there.",
+      "program_notes": [
+        "<b>The program exists</b> — ESPN carries a full 2026 men's soccer schedule and KSU fields 18 Division I teams.",
+        "<b>Everything else is unavailable.</b> No head coach name, no record, no conference detail, no staff contact could be retrieved. Searches are swamped by football and basketball.",
+        "<b>Go to ksuowls.com directly or telephone the athletics department.</b> The one school here where desk research doesn't work.",
+        "Context: athletics is ascendant. Football won the 2025 C-USA title and basketball the 2026 C-USA tournament.",
+        "Home matches are likely at Fifth Third Stadium, capacity 10,200."
+      ],
+      "academic_notes": [
+        "<b>24% four-year graduation rate — the worst figure anywhere in this research.</b> Raise it directly with a coach; athletes often graduate at better rates.",
+        "<b>#373 nationally</b>, the lowest-ranked school on either list.",
+        "Out-of-state $22,278 — second cheapest here after FIU. Around 68–69% acceptance.",
+        "Coles College of Business takes ~20% of the entire student body; ranked #104 nationally."
+      ],
+      "geography_notes": [
+        "570 acres across two sites in Cobb County, 25–30 miles northwest of Atlanta. Green, with a lake and nature preserve.",
+        "<b>Atlanta's airport is 45–60 minutes away</b> — on the far side of the metro, unlike Georgia State's 20.",
+        "Houses 5,000+ students, but that's a small share of 43,000 undergraduates."
+      ],
+      "known_for": "Rapid growth from a junior college. Coles College of Business. Scrappy the Owl.",
+      "profile_complete": false
+    },
+    {
+      "id": "nc-state",
+      "name": "NC State",
+      "tier": "extra",
+      "city": "Raleigh, North Carolina",
+      "conference": "ACC",
+      "division": "NCAA D1",
+      "enrollment": 38000,
+      "student_faculty_ratio": "15:1",
+      "acceptance_rate": "—",
+      "out_of_state_cost": "$33,993",
+      "out_of_state_cost_usd": 33993,
+      "drive_to_canadian_border": "11 hr",
+      "drive_hours": 11,
+      "us_news_rank": "#64",
+      "head_coach": "Marc Hubbard",
+      "contact": "mens_soccer@ncsu.edu",
+      "questionnaire": "gopack.com/sports/2015/4/27/GEN_20140101185",
+      "summary": "2025 national runners-up, picked first in the ACC, and cheaper than most of the Core 12.",
+      "verdict": "Arguably the best soccer-per-dollar on the whole list, with Boston-level internship density next door.",
+      "program_notes": [
+        "<b>Reached the 2025 NCAA national championship match</b> — the first title-game appearance in program history.",
+        "<b>Picked first in the 2026 ACC preseason coaches poll.</b> Opened ranked No. 2, since slipped to around No. 20.",
+        "<b>Hubbard's trajectory is extraordinary</b>: Sweet Sixteen and a No. 14 finish in year one, the national final in year two.",
+        "Heavy turnover — 15 returners, 18 newcomers including 10 transfers.",
+        "<b>Both the 2026 ACC finals and the College Cup are at Cary, twenty minutes from campus.</b> A home-region championship weekend nobody else gets.",
+        "Dail Soccer Field, capacity 3,000; the 2025 UNC match drew over 5,000."
+      ],
+      "academic_notes": [
+        "<b>Out-of-state tuition $33,993</b> — lower than every private school here and most of the Core 12, at a #64-ranked university.",
+        "15:1 ratio, <b>68% four-year graduation</b> — far above UMass Lowell or IU Indy.",
+        "Poole College ranked <b>#9 nationally among publics for business analytics</b>, but it is one of the most competitive admissions units at NC State.",
+        "Wilson College of Textiles is essentially unique in American higher education."
+      ],
+      "geography_notes": [
+        "2,137 acres southwest of downtown Raleigh, <b>adjacent to Research Triangle Park</b> — SAS, Red Hat, IBM, Cisco, Lenovo, GSK.",
+        "<b>Raleigh-Durham International 20 minutes with direct Air Canada service to Toronto.</b>",
+        "~700 miles to Buffalo–Niagara, about 11 hours."
+      ],
+      "known_for": "Engineering, textiles and veterinary medicine. The 1983 basketball championship. Mr. and Mrs. Wuf.",
+      "profile_complete": true
+    },
+    {
+      "id": "unc",
+      "name": "UNC Chapel Hill",
+      "tier": "extra",
+      "city": "Chapel Hill, North Carolina",
+      "conference": "ACC",
+      "division": "NCAA D1",
+      "enrollment": 32000,
+      "student_faculty_ratio": "14:1",
+      "acceptance_rate": "~8% out-of-state",
+      "out_of_state_cost": "$45,228",
+      "out_of_state_cost_usd": 45228,
+      "drive_to_canadian_border": "11 hr",
+      "drive_hours": 11,
+      "us_news_rank": "#22",
+      "head_coach": "Carlos Somoano",
+      "contact": "csomoano@uncaa.unc.edu",
+      "questionnaire": "None posted",
+      "summary": "The best combination of soccer and academics anywhere here — and the hardest door to open.",
+      "verdict": "Worth pursuing precisely because athletics is the one route in. Have the admissions conversation with the staff before investing.",
+      "program_notes": [
+        "<b>Two national championships (2001, 2011)</b>, a 2008 runner-up finish, nine College Cups, 32 NCAA appearances.",
+        "<b>In 79 seasons the program has had only two losing years.</b>",
+        "Somoano won the 2011 title <b>in his first year as a head coach</b> — only the second rookie head coach in NCAA history — taking the ACC regular season, ACC tournament and national title in one year.",
+        "He has coached <b>two National Players of the Year, 19 All-Americans and 36 MLS SuperDraft or homegrown players.</b>",
+        "Signed a three-year extension in April 2026 — no succession risk.",
+        "<b>Every coach publishes a direct email</b>, unusual at this level."
+      ],
+      "academic_notes": [
+        "<b>#22 nationally, #4 among publics.</b> 14:1 ratio, 97% retention, 92% six-year graduation — the best academic figures in this research.",
+        "<b>North Carolina law caps non-resident enrolment at 18%, and the out-of-state acceptance rate runs around 8% — harder than Cornell.</b> 97% of enrolled first-years had a weighted GPA of 4.0+.",
+        "<b>Ask admissions how international students count against the 18% cap.</b> It changes the odds materially.",
+        "<b>Recruited-athlete admission is a separate process.</b> That's the only realistic route, which makes the soccer conversation matter more here than anywhere.",
+        "Kenan-Flagler ranked <b>#8 nationally for undergraduate business</b> — highest general business ranking on either list."
+      ],
+      "geography_notes": [
+        "<b>A genuine college town.</b> Chapel Hill is 60,000 people built around the university; Franklin Street is the spine.",
+        "Raleigh-Durham International 25 minutes, direct Air Canada to Toronto.",
+        "~700 miles to the border, about 11 hours."
+      ],
+      "known_for": "First public university in the United States. Basketball above all. The Anson Dorrance women's dynasty — 21 national titles. Rameses, a live ram.",
+      "profile_complete": true
+    },
+    {
+      "id": "unc-charlotte",
+      "name": "UNC Charlotte",
+      "tier": "extra",
+      "city": "Charlotte, North Carolina",
+      "conference": "American",
+      "division": "NCAA D1",
+      "enrollment": 31000,
+      "student_faculty_ratio": "21:1",
+      "acceptance_rate": "~80%",
+      "out_of_state_cost": "$22,274",
+      "out_of_state_cost_usd": 22274,
+      "drive_to_canadian_border": "10 hr",
+      "drive_hours": 10,
+      "us_news_rank": "#143",
+      "head_coach": "Kevin Langan",
+      "contact": "Site blocks access — visit charlotte49ers.com",
+      "questionnaire": "Not retrieved",
+      "summary": "Possibly the strongest value combination in the entire research.",
+      "verdict": "A winning program, forgiving admission, low cost, ten hours from home, direct flights. The only gap is the blocked staff directory.",
+      "program_notes": [
+        "<b>Reigning American Conference regular-season champions, picked first for 2026.</b>",
+        "<b>Back-to-back conference tournament titles in 2023 and 2024</b>, beating FIU in overtime in the 2024 final.",
+        "<b>2011 national runners-up</b> — the first team in any sport in school history to reach an NCAA final. 17 NCAA appearances.",
+        "Swept the conference's individual awards last season — Goalkeeper, Midfielder and Freshman of the Year. <b>Fisher and Manufor both return</b>, with leading scorer Elias Arsvoll.",
+        "<b>Four of six graduating seniors signed professional contracts</b> after 2025; two were MLS draft picks.",
+        "Langan has been on staff since 2009. Six of the program's ten conference titles are his."
+      ],
+      "academic_notes": [
+        "<b>~80% acceptance</b> at $22,274 out-of-state — third cheapest here. Average net price $15,018.",
+        "#143 nationally, #38 Most Innovative, Carnegie R1.",
+        "<b>The first School of Data Science in the Carolinas, and the only BS in Sports Analytics in the Southeast.</b> That combination exists nowhere else on this list.",
+        "Belk is the largest business school in North Carolina, top 25% nationally. <b>Every student is guaranteed access to an internship.</b>"
+      ],
+      "geography_notes": [
+        "1,000 acres in University City, nine miles from uptown. <b>The LYNX Blue Line runs directly from campus into the city centre.</b>",
+        "<b>Charlotte Douglas 25–30 minutes with direct Toronto service.</b>",
+        "<b>~650 miles to Buffalo–Niagara, about 10 hours — the shortest in the Carolinas or Georgia.</b>"
+      ],
+      "known_for": "Charlotte is the second-largest banking centre in the US. Niche named this the most beautiful public campus in the country. Norm the Niner.",
+      "profile_complete": true
+    },
+    {
+      "id": "fau",
+      "name": "Florida Atlantic",
+      "tier": "extra",
+      "city": "Boca Raton, Florida",
+      "conference": "American",
+      "division": "NCAA D1",
+      "enrollment": 31000,
+      "student_faculty_ratio": "24:1",
+      "acceptance_rate": "~73%",
+      "out_of_state_cost": "$21,655",
+      "out_of_state_cost_usd": 21655,
+      "drive_to_canadian_border": "22 hr",
+      "drive_hours": 22,
+      "us_news_rank": "#183",
+      "head_coach": "Joey Worthen",
+      "contact": "Not yet retrieved",
+      "questionnaire": "Not yet retrieved",
+      "summary": "Lowest net price in the research, attached to a program that just broke through.",
+      "verdict": "Cheapest realistic option once aid is counted, on a rising program that recruits Canadians. Contacts still need gathering.",
+      "program_notes": [
+        "<b>2025 was the first NCAA tournament appearance in 45 years of the program's existence.</b> They won the American Conference tournament and finished 12-4-2.",
+        "Currently ranked around <b>No. 19 nationally</b>.",
+        "Worthen has been head coach since February 2017 — the breakthrough came in his ninth season, which usually makes it more durable.",
+        "<b>New assistant Lucas Champenois has developed 20+ professional players</b>, including a Sporting Kansas City first-round pick. Fluent in French.",
+        "<b>FAU's roster has carried Canadian players</b> — a real signal the staff recruits north of the border.",
+        "FAU Soccer Stadium holds <b>1,000 — the smallest venue on either list</b>. No atmosphere."
+      ],
+      "academic_notes": [
+        "<b>Average net price $8,636 — the lowest of any school in this research.</b> Out-of-state tuition $21,655.",
+        "#183 nationally, #30 for social mobility. Carnegie R1.",
+        "<b>Honest caveat:</b> student reviews of the engineering college split sharply — some cite careers at IBM and Cisco, others describe course-availability and advising problems. Probe this with current students.",
+        "24:1 ratio, 50% four-year graduation."
+      ],
+      "geography_notes": [
+        "850 acres in affluent Boca Raton, two miles from the Atlantic. Housing is expensive by Florida standards.",
+        "<b>Two airports</b>: Fort Lauderdale 30 minutes and Palm Beach 25. <b>FLL carries heavy direct Toronto and Montreal traffic.</b>",
+        "~1,450 miles, about 22 hours."
+      ],
+      "known_for": "The 2023 basketball Final Four run put the school on the map. Ocean and coastal research. Owlsley the Owl.",
+      "profile_complete": true
+    },
+    {
+      "id": "clemson",
+      "name": "Clemson",
+      "tier": "extra",
+      "city": "Clemson, South Carolina",
+      "conference": "ACC",
+      "division": "NCAA D1",
+      "enrollment": 28000,
+      "student_faculty_ratio": "16:1",
+      "acceptance_rate": "38–49%",
+      "out_of_state_cost": "$60,000+ all-in",
+      "out_of_state_cost_usd": 60000,
+      "drive_to_canadian_border": "12–13 hr",
+      "drive_hours": 12.5,
+      "us_news_rank": "#75",
+      "head_coach": "Mike Noonan",
+      "contact": "Not yet retrieved",
+      "questionnaire": "Not yet retrieved",
+      "summary": "The best professional pathway in college soccer right now.",
+      "verdict": "If professional soccer is the goal and $60,000 is absorbable, this is the strongest case anywhere. If not, Charlotte gives you most of it for a third.",
+      "program_notes": [
+        "<b>Four national championships — 1984, 1987, 2021 and 2023</b> — plus runner-up finishes in 1979 and 2015 and ten College Cup semifinals.",
+        "<b>Founded 1934. The oldest and most decorated program in this research.</b> 38 NCAA appearances.",
+        "<b>In 2025 Clemson led every NCAA program in the country with four first-round MLS SuperDraft selections.</b> Kwaku Agyabeng became the tenth Tiger to sign a Generation adidas contract.",
+        "<b>Reached the ACC championship game in five of the past six seasons.</b>",
+        "2025 was a down year at 8-6-3 — and they still won the ACC tournament. That tells you how high the floor is.",
+        "Historic Riggs Field, capacity 6,500, with <b>486 home wins across 60 years</b>. Noonan is in his 17th season; Jones has 14, Rodriguez 11."
+      ],
+      "academic_notes": [
+        "<b>Median earnings $75,142 four years after graduation — the highest figure in this research</b>, and measured at four years while NJIT's $69,591 is at six.",
+        "#75 nationally. <b>86–87% six-year graduation</b>, second only to UNC.",
+        "<b>Out-of-state cost of attendance now exceeds $60,000 a year</b>, with only 34% receiving need-based aid. Roughly three times FAU.",
+        "Computer science ranks #83. Creative Inquiry undergraduate research is the distinctive academic feature."
+      ],
+      "geography_notes": [
+        "A small college town of 17,000 on Lake Hartwell at the foot of the Blue Ridge. <b>The most scenic setting here.</b>",
+        "<b>Airports are poor.</b> Greenville-Spartanburg is regional with no Toronto service; Charlotte and Atlanta are both two hours by car.",
+        "~800 miles, 12–13 hours. First-year students must live on campus."
+      ],
+      "known_for": "Football and Death Valley. Engineering, business and agricultural sciences. The Tiger.",
+      "profile_complete": true
+    },
+    {
+      "id": "georgia-southern",
+      "name": "Georgia Southern",
+      "tier": "extra",
+      "city": "Statesboro, Georgia",
+      "conference": "Sun Belt",
+      "division": "NCAA D1",
+      "enrollment": 26500,
+      "student_faculty_ratio": "24:1",
+      "acceptance_rate": "88–90%",
+      "out_of_state_cost": "$21,784",
+      "out_of_state_cost_usd": 21784,
+      "drive_to_canadian_border": "15 hr",
+      "drive_hours": 15,
+      "us_news_rank": "#343",
+      "head_coach": "Lee Squires",
+      "contact": "gsumenssoccer@georgiasouthern.edu",
+      "questionnaire": "questionnaires.armssoftware.com/350ec954fad8",
+      "summary": "Easiest admission in the research, attached to a team that was ranked sixth nationally.",
+      "verdict": "Ranked sixth in the country last year and you can get in with an 88% admit rate. The open question is whether 2025 was a step change or a spike.",
+      "program_notes": [
+        "<b>2025 was a dramatic breakout: 13-4-1, ranked as high as sixth nationally.</b> The win over Marshall is the biggest in program history.",
+        "<b>Head coach Lee Squires is English</b> — born in Sheffield, with a career record of 142-67-31 across three programs.",
+        "<b>All four coaches publish direct emails</b>, plus an ARMS questionnaire. One of the easiest staffs to approach.",
+        "<b>But there's almost no history behind it.</b> Before 2025 the entire honours list was two conference regular-season titles, in 1990 and 2016.",
+        "2026 has started unevenly at roughly 2-1-1, including 0-2 at UNC Wilmington.",
+        "The schedule is hard by design: Clemson, Marshall, James Madison, West Virginia and UCF."
+      ],
+      "academic_notes": [
+        "<b>88–90% acceptance — the most accessible school on either list.</b>",
+        "<b>Median earnings $62,342 four years out</b> — higher than NC State's six-year figure, despite a #343 ranking.",
+        "36% four-year graduation, 24–25:1 ratio.",
+        "<b>94–95% of students come from Georgia.</b> A Canadian would be genuinely unusual here — weigh the culture fit honestly."
+      ],
+      "geography_notes": [
+        "A classic small Southern college town of 33,000, an hour inland from Savannah. First-years must live on campus.",
+        "<b>Airport is poor</b> — Savannah is regional with no Toronto service; Jacksonville 2.5 hours, Atlanta 3.5.",
+        "~950 miles, about 15 hours. Also has a campus in Wexford, Ireland."
+      ],
+      "known_for": "Six FCS football national championships. Adrian Peterson and Matt Breida came through. GUS the Eagle.",
+      "profile_complete": true
+    },
+    {
+      "id": "nova-southeastern",
+      "name": "Nova Southeastern",
+      "tier": "extra",
+      "city": "Davie, Florida",
+      "conference": "Sunshine State",
+      "division": "NCAA D2",
+      "enrollment": 7311,
+      "student_faculty_ratio": "16:1",
+      "acceptance_rate": "76%",
+      "out_of_state_cost": "$40,200",
+      "out_of_state_cost_usd": 40200,
+      "drive_to_canadian_border": "22 hr",
+      "drive_hours": 22,
+      "us_news_rank": "#257",
+      "head_coach": "Matt McArthur",
+      "contact": "Not yet retrieved",
+      "questionnaire": "Not yet retrieved",
+      "summary": "A heavily international squad — but a small undergraduate college inside a health-professions university.",
+      "verdict": "The international roster is a real positive. Everything else points elsewhere unless marine science appeals.",
+      "program_notes": [
+        "NCAA Division II, Sunshine State Conference — one of the strongest D2 leagues in the country.",
+        "2025: 8-4-3, opening with a <b>2-0 upset of No. 5 Clayton State</b>. Picked fifth for 2026.",
+        "Santiago Hoyos Lopez earned First Team All-SSC and ranked <b>sixth nationally in points per game</b>.",
+        "<b>The roster is the story: Dahl, Valdez, Morral Rosales, Rokseth, Scerbo, Bulloch, Katsuma, Ricardo.</b> Scandinavian, Spanish, Japanese, British, Latin American. This staff recruits abroad as routine.",
+        "<b>D2 scholarships are equivalency-based</b> — partial awards, stackable with academic and need aid.",
+        "McArthur is young, promoted in January 2025."
+      ],
+      "academic_notes": [
+        "<b>Undergraduate enrolment is only 7,311</b> — about SMU's size. The ~21,000 figure is two-thirds graduate and professional students.",
+        "<b>It does not really meet the 18,000 size criterion.</b>",
+        "16:1 ratio — the upside of a small undergraduate college. #257 nationally, 55% four-year graduation.",
+        "<b>A student reviewer states the institution prioritises the medical school and advises against enrolling for business.</b> One voice, but consistent with the structure. <b>Weakest academic fit among the extras for your subjects.</b>"
+      ],
+      "geography_notes": [
+        "314 suburban acres in Davie, car-dependent. Residence halls only at the Fort Lauderdale campus.",
+        "Fort Lauderdale International 20 minutes with heavy direct Toronto and Montreal traffic.",
+        "~1,450 miles, about 22 hours."
+      ],
+      "known_for": "Health professions — medicine, dental, pharmacy, optometry. Marine science and coral reef restoration. Razor the Shark.",
+      "profile_complete": true
+    },
+    {
+      "id": "keiser",
+      "name": "Keiser",
+      "tier": "extra",
+      "city": "West Palm Beach, Florida",
+      "conference": "Sun Conference",
+      "division": "NAIA",
+      "enrollment": 1500,
+      "student_faculty_ratio": "—",
+      "acceptance_rate": "96–97%",
+      "out_of_state_cost": "~$34,000–39,700",
+      "out_of_state_cost_usd": 37000,
+      "drive_to_canadian_border": "21 hr",
+      "drive_hours": 21,
+      "us_news_rank": "—",
+      "head_coach": "Gavin Oldham",
+      "contact": "Not yet retrieved",
+      "questionnaire": "Not yet retrieved",
+      "summary": "Excellent soccer at a 1,500-student career college. NAIA eligibility rules are the useful part.",
+      "verdict": "Great soccer, wrong academics. Worth knowing for the NAIA eligibility route more than the school itself.",
+      "program_notes": [
+        "<b>2025 was outstanding: 16-1-2</b>, winning both the Sun Conference regular season and tournament titles, finishing <b>No. 16 nationally</b>.",
+        "<b>11-1 at home and 7-0-1 in conference.</b> Reached the second round of the NAIA National Tournament.",
+        "Fifth conference regular-season title, and <b>NAIA opening rounds in seven consecutive seasons</b>. Opened 2026 ranked No. 15.",
+        "Oldham is in his 10th season; <b>the staff was named NAIA South Staff of the Year</b>.",
+        "<b>NAIA eligibility rules are more flexible than the NCAA's</b> — athletic aid stacks more freely with academic and need-based aid, and there is no 2.3 core-GPA sliding scale. <b>A real parallel path if NCAA eligibility is ever tight.</b>",
+        "Correction: an earlier note recorded a 2021 NAIA national title. That could not be verified — the <i>football</i> team won the NAIA title in 2023."
+      ],
+      "academic_notes": [
+        "<b>The flagship residential campus has about 1,500 students.</b> The ~20,000 figure is the whole system — 21 Florida campuses plus online, China and Nicaragua.",
+        "<b>Does not meet the 18,000 criterion in any meaningful sense.</b>",
+        "Founded 1977 as a career college. Effectively open admission at 96–97%. Top 25 for social mobility four years running.",
+        "<b>Maths and physics almost certainly don't exist as majors.</b> Computing is IT-oriented. <b>Of your four subjects, it meets one.</b>"
+      ],
+      "geography_notes": [
+        "100-acre residential campus off Okeechobee Boulevard, built deliberately for a traditional campus experience.",
+        "Palm Beach International 15 minutes; Fort Lauderdale 45 with heavy Toronto service.",
+        "~1,400 miles, about 21 hours."
+      ],
+      "known_for": "Florida's largest private non-profit by system enrolment. Career education in health and business. The Seahawks.",
+      "profile_complete": true
+    },
+    {
+      "id": "uncw",
+      "name": "UNC Wilmington",
+      "tier": "extra",
+      "city": "Wilmington, North Carolina",
+      "conference": "CAA",
+      "division": "NCAA D1",
+      "enrollment": 15254,
+      "student_faculty_ratio": "17:1",
+      "acceptance_rate": "62–68%",
+      "out_of_state_cost": "$25,420 ($42,603 intl)",
+      "out_of_state_cost_usd": 25420,
+      "drive_to_canadian_border": "12 hr",
+      "drive_hours": 12,
+      "us_news_rank": "#198",
+      "head_coach": "Aidan Heaney",
+      "contact": "Not yet retrieved",
+      "questionnaire": "Not yet retrieved",
+      "summary": "The clearest evidence anywhere that freshmen actually play.",
+      "verdict": "If early minutes matter more than the badge, this is the strongest evidence on the list. Check the international tuition first.",
+      "program_notes": [
+        "<b>In 2024 Heaney took a roster with 20 combined freshmen and sophomores to the CAA Championship Game.</b>",
+        "<b>The goals in that run came from first-year players</b> — Acevedo, D'Amico and Gyamfi. A redshirt freshman goalkeeper kept a clean sheet in the semifinal; a redshirt sophomore saved three penalties in the shootout that won round one.",
+        "<b>No other program here demonstrates that pattern so explicitly.</b> Most say freshmen get minutes; this one built a conference final on them.",
+        "<b>Heaney is in his 26th season</b> — second-longest tenure in this research after Vom Steeg. 208 wins, four NCAA appearances.",
+        "They punch up: a road win at South Carolina and a draw with a ranked Clemson in 2023; beat Georgia Southern 2-0 this season."
+      ],
+      "academic_notes": [
+        "<b>#198 nationally but #58 for Best Undergraduate Teaching.</b> 17:1 ratio, average class size ~25.",
+        "<b>Cost flag: out-of-state is $25,420, but reported international undergraduate tuition is around $42,603</b> — a gap of roughly $17,000 a year. <b>Verify before treating this as affordable.</b>",
+        "Marine biology is world class, with a waterfront Center for Marine Science and a PhD program.",
+        "Not STEM-forward. Maths and physics are small departments. Median salary $46,972."
+      ],
+      "geography_notes": [
+        "Between the Cape Fear River and the Atlantic. <b>Wrightsville Beach is ten minutes away</b> and students bike to it.",
+        "<b>Airport is weak</b> — Wilmington International is small; Raleigh-Durham is two hours by car.",
+        "~750 miles, about 12 hours. All first-years must live on campus."
+      ],
+      "known_for": "Marine biology and coastal research. Film studies, supported by Wilmington's production industry. Sammy C. Hawk.",
+      "profile_complete": true
+    },
+    {
+      "id": "uncg",
+      "name": "UNC Greensboro",
+      "tier": "extra",
+      "city": "Greensboro, North Carolina",
+      "conference": "SoCon",
+      "division": "NCAA D1",
+      "enrollment": 14416,
+      "student_faculty_ratio": "18:1",
+      "acceptance_rate": "89–90%",
+      "out_of_state_cost": "$24,014",
+      "out_of_state_cost_usd": 24014,
+      "drive_to_canadian_border": "11 hr",
+      "drive_hours": 11,
+      "us_news_rank": "#198",
+      "head_coach": "Chris Rich",
+      "contact": "Not yet retrieved",
+      "questionnaire": "Not yet retrieved",
+      "summary": "Ranked last by size, and one of the four or five best soccer programs in this entire research.",
+      "verdict": "The biggest mismatch here between soccer quality and list position. If soccer per dollar is the criterion, this belongs near the top.",
+      "program_notes": [
+        "<b>Five NCAA national championships</b> — 1982, 1983, 1985, 1986 and 1987 at Division III — plus a D2 runner-up finish in 1989.",
+        "<b>2025: reached the Sweet Sixteen, beating No. 2 Virginia on penalties to get there.</b> Peaked at No. 11 nationally and stayed in the Top 25 all season.",
+        "<b>Two first-round picks in the 2026 MLS SuperDraft</b> — Enzo Dovlo 12th overall to Atlanta United, Issah Haruna 20th to Orlando City. <b>A pipeline that rivals Clemson's.</b>",
+        "23 conference regular-season titles, 15 conference tournament titles, 13 D1 NCAA appearances.",
+        "Rich has delivered four SoCon regular-season titles and two tournament championships in seven seasons.",
+        "UNCG Soccer Stadium, capacity 3,540."
+      ],
+      "academic_notes": [
+        "<b>89–90% acceptance</b>, essentially tied with Georgia Southern as the easiest here.",
+        "<b>Average net price $10,907 — second lowest in the research after FAU.</b> Out-of-state tuition $24,014. #13 nationally for social mobility.",
+        "<b>Bryan School holds AACSB accreditation in both business and economics — top 1% of business schools worldwide.</b>",
+        "<b>Counterweights: 39% four-year graduation and $39,869 median salary</b>, second lowest here. Maths, physics and CS are small departments."
+      ],
+      "geography_notes": [
+        "266 urban acres in a city of 300,000, anchoring the Piedmont Triad.",
+        "<b>Sits between Charlotte and Raleigh</b> — 90 and 75 minutes — putting UNC, NC State, Duke and Charlotte all within reach.",
+        "Piedmont Triad International is 15 minutes; Charlotte Douglas 90 minutes with direct Toronto service. <b>~700 miles, about 11 hours.</b>"
+      ],
+      "known_for": "Founded 1891 as a women's college. Education, nursing and the performing arts. The Weatherspoon Art Museum. Spiro the Spartan.",
+      "profile_complete": true
+    },
+    {
+      "id": "toronto",
+      "name": "University of Toronto",
+      "tier": "canada",
+      "city": "Toronto, Ontario",
+      "conference": "OUA East",
+      "division": "U SPORTS",
+      "enrollment": 98000,
+      "student_faculty_ratio": "—",
+      "acceptance_rate": "—",
+      "out_of_state_cost": "Domestic tuition",
+      "out_of_state_cost_usd": null,
+      "drive_to_canadian_border": "Home",
+      "drive_hours": 0,
+      "us_news_rank": "Canada #1",
+      "head_coach": "Ilya Orlov",
+      "contact": "ilya.orlov@utoronto.ca",
+      "questionnaire": "varsityblues.ca/sb_output.aspx?form=3",
+      "summary": "The oldest program in this research, in a rebuild year with nine starters gone.",
+      "verdict": "The strongest academic institution available at domestic prices, mid-rebuild, with a coach openly looking to younger players.",
+      "program_notes": [
+        "<b>Founded 1879 — 147 years ago.</b> By far the oldest program here, predating Clemson by more than half a century.",
+        "<b>51 OUA provincial championships, an all-time conference record</b>, plus the 1988 national title and 17 national championship appearances.",
+        "<b>2025: won the 51st OUA title 2-0 over York</b>, led the OUA with 42 goals and conceded a province-low eight. The women won their first title the same year — a joint sweep managed only three times before in OUA history.",
+        "<b>Orlov has the most internationally developed coaching background in this document</b>: youth performance coach at FC Union Berlin, internships at Fulham, Feyenoord, Korona Kielce and KuPS. Career record 45-15-12.",
+        "<b>He is also head coach of Alliance United FC in League1 Ontario</b> — embedded in the same semi-pro ecosystem an Ontario player already moves through.",
+        "<b>2026 is a rebuild.</b> Nine starters gone, roughly 1-1-2 so far including a home loss to TMU. Orlov has said he's most excited to work with the younger players.",
+        "Varsity Stadium, capacity 4,000, downtown on the St. George campus."
+      ],
+      "academic_notes": [
+        "Canada's largest and highest-ranked university, ~98,000 students across three campuses.",
+        "<b>The Program of Study system is the key risk.</b> You're admitted to a faculty, not a major. <b>Computer Science and Rotman Commerce are limited-enrolment and you apply after first year, on first-year marks.</b>",
+        "<b>That competition happens after you've enrolled and started playing.</b> Ask Orlov and an academic advisor what happens if grades dip during the season.",
+        "Maths and physics are world class — the Fields Institute is here. Large first-year classes and demanding grading are well documented.",
+        "<b>Domestic Ontario tuition against Northeastern's $69,289 is the clearest financial argument for the Canadian route.</b>"
+      ],
+      "geography_notes": [
+        "The most urban campus in this research. St. George occupies central Toronto, walkable throughout, with the subway running through it.",
+        "<b>No flights required for home matches.</b> Away fixtures at Queen's, Trent, Nipissing, Ontario Tech, TMU and York are all drivable.",
+        "Pearson is 30 minutes; Billy Bishop is downtown."
+      ],
+      "known_for": "Canada's flagship research university — insulin, stem cells. Rotman Commerce, Engineering Science, the Fields Institute. True Blue.",
+      "profile_complete": true
+    },
+    {
+      "id": "york",
+      "name": "York University",
+      "tier": "canada",
+      "city": "Toronto, Ontario",
+      "conference": "OUA East",
+      "division": "U SPORTS",
+      "enrollment": 55000,
+      "student_faculty_ratio": "—",
+      "acceptance_rate": "—",
+      "out_of_state_cost": "Domestic tuition",
+      "out_of_state_cost_usd": null,
+      "drive_to_canadian_border": "Home",
+      "drive_hours": 0,
+      "us_news_rank": "Canada",
+      "head_coach": "Carmine Isacco",
+      "contact": "cisacco@yorku.ca",
+      "questionnaire": "yorkulions.ca/sb_output.aspx?form=3",
+      "summary": "Reigning national champions, with a roster built from MLS Next Pro and League1 Ontario.",
+      "verdict": "If the Canadian route is live at all, this is the first call.",
+      "program_notes": [
+        "<b>York are the reigning U SPORTS national champions.</b> They won the 2025 title and are defending it, chasing a seventh in program history.",
+        "<b>They lost the 2025 OUA final 2-0 to Toronto and won the national championship anyway.</b> Different trophies — York holds the bigger one.",
+        "<b>Six national championships</b> (1977, 2008, 2010, 2014, 2015, 2025) and seven OUA titles. Five of the nationals are Isacco's.",
+        "<b>Isacco played Division I soccer at Maryland</b> — three-time All-ACC first team goalkeeper, team captain in 1992, Canadian Olympic Team. <b>The only coach here who came through the American system and now coaches in Canada.</b>",
+        "<b>The roster is a professional pathway</b>: two players from Toronto FC II (MLS Next Pro), plus Vaughan SC in League1 Ontario, TMU Bold, Utah Tech (NCAA D1) and a US junior college.",
+        "<b>York Lions Stadium is also home to York United FC in the Canadian Premier League.</b>",
+        "Eight coaches on staff — the deepest here. Four publish emails."
+      ],
+      "academic_notes": [
+        "Canada's third-largest university, ~55,000 students in north Toronto plus the Glendon bilingual campus.",
+        "<b>Schulich School of Business is elite, and its BBA is direct-entry</b> — a competitive admission decision rather than a post-first-year hurdle. <b>Arguably better for an athlete: you know where you stand before you arrive.</b>",
+        "Osgoode Hall Law School is among Canada's strongest. Lassonde School of Engineering covers computer science.",
+        "<b>Generally less selective and less grade-deflating than U of T</b> — worth weighing against prestige for an athlete balancing a season."
+      ],
+      "geography_notes": [
+        "Suburban north Toronto at Keele and Steeles. <b>The TTC Line 1 subway extension runs directly onto campus.</b>",
+        "More self-contained and isolated in feel than U of T's downtown campus.",
+        "Pearson is 25 minutes. No flights for home matches; all OUA away fixtures drivable."
+      ],
+      "known_for": "Schulich and Osgoode Hall. Canada's most successful modern men's university soccer program. Yeo the Lion.",
+      "profile_complete": true
+    },
+    {
+      "id": "western",
+      "name": "Western University",
+      "tier": "canada",
+      "city": "London, Ontario",
+      "conference": "OUA West",
+      "division": "U SPORTS",
+      "enrollment": 40000,
+      "student_faculty_ratio": "—",
+      "acceptance_rate": "—",
+      "out_of_state_cost": "Domestic tuition",
+      "out_of_state_cost_usd": null,
+      "drive_to_canadian_border": "~2 hr to Windsor",
+      "drive_hours": 2,
+      "us_news_rank": "Canada",
+      "head_coach": "Martin Painter",
+      "contact": "mpainter@uwo.ca",
+      "questionnaire": "Not posted",
+      "summary": "Best traditional campus of the three — but the head coach runs two programs at once.",
+      "verdict": "Best campus experience of the three. The divided coaching role and the two-year Ivey pathway are the questions to resolve.",
+      "program_notes": [
+        "<b>Painter coaches both the men's and women's teams.</b> At every other school in this research the men's program has a dedicated head coach. <b>Ask how his time is divided and who runs men's training daily.</b>",
+        "He is genuinely decorated: <b>U SPORTS Coach of the Year 2013</b>, OUA West Coach of the Year 2013 and 2017, Canada Soccer A License.",
+        "With the women since 2012: five OUA West titles, nine straight playoff appearances, five U SPORTS national championship appearances. <b>Took over the men in 2018 and won OUA bronze that first season.</b>",
+        "<b>He played four seasons for Western, winning three OUA championships and the 1999 national title</b> — an alumnus and a national champion as a player.",
+        "Coached <b>FC London from its 2009 inception through 2015 in the PDL, winning a North American championship in 2012</b>.",
+        "Western won OUA titles in 1998 and 2004 and is one of only three programs ever to sweep both men's and women's OUA titles in a season."
+      ],
+      "academic_notes": [
+        "~40,000 students in London, a city of 425,000 two hours from Toronto.",
+        "<b>Known for the strongest undergraduate student experience of the Ontario schools</b> — genuinely residential, in a way neither U of T nor York is.",
+        "<b>Ivey is an Advanced Entry Opportunity</b>: you apply to another faculty, complete two years, and enter Ivey in third year. <b>AEO status is granted at admission but does not guarantee entry</b> — you must hold marks through years one and two.",
+        "<b>Same structural risk as U of T's Program of Study, spread across two years instead of one.</b>"
+      ],
+      "geography_notes": [
+        "<b>The most traditional campus of the three Canadian options</b> — green, residential, Gothic Revival stone. Closer in feel to Penn State or Clemson.",
+        "<b>Under two hours to the Detroit–Windsor crossing</b>, the closest of the three.",
+        "London International for regional connections; Pearson about two hours by car."
+      ],
+      "known_for": "Ivey Business School. The strongest undergraduate campus culture in Ontario. Medicine and engineering. JW the Mustang.",
+      "profile_complete": true
+    }
+  ],
+  "no_program": [
+    {
+      "school": "Cincinnati",
+      "state": "Ohio",
+      "reason": "Program discontinued 14 April 2020."
+    },
+    {
+      "school": "Appalachian State",
+      "state": "North Carolina",
+      "reason": "Cut 26 May 2020 in COVID budget reductions, immediately after an 11-7-1 season ranked 69th of 206 in RPI. Never reinstated. The former coach founded Appalachian FC, now in USL League Two, playing at the old stadium."
+    },
+    {
+      "school": "Florida",
+      "state": "Florida",
+      "reason": "Club only. The SEC does not sponsor men's soccer — only Kentucky and South Carolina field teams, both as Sun Belt affiliates."
+    },
+    {
+      "school": "Georgia",
+      "state": "Georgia",
+      "reason": "Club only, same reason."
+    },
+    {
+      "school": "UT Austin",
+      "state": "Texas",
+      "reason": "Club only."
+    },
+    {
+      "school": "Purdue",
+      "state": "Indiana",
+      "reason": "No varsity team. Purdue FC is player-run."
+    },
+    {
+      "school": "Miami (FL)",
+      "state": "Florida",
+      "reason": "16 varsity teams, seven men's, no men's soccer."
+    },
+    {
+      "school": "Arizona State",
+      "state": "Arizona",
+      "reason": "Club only."
+    }
+  ]
+}
