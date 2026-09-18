@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Men's Soccer Recruiting — 28 schools</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper:#f3f5f7; --surface:#fff; --ink:#131820; --muted:#5d6773; --rule:#d8dee5;
+  --core:#2f4a9e; --extra:#8a5a16; --canada:#a8202a; --out:#6b7280;
+  --sans:"Archivo",system-ui,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:#0e1218; --surface:#161b23; --ink:#e7ecf2; --muted:#96a1ae; --rule:#2a323d;
+    --core:#8ba3e8; --extra:#d4a45c; --canada:#ef8b92; --out:#94a0ad;
+  }
+}
+:root[data-theme="dark"] {
+  --paper:#0e1218; --surface:#161b23; --ink:#e7ecf2; --muted:#96a1ae; --rule:#2a323d;
+  --core:#8ba3e8; --extra:#d4a45c; --canada:#ef8b92; --out:#94a0ad;
+}
+*,*::before,*::after { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:1rem; }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
+body {
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--serif); font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,dt,th,.chip,.num,button,input,.sh-meta,.toc-group h3,.flag { font-family:var(--sans); }
+a { color:inherit; }
+:focus-visible { outline:2px solid var(--core); outline-offset:2px; border-radius:2px; }
+
+/* layout */
+.wrap { display:grid; grid-template-columns:274px minmax(0,1fr); gap:0; max-width:1500px; margin:0 auto; }
+.side {
+  position:sticky; top:0; align-self:start; height:100vh; overflow-y:auto;
+  border-right:1px solid var(--rule); padding:1.6rem 1.1rem 3rem; background:var(--surface);
+}
+.main { padding:1.6rem clamp(1rem,3.5vw,3rem) 5rem; min-width:0; }
+
+/* sidebar */
+.brand { font-family:var(--sans); font-weight:700; font-size:1rem; letter-spacing:-.01em; line-height:1.25; margin:0 0 .15rem; }
+.brand-sub { font-size:.78rem; color:var(--muted); margin:0 0 1rem; font-family:var(--sans); }
+#filter {
+  width:100%; padding:.5rem .65rem; border:1px solid var(--rule); border-radius:6px;
+  background:var(--paper); color:var(--ink); font-size:.85rem; margin-bottom:1.1rem;
+}
+.toc-group { margin-bottom:1.3rem; }
+.toc-group h3 {
+  font-size:.7rem; font-weight:600; color:var(--muted); margin:0 0 .45rem;
+  display:flex; justify-content:space-between; letter-spacing:.04em;
+}
+.toc-group h3 span { font-variant-numeric:tabular-nums; }
+.toc-group ul { list-style:none; margin:0; padding:0; }
+.toc-group li a {
+  display:flex; align-items:center; gap:.5rem; padding:.28rem .4rem; border-radius:5px;
+  font-family:var(--sans); font-size:.845rem; text-decoration:none; color:var(--ink);
+}
+.toc-group li a:hover { background:var(--paper); }
+.toc-group li a.on { background:var(--paper); font-weight:600; }
+.dot { width:7px; height:7px; border-radius:50%; flex:none; }
+.dot-core{background:var(--core)} .dot-extra{background:var(--extra)}
+.dot-canada{background:var(--canada)} .dot-out{background:var(--out)}
+
+/* hero + table */
+.hero { border-bottom:2px solid var(--ink); padding-bottom:1.1rem; margin-bottom:1.5rem; }
+.hero h1 { font-size:clamp(1.7rem,3.6vw,2.5rem); line-height:1.08; margin:0 0 .5rem; letter-spacing:-.025em; font-weight:700; }
+.hero p { margin:0; max-width:64ch; color:var(--muted); }
+.tallies { display:flex; flex-wrap:wrap; gap:1.4rem; margin-top:1rem; }
+.tally { font-family:var(--sans); }
+.tally b { display:block; font-size:1.5rem; font-weight:700; line-height:1; font-variant-numeric:tabular-nums; }
+.tally span { font-size:.75rem; color:var(--muted); }
+.tablewrap { overflow-x:auto; border:1px solid var(--rule); border-radius:8px; background:var(--surface); margin-bottom:2.5rem; }
+table { border-collapse:collapse; width:100%; min-width:840px; font-family:var(--sans); font-size:.845rem; }
+th {
+  text-align:left; font-weight:600; font-size:.72rem; color:var(--muted);
+  padding:.7rem .75rem; border-bottom:1px solid var(--rule); white-space:nowrap;
+}
+th.sortable { cursor:pointer; user-select:none; }
+th.sortable:hover { color:var(--ink); }
+th.sortable::after { content:"\2195"; opacity:.3; margin-left:.3rem; }
+th.asc::after { content:"\2191"; opacity:1; }
+th.desc::after { content:"\2193"; opacity:1; }
+td { padding:.62rem .75rem; border-bottom:1px solid var(--rule); vertical-align:top; }
+tr:last-child td { border-bottom:none; }
+tbody tr:hover { background:var(--paper); }
+.t-name a { font-weight:600; text-decoration:none; }
+.t-name a:hover { text-decoration:underline; }
+.t-city { display:block; font-size:.73rem; color:var(--muted); font-weight:400; }
+.t-conf { color:var(--muted); }
+.num { font-variant-numeric:tabular-nums; white-space:nowrap; }
+.why { font-family:var(--serif); font-size:.9rem; min-width:22rem; }
+
+.chip {
+  display:inline-block; font-size:.66rem; font-weight:600; padding:.12rem .42rem;
+  border-radius:3px; border:1px solid currentColor; white-space:nowrap;
+}
+.chip-core{color:var(--core)} .chip-extra{color:var(--extra)} .chip-canada{color:var(--canada)}
+
+/* tier breaks */
+.tier-break { margin:3.5rem 0 1.5rem; border-top:2px solid var(--ink); padding-top:.9rem; }
+.tier-break h2 { font-size:1.25rem; margin:0 0 .2rem; letter-spacing:-.01em; }
+.tier-break p { margin:0; color:var(--muted); font-size:.92rem; max-width:62ch; }
+
+/* school */
+.school {
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:1.5rem clamp(1rem,2.2vw,1.9rem) 1.3rem; margin-bottom:1.5rem;
+  border-left:4px solid var(--rule);
+}
+.school.t-core { border-left-color:var(--core); }
+.school.t-extra { border-left-color:var(--extra); }
+.school.t-canada { border-left-color:var(--canada); }
+.sh-top { display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; margin-bottom:.5rem; }
+.sh-meta { font-size:.75rem; color:var(--muted); }
+.flag { font-size:.68rem; font-weight:600; color:var(--canada); border:1px solid currentColor; border-radius:3px; padding:.12rem .42rem; }
+.sh h2 { font-size:clamp(1.3rem,2.6vw,1.75rem); margin:0; letter-spacing:-.02em; line-height:1.1; }
+.sh-city { margin:.15rem 0 0; color:var(--muted); font-size:.9rem; }
+.sh-tag { margin:.65rem 0 0; font-size:1.02rem; max-width:62ch; }
+
+.facts {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(118px,1fr));
+  gap:.1rem 1rem; margin:1.25rem 0 1.4rem; padding:.85rem 0;
+  border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+}
+.facts div { min-width:0; }
+.facts dt { font-size:.68rem; color:var(--muted); font-weight:500; margin-bottom:.12rem; }
+.facts dd { margin:0; font-family:var(--sans); font-weight:600; font-size:.95rem; font-variant-numeric:tabular-nums; }
+
+.cols { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem 2.4rem; }
+.col h3 { font-size:.74rem; color:var(--muted); font-weight:600; margin:0 0 .5rem; letter-spacing:.03em; }
+.col h3 + ul + h3 { margin-top:1.15rem; }
+.bl { margin:0; padding:0; list-style:none; }
+.bl li { position:relative; padding-left:.95rem; margin-bottom:.55rem; font-size:.945rem; max-width:60ch; }
+.bl li::before { content:""; position:absolute; left:0; top:.62em; width:5px; height:1px; background:var(--muted); }
+.bl b { font-weight:600; }
+
+.known { margin:1.35rem 0 0; font-size:.92rem; color:var(--muted); max-width:70ch; }
+.known span { font-family:var(--sans); font-size:.68rem; font-weight:600; color:var(--ink); margin-right:.4rem; }
+.contact {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:.6rem 1.4rem;
+  margin:1.1rem 0 0; padding:.85rem 0; border-top:1px solid var(--rule);
+}
+.contact dt { font-family:var(--sans); font-size:.68rem; color:var(--muted); font-weight:500; }
+.contact dd { margin:.1rem 0 0; font-size:.9rem; word-break:break-word; }
+.verdict {
+  margin:.9rem 0 0; padding:.8rem 1rem; background:var(--paper); border-radius:7px;
+  font-size:.96rem; max-width:72ch;
+}
+.totop { display:inline-block; margin-top:1rem; font-family:var(--sans); font-size:.76rem; color:var(--muted); text-decoration:none; }
+.totop:hover { color:var(--ink); text-decoration:underline; }
+
+.note { font-size:.88rem; color:var(--muted); max-width:66ch; margin:0 0 1.2rem; }
+
+/* mobile */
+.menubtn {
+  display:none; position:fixed; left:.8rem; bottom:.8rem; z-index:40;
+  background:var(--ink); color:var(--paper); border:none; border-radius:999px;
+  padding:.6rem 1.05rem; font-size:.82rem; font-weight:600; cursor:pointer;
+  box-shadow:0 3px 14px rgba(0,0,0,.28);
+}
+@media (max-width:900px) {
+  .wrap { grid-template-columns:1fr; }
+  .side {
+    position:fixed; inset:0 auto 0 0; width:82vw; max-width:310px; z-index:50;
+    transform:translateX(-102%); transition:transform .22s ease; height:100dvh;
+    box-shadow:0 0 40px rgba(0,0,0,.25);
+  }
+  .side.open { transform:none; }
+  .menubtn { display:block; }
+  .cols { grid-template-columns:1fr; }
+  .main { padding-bottom:5.5rem; }
+}
+</style>
+</head>
+<body>
+<a class="menubtn" id="menubtn" href="#" role="button">Schools</a>
+<div class="wrap">
+  <nav class="side" id="side" aria-label="School index">
+    <p class="brand">Men's soccer recruiting</p>
+    <p class="brand-sub">28 schools · researched September 2026</p>
+    <label for="filter" class="sr" style="position:absolute;left:-9999px">Filter schools</label>
+    <input id="filter" type="search" placeholder="Filter schools…" autocomplete="off">
+    <div class="toc-group"><h3>Core 12<span>12</span></h3><ul><li data-name="smu"><a href="#smu"><span class="dot dot-core"></span>SMU</a></li><li data-name="ucf"><a href="#ucf"><span class="dot dot-core"></span>UCF</a></li><li data-name="usf"><a href="#usf"><span class="dot dot-core"></span>USF</a></li><li data-name="south carolina"><a href="#south-carolina"><span class="dot dot-core"></span>South Carolina</a></li><li data-name="ohio state"><a href="#ohio-state"><span class="dot dot-core"></span>Ohio State</a></li><li data-name="penn state"><a href="#penn-state"><span class="dot dot-core"></span>Penn State</a></li><li data-name="boston university"><a href="#boston-university"><span class="dot dot-core"></span>Boston University</a></li><li data-name="northeastern"><a href="#northeastern"><span class="dot dot-core"></span>Northeastern</a></li><li data-name="uc santa barbara"><a href="#ucsb"><span class="dot dot-core"></span>UC Santa Barbara</a></li><li data-name="njit"><a href="#njit"><span class="dot dot-core"></span>NJIT</a></li><li data-name="umass lowell"><a href="#umass-lowell"><span class="dot dot-core"></span>UMass Lowell</a></li><li data-name="iu indianapolis"><a href="#iu-indianapolis"><span class="dot dot-core"></span>IU Indianapolis</a></li></ul></div><div class="toc-group"><h3>Extras<span>13</span></h3><ul><li data-name="fiu"><a href="#fiu"><span class="dot dot-extra"></span>FIU</a></li><li data-name="georgia state"><a href="#georgia-state"><span class="dot dot-extra"></span>Georgia State</a></li><li data-name="kennesaw state"><a href="#kennesaw-state"><span class="dot dot-extra"></span>Kennesaw State</a></li><li data-name="nc state"><a href="#nc-state"><span class="dot dot-extra"></span>NC State</a></li><li data-name="unc chapel hill"><a href="#unc"><span class="dot dot-extra"></span>UNC Chapel Hill</a></li><li data-name="unc charlotte"><a href="#unc-charlotte"><span class="dot dot-extra"></span>UNC Charlotte</a></li><li data-name="florida atlantic"><a href="#fau"><span class="dot dot-extra"></span>Florida Atlantic</a></li><li data-name="clemson"><a href="#clemson"><span class="dot dot-extra"></span>Clemson</a></li><li data-name="georgia southern"><a href="#georgia-southern"><span class="dot dot-extra"></span>Georgia Southern</a></li><li data-name="nova southeastern"><a href="#nova-southeastern"><span class="dot dot-extra"></span>Nova Southeastern</a></li><li data-name="keiser"><a href="#keiser"><span class="dot dot-extra"></span>Keiser</a></li><li data-name="unc wilmington"><a href="#uncw"><span class="dot dot-extra"></span>UNC Wilmington</a></li><li data-name="unc greensboro"><a href="#uncg"><span class="dot dot-extra"></span>UNC Greensboro</a></li></ul></div><div class="toc-group"><h3>Canada<span>3</span></h3><ul><li data-name="university of toronto"><a href="#toronto"><span class="dot dot-canada"></span>University of Toronto</a></li><li data-name="york university"><a href="#york"><span class="dot dot-canada"></span>York University</a></li><li data-name="western university"><a href="#western"><span class="dot dot-canada"></span>Western University</a></li></ul></div><div class="toc-group"><h3>No program<span>8</span></h3><ul><li data-name="ruled out"><a href="#ruled-out"><span class="dot dot-out"></span>Eight schools cut or never founded</a></li></ul></div>
+  </nav>
+  <main class="main" id="top">
+    <div class="hero">
+      <h1>Twenty-eight men's soccer programs,<br>ranked, contacted and compared.</h1>
+      <p>Every school that survived the cut, with the program, the academics, the place and the people to email. Sort the table, or jump straight to a school.</p>
+      <div class="tallies">
+        <div class="tally"><b>12</b><span>Core targets</span></div>
+        <div class="tally"><b>13</b><span>Extras</span></div>
+        <div class="tally"><b>3</b><span>Canadian</span></div>
+        <div class="tally"><b>8</b><span>No program</span></div>
+      </div>
+    </div>
+    <div class="tablewrap">
+      <table id="tbl">
+        <thead><tr>
+          <th class="sortable" data-col="0">School</th>
+          <th>Tier</th><th>Conference</th>
+          <th class="sortable num" data-col="3">Size</th>
+          <th class="num">Ratio</th><th class="num">Admit</th>
+          <th class="sortable num" data-col="6">Out-of-state</th>
+          <th class="sortable num" data-col="7">To border</th>
+        </tr></thead>
+        <tbody><tr data-name="smu" data-tier="core">
+<td class="t-name"><a href="#smu">SMU</a><span class="t-city">Dallas, Texas</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">ACC</td>
+<td class="num" data-sort="12000">12,000</td>
+<td class="num">11:1</td>
+<td class="num">~53%</td>
+<td class="num" data-sort="69722">$69,722</td>
+<td class="num" data-sort="21.5">21–22 hr</td>
+</tr><tr data-name="ucf" data-tier="core">
+<td class="t-name"><a href="#ucf">UCF</a><span class="t-city">Orlando, Florida</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">Sun Belt</td>
+<td class="num" data-sort="69000">69,000</td>
+<td class="num">28:1</td>
+<td class="num">40%</td>
+<td class="num" data-sort="24076">$24,076</td>
+<td class="num" data-sort="20.5">20–21 hr</td>
+</tr><tr data-name="usf" data-tier="core">
+<td class="t-name"><a href="#usf">USF</a><span class="t-city">Tampa, Florida</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">American</td>
+<td class="num" data-sort="50000">50,000</td>
+<td class="num">21:1</td>
+<td class="num">43%</td>
+<td class="num" data-sort="999999">—</td>
+<td class="num" data-sort="22">22 hr</td>
+</tr><tr data-name="south carolina" data-tier="core">
+<td class="t-name"><a href="#south-carolina">South Carolina</a><span class="t-city">Columbia, South Carolina</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">Sun Belt</td>
+<td class="num" data-sort="36000">36,000</td>
+<td class="num">19:1</td>
+<td class="num">~64%</td>
+<td class="num" data-sort="37376">$37,376</td>
+<td class="num" data-sort="14">14 hr</td>
+</tr><tr data-name="ohio state" data-tier="core">
+<td class="t-name"><a href="#ohio-state">Ohio State</a><span class="t-city">Columbus, Ohio</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">Big Ten</td>
+<td class="num" data-sort="66000">66,000</td>
+<td class="num">14:1</td>
+<td class="num">35–40% out-of-state</td>
+<td class="num" data-sort="42423">$42,423</td>
+<td class="num" data-sort="3.25">3–3.5 hr</td>
+</tr><tr data-name="penn state" data-tier="core">
+<td class="t-name"><a href="#penn-state">Penn State</a><span class="t-city">University Park, Pennsylvania</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">Big Ten</td>
+<td class="num" data-sort="48000">48,000</td>
+<td class="num">15:1</td>
+<td class="num">54–61%</td>
+<td class="num" data-sort="43490">$43,490</td>
+<td class="num" data-sort="4.5">4.5 hr</td>
+</tr><tr data-name="boston university" data-tier="core">
+<td class="t-name"><a href="#boston-university">Boston University</a><span class="t-city">Boston, Massachusetts</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">Patriot League</td>
+<td class="num" data-sort="37000">37,000</td>
+<td class="num">10:1</td>
+<td class="num">11%</td>
+<td class="num" data-sort="71372">$71,372</td>
+<td class="num" data-sort="5">5 hr</td>
+</tr><tr data-name="northeastern" data-tier="core">
+<td class="t-name"><a href="#northeastern">Northeastern</a><span class="t-city">Boston, Massachusetts</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">CAA</td>
+<td class="num" data-sort="30000">30,000</td>
+<td class="num">16:1</td>
+<td class="num">5.2%</td>
+<td class="num" data-sort="69289">$69,289</td>
+<td class="num" data-sort="5">5 hr</td>
+</tr><tr data-name="uc santa barbara" data-tier="core">
+<td class="t-name"><a href="#ucsb">UC Santa Barbara</a><span class="t-city">Goleta, California</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">Big West → West Coast 2027</td>
+<td class="num" data-sort="26000">26,000</td>
+<td class="num">17:1</td>
+<td class="num">~32% (51% out-of-state)</td>
+<td class="num" data-sort="80000">~$80,000 all-in</td>
+<td class="num" data-sort="18.5">18–19 hr</td>
+</tr><tr data-name="njit" data-tier="core">
+<td class="t-name"><a href="#njit">NJIT</a><span class="t-city">Newark, New Jersey</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">America East</td>
+<td class="num" data-sort="12000">12,000</td>
+<td class="num">16:1</td>
+<td class="num">65%</td>
+<td class="num" data-sort="39912">$39,912</td>
+<td class="num" data-sort="7">7 hr</td>
+</tr><tr data-name="umass lowell" data-tier="core">
+<td class="t-name"><a href="#umass-lowell">UMass Lowell</a><span class="t-city">Lowell, Massachusetts</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">America East</td>
+<td class="num" data-sort="18000">18,000</td>
+<td class="num">17:1</td>
+<td class="num">83%</td>
+<td class="num" data-sort="37460">$37,460</td>
+<td class="num" data-sort="3.75">3.5–4 hr</td>
+</tr><tr data-name="iu indianapolis" data-tier="core">
+<td class="t-name"><a href="#iu-indianapolis">IU Indianapolis</a><span class="t-city">Indianapolis, Indiana</span></td>
+<td><span class="chip chip-core">Core</span></td>
+<td class="t-conf">Horizon League</td>
+<td class="num" data-sort="19000">19,000</td>
+<td class="num">13:1</td>
+<td class="num">—</td>
+<td class="num" data-sort="35227">$35,227</td>
+<td class="num" data-sort="5.25">5–5.5 hr</td>
+</tr><tr data-name="fiu" data-tier="extra">
+<td class="t-name"><a href="#fiu">FIU</a><span class="t-city">Miami, Florida</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">American</td>
+<td class="num" data-sort="54700">54,700</td>
+<td class="num">22:1</td>
+<td class="num">55%</td>
+<td class="num" data-sort="18964">$18,964</td>
+<td class="num" data-sort="23">23 hr</td>
+</tr><tr data-name="georgia state" data-tier="extra">
+<td class="t-name"><a href="#georgia-state">Georgia State</a><span class="t-city">Atlanta, Georgia</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">Sun Belt</td>
+<td class="num" data-sort="51000">51,000</td>
+<td class="num">25:1</td>
+<td class="num">—</td>
+<td class="num" data-sort="31320">$31,320</td>
+<td class="num" data-sort="13.5">13–14 hr</td>
+</tr><tr data-name="kennesaw state" data-tier="extra">
+<td class="t-name"><a href="#kennesaw-state">Kennesaw State</a><span class="t-city">Kennesaw, Georgia</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">Conference USA</td>
+<td class="num" data-sort="47000">47,000</td>
+<td class="num">23:1</td>
+<td class="num">68–69%</td>
+<td class="num" data-sort="22278">$22,278</td>
+<td class="num" data-sort="13.5">13–14 hr</td>
+</tr><tr data-name="nc state" data-tier="extra">
+<td class="t-name"><a href="#nc-state">NC State</a><span class="t-city">Raleigh, North Carolina</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">ACC</td>
+<td class="num" data-sort="38000">38,000</td>
+<td class="num">15:1</td>
+<td class="num">—</td>
+<td class="num" data-sort="33993">$33,993</td>
+<td class="num" data-sort="11">11 hr</td>
+</tr><tr data-name="unc chapel hill" data-tier="extra">
+<td class="t-name"><a href="#unc">UNC Chapel Hill</a><span class="t-city">Chapel Hill, North Carolina</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">ACC</td>
+<td class="num" data-sort="32000">32,000</td>
+<td class="num">14:1</td>
+<td class="num">~8% out-of-state</td>
+<td class="num" data-sort="45228">$45,228</td>
+<td class="num" data-sort="11">11 hr</td>
+</tr><tr data-name="unc charlotte" data-tier="extra">
+<td class="t-name"><a href="#unc-charlotte">UNC Charlotte</a><span class="t-city">Charlotte, North Carolina</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">American</td>
+<td class="num" data-sort="31000">31,000</td>
+<td class="num">21:1</td>
+<td class="num">~80%</td>
+<td class="num" data-sort="22274">$22,274</td>
+<td class="num" data-sort="10">10 hr</td>
+</tr><tr data-name="florida atlantic" data-tier="extra">
+<td class="t-name"><a href="#fau">Florida Atlantic</a><span class="t-city">Boca Raton, Florida</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">American</td>
+<td class="num" data-sort="31000">31,000</td>
+<td class="num">24:1</td>
+<td class="num">~73%</td>
+<td class="num" data-sort="21655">$21,655</td>
+<td class="num" data-sort="22">22 hr</td>
+</tr><tr data-name="clemson" data-tier="extra">
+<td class="t-name"><a href="#clemson">Clemson</a><span class="t-city">Clemson, South Carolina</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">ACC</td>
+<td class="num" data-sort="28000">28,000</td>
+<td class="num">16:1</td>
+<td class="num">38–49%</td>
+<td class="num" data-sort="60000">$60,000+ all-in</td>
+<td class="num" data-sort="12.5">12–13 hr</td>
+</tr><tr data-name="georgia southern" data-tier="extra">
+<td class="t-name"><a href="#georgia-southern">Georgia Southern</a><span class="t-city">Statesboro, Georgia</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">Sun Belt</td>
+<td class="num" data-sort="26500">26,500</td>
+<td class="num">24:1</td>
+<td class="num">88–90%</td>
+<td class="num" data-sort="21784">$21,784</td>
+<td class="num" data-sort="15">15 hr</td>
+</tr><tr data-name="nova southeastern" data-tier="extra">
+<td class="t-name"><a href="#nova-southeastern">Nova Southeastern</a><span class="t-city">Davie, Florida</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">Sunshine State</td>
+<td class="num" data-sort="7311">7,311</td>
+<td class="num">16:1</td>
+<td class="num">76%</td>
+<td class="num" data-sort="40200">$40,200</td>
+<td class="num" data-sort="22">22 hr</td>
+</tr><tr data-name="keiser" data-tier="extra">
+<td class="t-name"><a href="#keiser">Keiser</a><span class="t-city">West Palm Beach, Florida</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">Sun Conference</td>
+<td class="num" data-sort="1500">1,500</td>
+<td class="num">—</td>
+<td class="num">96–97%</td>
+<td class="num" data-sort="37000">~$34,000–39,700</td>
+<td class="num" data-sort="21">21 hr</td>
+</tr><tr data-name="unc wilmington" data-tier="extra">
+<td class="t-name"><a href="#uncw">UNC Wilmington</a><span class="t-city">Wilmington, North Carolina</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">CAA</td>
+<td class="num" data-sort="15254">15,254</td>
+<td class="num">17:1</td>
+<td class="num">62–68%</td>
+<td class="num" data-sort="25420">$25,420 ($42,603 intl)</td>
+<td class="num" data-sort="12">12 hr</td>
+</tr><tr data-name="unc greensboro" data-tier="extra">
+<td class="t-name"><a href="#uncg">UNC Greensboro</a><span class="t-city">Greensboro, North Carolina</span></td>
+<td><span class="chip chip-extra">Extra</span></td>
+<td class="t-conf">SoCon</td>
+<td class="num" data-sort="14416">14,416</td>
+<td class="num">18:1</td>
+<td class="num">89–90%</td>
+<td class="num" data-sort="24014">$24,014</td>
+<td class="num" data-sort="11">11 hr</td>
+</tr><tr data-name="university of toronto" data-tier="canada">
+<td class="t-name"><a href="#toronto">University of Toronto</a><span class="t-city">Toronto, Ontario</span></td>
+<td><span class="chip chip-canada">Canada</span></td>
+<td class="t-conf">OUA East</td>
+<td class="num" data-sort="98000">98,000</td>
+<td class="num">—</td>
+<td class="num">—</td>
+<td class="num" data-sort="999999">Domestic tuition</td>
+<td class="num" data-sort="0">Home</td>
+</tr><tr data-name="york university" data-tier="canada">
+<td class="t-name"><a href="#york">York University</a><span class="t-city">Toronto, Ontario</span></td>
+<td><span class="chip chip-canada">Canada</span></td>
+<td class="t-conf">OUA East</td>
+<td class="num" data-sort="55000">55,000</td>
+<td class="num">—</td>
+<td class="num">—</td>
+<td class="num" data-sort="999999">Domestic tuition</td>
+<td class="num" data-sort="0">Home</td>
+</tr><tr data-name="western university" data-tier="canada">
+<td class="t-name"><a href="#western">Western University</a><span class="t-city">London, Ontario</span></td>
+<td><span class="chip chip-canada">Canada</span></td>
+<td class="t-conf">OUA West</td>
+<td class="num" data-sort="40000">40,000</td>
+<td class="num">—</td>
+<td class="num">—</td>
+<td class="num" data-sort="999999">Domestic tuition</td>
+<td class="num" data-sort="2">~2 hr to Windsor</td>
+</tr></tbody>
+      </table>
+    </div>
+    <div class="tier-break tb-core"><h2>Core 12</h2><p>Primary targets — the schools from the original list that sponsor varsity men's soccer.</p></div>
+<section class="school t-core" id="smu">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · ACC</span></div>
+    <h2>SMU</h2>
+    <p class="sh-city">Dallas, Texas</p>
+    <p class="sh-tag">Defending ACC champions, and the one big-name school where CS isn't gated.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>12,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>11:1</dd></div>
+    <div><dt>Admit rate</dt><dd>~53%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$69,722</dd></div>
+    <div><dt>Drive to border</dt><dd>21–22 hr</dd></div>
+    <div><dt>US News</dt><dd>#88</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li>Founded 1975. Fourth head coach in program history; Hudson is 115-44-23 across 11 seasons.</li><li>Won the <b>first ACC tournament title in program history</b> in 2025 and opened 2026 at 5-0-1, ranked No. 7.</li><li>37 NCAA appearances, College Cups in 2000 and 2005, Elite Eights in 2010, 2019 and 2024.</li><li>The 2023 side produced four All-Americans — most of any Division I program that year.</li><li>Washburne Stadium, capacity 2,577. Dedicated soccer venue, ten home matches.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>11:1 ratio, average class size 22</b>, 70% of classes at 25 or fewer. Best-in-class teaching for a school this size.</li><li>Cox School of Business ranked <b>#25 nationally</b> — but direct-admit, so you must name business as your primary interest on the application.</li><li><b>Computer science is not a restricted major.</b> A real edge over Penn State, Ohio State, UCSB and NJIT, which all gate it behind a second application.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>Not a college town. 234 walkable acres in University Park, an affluent enclave inside Dallas.</li><li><b>Two airports</b>: Love Field 15 minutes, DFW 30–35. Strong routing for a Canadian family.</li><li>Residential Commons system, two years on campus required.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> George W. Bush Presidential Center is on campus. Peruna, a live Shetland pony, is the mascot. Only school ever given the NCAA death penalty (football, 1987).</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Kevin Hudson</dd></div>
+    <div><dt>Contact</dt><dd>khudson@smu.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>None posted</dd></div>
+  </div>
+  <p class="verdict">Blue-chip soccer, elite teaching ratios, unrestricted CS. The cost is the barrier at nearly $70,000.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="ucf">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · Sun Belt</span></div>
+    <h2>UCF</h2>
+    <p class="sh-city">Orlando, Florida</p>
+    <p class="sh-tag">Reigning Sun Belt champions who beat Kentucky and Marshall on the road to get there.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>69,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>28:1</dd></div>
+    <div><dt>Admit rate</dt><dd>40%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$24,076</dd></div>
+    <div><dt>Drive to border</dt><dd>20–21 hr</dd></div>
+    <div><dt>US News</dt><dd>#117</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li>Calabrese is in his 10th season. Won the <b>first Sun Belt tournament title</b> in program history in 2025.</li><li>That run was entirely away: 3-2 in 2OT at Georgia Southern, 1-0 at top-seeded Kentucky, then Marshall — the Herd's first home loss in 721 days.</li><li>In their first-ever Sun Belt match (2023) they won 2-1 at then-No. 9 Clemson. Clemson won the national title that year.</li><li><b>Built on the back line.</b> Preseason All-Sun Belt: GK Matisse Hébert (preseason Goalkeeper of the Year), defender Takahiro Fujita (second straight preseason Defensive POY), defender Jem Hewlett.</li><li>Round of 16 in 2019 and 2020. Twelve NCAA appearances.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>Largest university in Florida</b> — 70,674 students, 59,649 undergraduates.</li><li>The trade-off is scale: <b>28:1 ratio, only 28% of classes under 20 students</b>. The inverse of SMU.</li><li>Out-of-state is $24,076, roughly a third of SMU. Verify international rates separately.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>1,420 acres, 13 miles east of downtown Orlando. Large and spread out, ringed by student apartments.</li><li><b>Orlando International is 20–25 minutes with direct Toronto service</b> — one of the best air links here.</li><li>~12,140 beds on campus, mostly first-years. Huge adjacent rental market.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Deep ties to the space and simulation industries. Rosen College of Hospitality is nationally leading. Knightro the knight.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Scott Calabrese</dd></div>
+    <div><dt>Contact</dt><dd>anyquist@athletics.ucf.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>Recruit Questionnaire in the men's soccer nav</dd></div>
+  </div>
+  <p class="verdict">Cheap, warm, winning, and one flight from Toronto. The class sizes are the honest cost.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="usf">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · American</span></div>
+    <h2>USF</h2>
+    <p class="sh-city">Tampa, Florida</p>
+    <p class="sh-tag">The strongest MLS pipeline on the list, mid-rebuild with 22 newcomers.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>50,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>21:1</dd></div>
+    <div><dt>Admit rate</dt><dd>43%</dd></div>
+    <div><dt>Out-of-state</dt><dd>—</dd></div>
+    <div><dt>Drive to border</dt><dd>22 hr</dd></div>
+    <div><dt>US News</dt><dd>#88</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>USF's oldest varsity program</b> — played the school's first-ever intercollegiate contest on 25 September 1965.</li><li><b>31 MLS draft picks</b>, including two-time Golden Boot winner Jeff Cunningham, World Cup international Roy Wegerle and MLS Cup winner Dom Dwyer.</li><li>14 conference tournament titles, 22 NCAA appearances, Elite Eights in 1997, 2008 and 2011.</li><li><b>2026 is a full reset.</b> Kiefer returned in December 2025 for a second tenure and brought in 22 newcomers — eight from Grand Canyon — with only six players returning. Opened 1-3.</li><li>Corbett Stadium, capacity 4,000 — largest dedicated venue among the Core 12.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li>AAU member, ranked <b>#88 nationally</b> — level with SMU and 29 places above UCF.</li><li>21:1 ratio. Better than UCF, well short of SMU.</li><li>Muma College of Business and the Pippenger School of Accountancy are <b>separately AACSB-accredited — one of only 194 institutions worldwide</b>.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>1,562 acres in north Tampa, ten miles from downtown. Suburban and spread out.</li><li>Tampa International 20–25 minutes, consistently rated among the best US airports.</li><li>Busch Gardens is adjacent. Gulf beaches 35–45 minutes.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> The Rowdies Cup — the winner keeps the actual 1975 Soccer Bowl trophy until the next meeting. Rocky D. Bull.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>George Kiefer</dd></div>
+    <div><dt>Contact</dt><dd>gkiefer@usf.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>college.jumpforward.com/questionnaire.aspx?iid=1625&amp;sportid=21</dd></div>
+  </div>
+  <p class="verdict">A brand-new staff rebuilding from scratch is the most open door on the Core 12 — and the most uncertain.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="south-carolina">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · Sun Belt</span></div>
+    <h2>South Carolina</h2>
+    <p class="sh-city">Columbia, South Carolina</p>
+    <p class="sh-tag">Ranked No. 6 nationally, and the best crowds in American college soccer.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>36,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>19:1</dd></div>
+    <div><dt>Admit rate</dt><dd>~64%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$37,376</dd></div>
+    <div><dt>Drive to border</dt><dd>14 hr</dd></div>
+    <div><dt>US News</dt><dd>#127</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>5-0 and ranked No. 6 nationally</b> as of mid-September 2026 — one of only seven unbeaten sides in Division I.</li><li><b>Led the nation in attendance four straight seasons.</b> The Clemson match on 28 August drew 7,671, the largest crowd in program history.</li><li>First program to lead attendance four years running since UCSB's 2007–2015 streak.</li><li>1993 national runner-up. College Cups in 1988 and 1993, 22 NCAA appearances.</li><li>Annan directed the Atlanta United academy before this — a developer, not just a recruiter. He succeeded Mark Berson, who held the job for 43 years.</li><li>Stone Stadium, capacity 5,700, known as <b>The Graveyard</b> for the cemetery next door.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li>Founded 1801, one of the oldest public universities in the US. 19:1 ratio.</li><li><b>Darla Moore's undergraduate International Business program has been ranked No. 1 in the US for 27 consecutive years.</b></li><li>~64% acceptance with an average SAT of 1280 — <b>the most accessible admission of any top-25 program here</b>.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>444 acres in downtown Columbia. <b>The closest thing to a real college town among the Core 12</b>, woven into a city of 140,000.</li><li><b>Weakest air link of the Core 12.</b> Columbia Metropolitan is small; most routing goes via Charlotte or Atlanta. Charlotte Douglas is 90 minutes by car.</li><li>~900 miles to the border — the first school where driving is conceivable.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> The Horseshoe, the 1801 campus core. SEC athletics culture — though men's soccer plays in the Sun Belt. Cocky the mascot.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Tony Annan</dd></div>
+    <div><dt>Contact</dt><dd>Not published</dd></div>
+    <div><dt>Questionnaire</dt><dd>gamecocksonline.com/news/2018/06/21/ot-recruiting-questionnaires-html</dd></div>
+  </div>
+  <p class="verdict">A top-six program, the best atmosphere in the country, the top-ranked international business degree, and forgiving admissions. The airport is the only real weakness.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="ohio-state">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · Big Ten</span></div>
+    <h2>Ohio State</h2>
+    <p class="sh-city">Columbus, Ohio</p>
+    <p class="sh-tag">Best-balanced school on the list — top-five soccer, top-15 public, three hours from the border.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>66,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>14:1</dd></div>
+    <div><dt>Admit rate</dt><dd>35–40% out-of-state</dd></div>
+    <div><dt>Out-of-state</dt><dd>$42,423</dd></div>
+    <div><dt>Drive to border</dt><dd>3–3.5 hr</dd></div>
+    <div><dt>US News</dt><dd>#41</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Ranked No. 4 and 3-0</b>, outscoring opponents 9-0 and outshooting them 70-14.</li><li><b>No. 1 overall seed in the 2024 NCAA tournament</b> — highest in program history — reaching the College Cup semifinal.</li><li>Maisonneuve inherited a 1-15-2 team in 2018 and built this. He played for the Columbus Crew 1996–2004.</li><li>Four Big Ten regular-season titles and four tournament titles. 2007 national runner-up.</li><li>The 2025 squad posted a <b>team GPA of 3.31</b> and a United Soccer Coaches Academic Award.</li><li>Jesse Owens Memorial Stadium, natural grass, ~4,518 for soccer.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>#41 nationally and #15 among publics</b> — highest-ranked school on the Core 12.</li><li><b>14:1 ratio</b>, better than any other large public here. 93% retention.</li><li><b>Computer science is a restricted major</b> — CSE ranks #38 nationally but requires a separate competitive application.</li><li>Out-of-state admission runs 35–40%, well below the headline rate. International applicants sit in that harder pool.</li></ul>
+      <h3>Place</h3><ul class="bl"><li><b>A true college town inside a real city.</b> Columbus is the 14th-largest US city, but the university owns its district. High Street runs the length of campus.</li><li><b>Roughly 190 miles to Detroit–Windsor, about 3 to 3.5 hours.</b> By far the best border proximity on the Core 12 — parents can drive to matches.</li><li>Two-year live-on requirement backed by one of the largest residence systems in the country.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Ohio Stadium holds over 100,000. Fisher College of Business. The Wexner Center for the Arts. Brutus Buckeye.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Brian Maisonneuve</dd></div>
+    <div><dt>Contact</dt><dd>maisonneuve.2@osu.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>ohiostatebuckeyes.com/feature/recruiting</dd></div>
+  </div>
+  <p class="verdict">If one school has to balance soccer, academics and travel, this is it.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="penn-state">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · Big Ten</span></div>
+    <h2>Penn State</h2>
+    <p class="sh-city">University Park, Pennsylvania</p>
+    <p class="sh-tag">A Canadian national-championship coach in year one of a rebuild.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>48,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>15:1</dd></div>
+    <div><dt>Admit rate</dt><dd>54–61%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$43,490</dd></div>
+    <div><dt>Drive to border</dt><dd>4.5 hr</dd></div>
+    <div><dt>US News</dt><dd>#59</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Rob Dow was born in Cole Harbour, Nova Scotia.</b> He will read a Canadian player's background with more context than most.</li><li>At Vermont he went 129-41-21, made <b>five consecutive NCAA tournaments</b> and <b>won the 2024 national championship</b> — the only America East coach ever to do it.</li><li>Penn State puts him at the <b>ninth-best win percentage among active Division I men's coaches</b>.</li><li><b>He inherited a hard job.</b> Penn State finished last in the Big Ten in each of the past two seasons — 5-8-4 overall, 1-6-3 in conference last year.</li><li>The program was strong recently: Big Ten tournament champions in 2019 and 2020, ranked as high as No. 11.</li><li>Jeffrey Field. Crowds are modest — a few hundred for conference matches.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>#59 nationally, #26 among publics.</b> 7,958 acres, the largest campus here.</li><li><b>89% of faculty are full-time against a 47% national average.</b> But intro courses run in 300-seat lecture halls.</li><li><b>Smeal Business, Engineering and Schreyer Honors are direct-admit and far more selective</b> than the university's headline rate. Computer science sits inside Engineering, so it carries that bar.</li></ul>
+      <h3>Place</h3><ul class="bl"><li><b>The most genuine college town on either list, and the most isolated.</b> State College is 42,000 people existing because of the university.</li><li><b>~250 miles to Buffalo–Niagara, about 4.5 hours.</b> Second-best border access on the Core 12. Toronto is about 6 hours.</li><li>University Park Airport is 10 minutes but small, with no direct international service. Pittsburgh is 2.5 hours.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> One of the largest alumni networks in the world. THON, the largest student philanthropy anywhere. Beaver Stadium holds 106,000. The Nittany Lion.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Rob Dow</dd></div>
+    <div><dt>Contact</dt><dd>msoc@athletics.psu.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>gopsusports.com/prospective-athlete-forms</dd></div>
+  </div>
+  <p class="verdict">Highest-upside situation on the Core 12. A championship coach who needs players will give minutes — if you can absorb a three-year rebuild.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="boston-university">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · Patriot League</span></div>
+    <h2>Boston University</h2>
+    <p class="sh-city">Boston, Massachusetts</p>
+    <p class="sh-tag">Best teaching ratio on the list, and the most reachable coaching staff.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>37,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>10:1</dd></div>
+    <div><dt>Admit rate</dt><dd>11%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$71,372</dd></div>
+    <div><dt>Drive to border</dt><dd>5 hr</dd></div>
+    <div><dt>US News</dt><dd>#42</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>The only Patriot League team to reach the semifinals in each of the last four seasons.</b></li><li>2023 was the best season ever: swept the regular season and tournament titles, 12-4-4, first All-America honour in 18 years, an MLS SuperDraft pick.</li><li>Regular-season champions in 2023 and 2024. The frustration is two straight 1-0 semifinal losses.</li><li>Led the Patriot League in points, goals and assists last season on a 10-8 record.</li><li><b>All four coaches publish direct emails</b> — among the easiest staffs here to approach.</li><li>Nickerson Field, capacity 9,871, opened 1915 on the site of Braves Field.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>10:1 student-faculty ratio — the best on the entire Core 12</b>, with 60% of classes under 20 students.</li><li>#42 nationally. Questrom School of Business; the College of Communication is among the country's strongest.</li><li><b>Admission is hard: 11.1% for the Class of 2028.</b> Tuition $71,372, the most expensive here.</li></ul>
+      <h3>Place</h3><ul class="bl"><li><b>No traditional quad.</b> The campus runs a mile and a half along Commonwealth Avenue, bisected by the Green Line.</li><li><b>Logan International 20–30 minutes with frequent direct Toronto flights.</b> Best air link alongside Orlando.</li><li>~300 miles to Derby Line, Vermont — about 5 hours. Montreal is roughly the same.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Elite men's ice hockey and the Beanpot. Martin Luther King Jr. earned his doctorate here. Rhett the Boston Terrier.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Kevin Nylen</dd></div>
+    <div><dt>Contact</dt><dd>knylen@bu.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>questionnaires.armssoftware.com/3585708e2ece</dd></div>
+  </div>
+  <p class="verdict">Small classes, real soccer, an easy staff to contact. The price and the admission rate are the gates.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="northeastern">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · CAA</span></div>
+    <h2>Northeastern</h2>
+    <p class="sh-city">Boston, Massachusetts</p>
+    <p class="sh-tag">Strongest academics on either list, weakest soccer on the Core 12. That trade is the whole story.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>30,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>16:1</dd></div>
+    <div><dt>Admit rate</dt><dd>5.2%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$69,289</dd></div>
+    <div><dt>Drive to border</dt><dd>5 hr</dd></div>
+    <div><dt>US News</dt><dd>#46</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>The weakest program on the Core 12 by record</b> — all-time 285-387-87, two NCAA appearances ever (2002, 2012).</li><li>Bonomo's three seasons have been roughly flat: 4-5-7, 4-7-4, and about 3-2-2 so far.</li><li><b>But his credential is recruiting.</b> At Cincinnati he brought in six top-100 recruits, five high-school All-Americans and two youth internationals. A coach who built his name recruiting answers enquiries.</li><li>He won the 2023 Horizon League title at Green Bay — that program's first NCAA berth in over a decade.</li><li><b>Parsons Field is in Brookline, two miles off campus</b> — a daily commute BU players don't have.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>5.2% acceptance rate</b> for the Class of 2028, from roughly 105,000 applications. <b>The most applied-to private university in the United States.</b></li><li>#46 nationally, <b>#5 for Most Innovative</b>, #9 for undergraduate international business. D'Amore-McKim ranked #20; its own admit rate is 6%.</li><li><b>Co-op is the whole proposition</b>: 95.5% of 2025 business graduates completed an internship before graduating; 91.7% employed within three months.</li><li><b>Campuses in Toronto and Vancouver</b> — unique on this list for a Canadian family.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>73 acres in the Fenway district — the most compact urban campus here.</li><li>Logan International 20 minutes, frequent direct Toronto service.</li><li>~300 miles to Derby Line, Vermont, about 5 hours.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Khoury College is one of the oldest dedicated computer science colleges in the country. One of the sharpest reputational climbs in American higher education. Paws the husky.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Jeremy Bonomo</dd></div>
+    <div><dt>Contact</dt><dd>Not published</dd></div>
+    <div><dt>Questionnaire</dt><dd>nuhuskies.com/sports/2012/8/16/GEN_0816125026.aspx</dd></div>
+  </div>
+  <p class="verdict">If soccer is the route into an institution otherwise out of reach, this is the clearest example of that trade anywhere here.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="ucsb">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · Big West → West Coast 2027</span></div>
+    <h2>UC Santa Barbara</h2>
+    <p class="sh-city">Goleta, California</p>
+    <p class="sh-tag">The only national champion here — and the only school that fails the business requirement outright.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>26,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>17:1</dd></div>
+    <div><dt>Admit rate</dt><dd>~32% (51% out-of-state)</dd></div>
+    <div><dt>Out-of-state</dt><dd>~$80,000 all-in</dd></div>
+    <div><dt>Drive to border</dt><dd>18–19 hr</dd></div>
+    <div><dt>US News</dt><dd>#40</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>2006 NCAA national champions</b>, 2004 runners-up. The only national champion on either list.</li><li><b>Over 60 players have gone professional or represented senior national teams</b> — the best conversion rate in this research.</li><li><b>NCAA attendance champions nine straight years, 2007–2015</b> — the longest streak in the record books. They hold the top six all-time on-campus attendance records.</li><li>Peak crowd: <b>15,896 against UCLA in 2010</b>, a night the fire marshal turned fans away.</li><li>Vom Steeg is in his 25th season. Harder Stadium holds <b>17,000 — the largest venue on either list</b>.</li><li><b>Planning note: UCSB leaves the Big West for the West Coast Conference after 2026–27.</b></li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>#40 nationally, #14 among publics.</b> 56.5% of classes under 20. <b>85% four-year graduation — the highest here.</b></li><li><b>No undergraduate business administration major.</b> Economics &amp; Accounting and Technology Management only. The one hard disqualifier on the Core 12.</li><li>Physics is world class — the Kavli Institute, where six Nobel laureates have worked. CS ranks #35 but is a restricted major.</li><li><b>Quarter system, not semesters.</b> And the UC system is <b>test-blind</b> — scores are not considered at all.</li></ul>
+      <h3>Place</h3><ul class="bl"><li><b>Literally on the beach</b> — a bluff above the Pacific with ocean on two sides and a lagoon through the middle.</li><li>Isla Vista, the adjacent student town, is one of the densest residential communities in the US — convenient, and with a party reputation worth discussing openly.</li><li>Santa Barbara airport is small; LAX is two hours. <b>~1,200 miles to the border, 18–19 hours.</b></li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Kavli Institute for Theoretical Physics. One of the most beautiful campuses in the country. The College of Creative Studies. Michael Douglas is an alumnus.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Tim Vom Steeg</dd></div>
+    <div><dt>Contact</dt><dd>menssoccer@athletics.ucsb.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>ucsbmenssoccer.exposure.co</dd></div>
+  </div>
+  <p class="verdict">The best soccer pedigree available — unless a business degree is a requirement, in which case it's out.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="njit">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · America East</span></div>
+    <h2>NJIT</h2>
+    <p class="sh-city">Newark, New Jersey</p>
+    <p class="sh-tag">Best financial outcome on the Core 12, and the best airport access.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>12,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>16:1</dd></div>
+    <div><dt>Admit rate</dt><dd>65%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$39,912</dd></div>
+    <div><dt>Drive to border</dt><dd>7 hr</dd></div>
+    <div><dt>US News</dt><dd>#80</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li>America East, with a <b>17-match slate and ten home games</b> in 2026 — unusually home-heavy.</li><li>Opened against Siena, the 2025 MAAC champions and an NCAA tournament side.</li><li>The America East is competitive: Vermont won the 2024 national championship out of it.</li><li>Small-crowd college soccer — adult tickets are $10.</li><li>Three of four coaches publish direct emails.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>Median salary six years after graduation is $69,591 — the highest on the Core 12.</b> IU Indianapolis is $47,173.</li><li>#80 nationally, <b>#34 for social mobility</b>. Money rated it the top public university in New Jersey.</li><li><b>65% acceptance but only a 51% four-year graduation rate</b> — easy to enter, hard to finish.</li><li><b>Narrow by design.</b> An engineering and computing institute. CS is a restricted major. Wrong school if interests might shift to humanities.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>48 dense urban acres in Newark's University Heights — the smallest campus on the Core 12, crossable in ten minutes.</li><li><b>Newark Liberty International is 10–15 minutes with frequent direct Toronto flights — the best airport access on the Core 12.</b></li><li><b>Manhattan is 20–30 minutes by PATH train.</b> A world city on a commuter ticket.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Engineering, computing and architecture. Strong social mobility outcomes. A rigorous, no-frills, career-focused environment. The Highlander.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Fernando Barboto</dd></div>
+    <div><dt>Contact</dt><dd>barboto@njit.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>njithighlanders.com/sports/2008/8/28/compliance_rules_prospective_SA</dd></div>
+  </div>
+  <p class="verdict">Best return on investment here, if the subject fit is right and you can finish the degree.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="umass-lowell">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · America East</span></div>
+    <h2>UMass Lowell</h2>
+    <p class="sh-city">Lowell, Massachusetts</p>
+    <p class="sh-tag">Easiest door on the Core 12, and closer to the border than either Boston school.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>18,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>17:1</dd></div>
+    <div><dt>Admit rate</dt><dd>83%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$37,460</dd></div>
+    <div><dt>Drive to border</dt><dd>3.5–4 hr</dd></div>
+    <div><dt>US News</dt><dd>#151</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li>The most modest soccer proposition on the Core 12 — little NCAA history, lower half of a competitive America East.</li><li><b>Where it competes is access</b>: the easiest Core 12 school for both a roster spot and admission.</li><li><b>Every coach publishes a direct email and phone number</b> — one of only six programs here that does.</li><li>Cushing Field Complex.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>83% acceptance — by far the most accessible on the Core 12.</b> Test-optional; only 27% of admits submitted scores.</li><li><b>Average net price $18,281</b>, so the $37,460 sticker substantially overstates what most pay.</li><li>44% four-year graduation, second-lowest here. Median salary $61,467 — well above IU Indy, below NJIT.</li><li>Plastics engineering is close to unique in American higher education. Manning School of Business covers the business requirement.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>A former mill city on the Merrimack, 30 minutes north of Boston. Campus splits across three sites connected by shuttle.</li><li><b>~200–230 miles to Derby Line, about 3.5 to 4 hours</b> — better placed for a drive north than BU or Northeastern, and third-best on the Core 12.</li><li>Logan is 45 minutes; Manchester, New Hampshire is 35. Housing is markedly cheaper than Boston.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Engineering, particularly plastics and materials. Division I ice hockey is the flagship sport. Rowdy the River Hawk.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Kyle Zenoni</dd></div>
+    <div><dt>Contact</dt><dd>Kyle_Zenoni@uml.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>goriverhawks.com/sports/2014/7/25/general_0725144713</dd></div>
+  </div>
+  <p class="verdict">The value and access play. Modest soccer, cheap housing, and a realistic drive home.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-core" id="iu-indianapolis">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-core">Core</span><span class="sh-meta">NCAA D1 · Horizon League</span></div>
+    <h2>IU Indianapolis</h2>
+    <p class="sh-city">Indianapolis, Indiana</p>
+    <p class="sh-tag">A defensive side that scores from penalties — ideal for a defender, a question mark for a forward.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>19,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>13:1</dd></div>
+    <div><dt>Admit rate</dt><dd>—</dd></div>
+    <div><dt>Out-of-state</dt><dd>$35,227</dd></div>
+    <div><dt>Drive to border</dt><dd>5–5.5 hr</dd></div>
+    <div><dt>US News</dt><dd>#192</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li>Keegan Boom was elevated to head coach in <b>June 2026</b>. Entirely new staff, actively recruiting.</li><li>Opened 2026 with <b>three consecutive 1-0 wins</b> over Lindenwood, Bowling Green and an unbeaten Southern Indiana.</li><li>Freshman goalkeeper Peter Field ran a 0.50 goals-against average with three shutouts. Three defenders played every minute of all three matches.</li><li><b>But three of four goals came from penalties</b>, with one from open play. This is a defensively organised side that hasn't solved attacking.</li><li><b>Great fit for a defender or keeper. Forwards should ask directly how they intend to create chances.</b></li><li>All three coaches publish direct emails. Michael A. Carroll Stadium.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>13:1 ratio — second-best on the Core 12</b>, behind only BU. Notable for a school ranked #192.</li><li><b>Cheapest on the Core 12</b>: in-state $10,762, and an average net price of $11,577 — the lowest here.</li><li><b>39% four-year graduation and $47,173 median salary — both the lowest on the Core 12.</b> Largely a commuter population.</li><li>Kelley School of Business carries the Indiana University brand. IU School of Medicine is on campus.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>539 acres immediately west of downtown Indianapolis, walking distance to the city centre.</li><li>Indianapolis International is 20 minutes. <b>~350 miles to Detroit–Windsor, 5 to 5.5 hours</b> — fourth-best here.</li><li>Historically commuter. Ask directly where the team actually lives.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Health sciences and the IU School of Medicine. Indianapolis is a serious sports city — the Indy 500, NCAA headquarters. Jawz the Jaguar.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Keegan Boom</dd></div>
+    <div><dt>Contact</dt><dd>kboom@iu.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>Recruiting guide PDF on iuindyjags.com</dd></div>
+  </div>
+  <p class="verdict">Cheapest option with the second-best teaching ratio. The graduation and earnings numbers are the honest counterweight.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section><div class="tier-break tb-extra"><h2>Extras</h2><p>Florida-to-Carolinas schools added to widen the net, ordered by enrolment.</p></div>
+<section class="school t-extra" id="fiu">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · American</span></div>
+    <h2>FIU</h2>
+    <p class="sh-city">Miami, Florida</p>
+    <p class="sh-tag">Cheapest out-of-state tuition in the entire research, by a wide margin.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>54,700</dd></div>
+    <div><dt>Student–faculty</dt><dd>22:1</dd></div>
+    <div><dt>Admit rate</dt><dd>55%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$18,964</dd></div>
+    <div><dt>Drive to border</dt><dd>23 hr</dd></div>
+    <div><dt>US News</dt><dd>#97</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Two NCAA Division II national championships (1982, 1984)</b> and D2 runners-up twice more. Moved to D1 in 1987.</li><li><b>Division I national runners-up in 1996.</b> Eight D1 NCAA appearances.</li><li>Coming off a <b>second consecutive American Conference Championship appearance</b>, third in four seasons.</li><li>Three preseason All-Conference players return: forwards Pasquale Capriati and Johan Helan, defender Alfonso Gilleard-Soriano.</li><li><b>Note the conference:</b> FIU plays men's soccer in the American, not Conference USA, despite being a C-USA member in other sports.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>Out-of-state tuition $18,964 — the cheapest of any school in this research.</b> NC State at $33,993 is next.</li><li><b>Ranked #1 in the United States for social mobility</b>, #97 nationally. 74% six-year graduation.</li><li>22–24:1 ratio; intro classes are lecture-sized. CS ranks #106, engineering #97 — solid rather than elite.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>344 acres in University Park, ten miles west of downtown Miami. Heavily commuter — ~18,000 attend part-time.</li><li><b>Miami International 15–20 minutes with frequent direct Toronto service.</b></li><li><b>~1,500 miles, about 23 hours — the longest drive of anything on either list.</b></li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Largest Hispanic-serving institution here. Deep Latin American and Caribbean ties. Roary the Panther.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Kyle Russell</dd></div>
+    <div><dt>Contact</dt><dd>krussell@fiu.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>college.jumpforward.com/questionnaire.aspx?iid=376&amp;sportid=21</dd></div>
+  </div>
+  <p class="verdict">If cost is a live constraint, this reshapes the list. Verify international rates separately.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="georgia-state">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · Sun Belt</span></div>
+    <h2>Georgia State</h2>
+    <p class="sh-city">Atlanta, Georgia</p>
+    <p class="sh-tag">Seventeen years of coaching stability and the best airport on either list.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>51,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>25:1</dd></div>
+    <div><dt>Admit rate</dt><dd>—</dd></div>
+    <div><dt>Out-of-state</dt><dd>$31,320</dd></div>
+    <div><dt>Drive to border</dt><dd>13–14 hr</dd></div>
+    <div><dt>US News</dt><dd>#198</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Surrency is in his 17th season</b> — since 2010. The coach who signs you will still be there when you graduate.</li><li>Three NCAA tournament appearances and a Sun Belt Championship.</li><li><b>All three coaches publish direct emails.</b> Office line 404-413-4002.</li><li><b>The 2026 schedule is punishing</b>: West Virginia, Georgia Southern, South Carolina, Marshall and UCF inside six weeks, plus a preseason trip to Clemson.</li><li>Home matches are at Panthersville in Decatur, about 15 minutes from the downtown campus.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>#198 nationally but #5 in the United States for Best Undergraduate Teaching.</b> Those measure different things.</li><li><b>Not test-optional</b> — SAT or ACT required for Fall 2026, minimum 480 EBRW / 440 maths, minimum GPA 2.75.</li><li><b>Weakest outcomes here: 33% four-year graduation and $37,844 median salary.</b></li><li>Robinson is the largest business school in the South — 8,000 students, 80,000 alumni.</li></ul>
+      <h3>Place</h3><ul class="bl"><li><b>Not a campus so much as downtown Atlanta.</b> Converted commercial buildings across city blocks, no quad. Primarily a commuter school.</li><li><b>Hartsfield-Jackson — the busiest airport in the world — is 20 minutes by MARTA, with multiple direct Toronto flights daily. The best air connection on either list.</b></li><li>~900 miles to Detroit–Windsor, 13–14 hours.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Nationally studied for raising graduation rates and closing achievement gaps. Pounce the Panther.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Brett Surrency</dd></div>
+    <div><dt>Contact</dt><dd>bsurrency@gsu.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>None posted — email direct</dd></div>
+  </div>
+  <p class="verdict">Buy the coaching stability and the airport. Confirm what campus life actually looks like.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="kennesaw-state">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · Conference USA</span><span class="flag">Partial — needs a phone call</span></div>
+    <h2>Kennesaw State</h2>
+    <p class="sh-city">Kennesaw, Georgia</p>
+    <p class="sh-tag">Program confirmed to exist, but no public information about it. Phone them.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>47,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>23:1</dd></div>
+    <div><dt>Admit rate</dt><dd>68–69%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$22,278</dd></div>
+    <div><dt>Drive to border</dt><dd>13–14 hr</dd></div>
+    <div><dt>US News</dt><dd>#373</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>The program exists</b> — ESPN carries a full 2026 men's soccer schedule and KSU fields 18 Division I teams.</li><li><b>Everything else is unavailable.</b> No head coach name, no record, no conference detail, no staff contact could be retrieved. Searches are swamped by football and basketball.</li><li><b>Go to ksuowls.com directly or telephone the athletics department.</b> The one school here where desk research doesn't work.</li><li>Context: athletics is ascendant. Football won the 2025 C-USA title and basketball the 2026 C-USA tournament.</li><li>Home matches are likely at Fifth Third Stadium, capacity 10,200.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>24% four-year graduation rate — the worst figure anywhere in this research.</b> Raise it directly with a coach; athletes often graduate at better rates.</li><li><b>#373 nationally</b>, the lowest-ranked school on either list.</li><li>Out-of-state $22,278 — second cheapest here after FIU. Around 68–69% acceptance.</li><li>Coles College of Business takes ~20% of the entire student body; ranked #104 nationally.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>570 acres across two sites in Cobb County, 25–30 miles northwest of Atlanta. Green, with a lake and nature preserve.</li><li><b>Atlanta's airport is 45–60 minutes away</b> — on the far side of the metro, unlike Georgia State's 20.</li><li>Houses 5,000+ students, but that's a small share of 43,000 undergraduates.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Rapid growth from a junior college. Coles College of Business. Scrappy the Owl.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Not found — call the athletics department</dd></div>
+    <div><dt>Contact</dt><dd>Not found</dd></div>
+    <div><dt>Questionnaire</dt><dd>Not found</dd></div>
+  </div>
+  <p class="verdict">Cheap and confirmed, but unknowable from a desk. Low priority until you've spoken to someone there.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="nc-state">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · ACC</span></div>
+    <h2>NC State</h2>
+    <p class="sh-city">Raleigh, North Carolina</p>
+    <p class="sh-tag">2025 national runners-up, picked first in the ACC, and cheaper than most of the Core 12.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>38,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>15:1</dd></div>
+    <div><dt>Admit rate</dt><dd>—</dd></div>
+    <div><dt>Out-of-state</dt><dd>$33,993</dd></div>
+    <div><dt>Drive to border</dt><dd>11 hr</dd></div>
+    <div><dt>US News</dt><dd>#64</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Reached the 2025 NCAA national championship match</b> — the first title-game appearance in program history.</li><li><b>Picked first in the 2026 ACC preseason coaches poll.</b> Opened ranked No. 2, since slipped to around No. 20.</li><li><b>Hubbard's trajectory is extraordinary</b>: Sweet Sixteen and a No. 14 finish in year one, the national final in year two.</li><li>Heavy turnover — 15 returners, 18 newcomers including 10 transfers.</li><li><b>Both the 2026 ACC finals and the College Cup are at Cary, twenty minutes from campus.</b> A home-region championship weekend nobody else gets.</li><li>Dail Soccer Field, capacity 3,000; the 2025 UNC match drew over 5,000.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>Out-of-state tuition $33,993</b> — lower than every private school here and most of the Core 12, at a #64-ranked university.</li><li>15:1 ratio, <b>68% four-year graduation</b> — far above UMass Lowell or IU Indy.</li><li>Poole College ranked <b>#9 nationally among publics for business analytics</b>, but it is one of the most competitive admissions units at NC State.</li><li>Wilson College of Textiles is essentially unique in American higher education.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>2,137 acres southwest of downtown Raleigh, <b>adjacent to Research Triangle Park</b> — SAS, Red Hat, IBM, Cisco, Lenovo, GSK.</li><li><b>Raleigh-Durham International 20 minutes with direct Air Canada service to Toronto.</b></li><li>~700 miles to Buffalo–Niagara, about 11 hours.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Engineering, textiles and veterinary medicine. The 1983 basketball championship. Mr. and Mrs. Wuf.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Marc Hubbard</dd></div>
+    <div><dt>Contact</dt><dd>mens_soccer@ncsu.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>gopack.com/sports/2015/4/27/GEN_20140101185</dd></div>
+  </div>
+  <p class="verdict">Arguably the best soccer-per-dollar on the whole list, with Boston-level internship density next door.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="unc">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · ACC</span></div>
+    <h2>UNC Chapel Hill</h2>
+    <p class="sh-city">Chapel Hill, North Carolina</p>
+    <p class="sh-tag">The best combination of soccer and academics anywhere here — and the hardest door to open.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>32,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>14:1</dd></div>
+    <div><dt>Admit rate</dt><dd>~8% out-of-state</dd></div>
+    <div><dt>Out-of-state</dt><dd>$45,228</dd></div>
+    <div><dt>Drive to border</dt><dd>11 hr</dd></div>
+    <div><dt>US News</dt><dd>#22</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Two national championships (2001, 2011)</b>, a 2008 runner-up finish, nine College Cups, 32 NCAA appearances.</li><li><b>In 79 seasons the program has had only two losing years.</b></li><li>Somoano won the 2011 title <b>in his first year as a head coach</b> — only the second rookie head coach in NCAA history — taking the ACC regular season, ACC tournament and national title in one year.</li><li>He has coached <b>two National Players of the Year, 19 All-Americans and 36 MLS SuperDraft or homegrown players.</b></li><li>Signed a three-year extension in April 2026 — no succession risk.</li><li><b>Every coach publishes a direct email</b>, unusual at this level.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>#22 nationally, #4 among publics.</b> 14:1 ratio, 97% retention, 92% six-year graduation — the best academic figures in this research.</li><li><b>North Carolina law caps non-resident enrolment at 18%, and the out-of-state acceptance rate runs around 8% — harder than Cornell.</b> 97% of enrolled first-years had a weighted GPA of 4.0+.</li><li><b>Ask admissions how international students count against the 18% cap.</b> It changes the odds materially.</li><li><b>Recruited-athlete admission is a separate process.</b> That's the only realistic route, which makes the soccer conversation matter more here than anywhere.</li><li>Kenan-Flagler ranked <b>#8 nationally for undergraduate business</b> — highest general business ranking on either list.</li></ul>
+      <h3>Place</h3><ul class="bl"><li><b>A genuine college town.</b> Chapel Hill is 60,000 people built around the university; Franklin Street is the spine.</li><li>Raleigh-Durham International 25 minutes, direct Air Canada to Toronto.</li><li>~700 miles to the border, about 11 hours.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> First public university in the United States. Basketball above all. The Anson Dorrance women's dynasty — 21 national titles. Rameses, a live ram.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Carlos Somoano</dd></div>
+    <div><dt>Contact</dt><dd>csomoano@uncaa.unc.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>None posted</dd></div>
+  </div>
+  <p class="verdict">Worth pursuing precisely because athletics is the one route in. Have the admissions conversation with the staff before investing.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="unc-charlotte">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · American</span></div>
+    <h2>UNC Charlotte</h2>
+    <p class="sh-city">Charlotte, North Carolina</p>
+    <p class="sh-tag">Possibly the strongest value combination in the entire research.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>31,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>21:1</dd></div>
+    <div><dt>Admit rate</dt><dd>~80%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$22,274</dd></div>
+    <div><dt>Drive to border</dt><dd>10 hr</dd></div>
+    <div><dt>US News</dt><dd>#143</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Reigning American Conference regular-season champions, picked first for 2026.</b></li><li><b>Back-to-back conference tournament titles in 2023 and 2024</b>, beating FIU in overtime in the 2024 final.</li><li><b>2011 national runners-up</b> — the first team in any sport in school history to reach an NCAA final. 17 NCAA appearances.</li><li>Swept the conference's individual awards last season — Goalkeeper, Midfielder and Freshman of the Year. <b>Fisher and Manufor both return</b>, with leading scorer Elias Arsvoll.</li><li><b>Four of six graduating seniors signed professional contracts</b> after 2025; two were MLS draft picks.</li><li>Langan has been on staff since 2009. Six of the program's ten conference titles are his.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>~80% acceptance</b> at $22,274 out-of-state — third cheapest here. Average net price $15,018.</li><li>#143 nationally, #38 Most Innovative, Carnegie R1.</li><li><b>The first School of Data Science in the Carolinas, and the only BS in Sports Analytics in the Southeast.</b> That combination exists nowhere else on this list.</li><li>Belk is the largest business school in North Carolina, top 25% nationally. <b>Every student is guaranteed access to an internship.</b></li></ul>
+      <h3>Place</h3><ul class="bl"><li>1,000 acres in University City, nine miles from uptown. <b>The LYNX Blue Line runs directly from campus into the city centre.</b></li><li><b>Charlotte Douglas 25–30 minutes with direct Toronto service.</b></li><li><b>~650 miles to Buffalo–Niagara, about 10 hours — the shortest in the Carolinas or Georgia.</b></li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Charlotte is the second-largest banking centre in the US. Niche named this the most beautiful public campus in the country. Norm the Niner.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Kevin Langan</dd></div>
+    <div><dt>Contact</dt><dd>Site blocks access — visit charlotte49ers.com</dd></div>
+    <div><dt>Questionnaire</dt><dd>Not retrieved</dd></div>
+  </div>
+  <p class="verdict">A winning program, forgiving admission, low cost, ten hours from home, direct flights. The only gap is the blocked staff directory.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="fau">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · American</span></div>
+    <h2>Florida Atlantic</h2>
+    <p class="sh-city">Boca Raton, Florida</p>
+    <p class="sh-tag">Lowest net price in the research, attached to a program that just broke through.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>31,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>24:1</dd></div>
+    <div><dt>Admit rate</dt><dd>~73%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$21,655</dd></div>
+    <div><dt>Drive to border</dt><dd>22 hr</dd></div>
+    <div><dt>US News</dt><dd>#183</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>2025 was the first NCAA tournament appearance in 45 years of the program's existence.</b> They won the American Conference tournament and finished 12-4-2.</li><li>Currently ranked around <b>No. 19 nationally</b>.</li><li>Worthen has been head coach since February 2017 — the breakthrough came in his ninth season, which usually makes it more durable.</li><li><b>New assistant Lucas Champenois has developed 20+ professional players</b>, including a Sporting Kansas City first-round pick. Fluent in French.</li><li><b>FAU's roster has carried Canadian players</b> — a real signal the staff recruits north of the border.</li><li>FAU Soccer Stadium holds <b>1,000 — the smallest venue on either list</b>. No atmosphere.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>Average net price $8,636 — the lowest of any school in this research.</b> Out-of-state tuition $21,655.</li><li>#183 nationally, #30 for social mobility. Carnegie R1.</li><li><b>Honest caveat:</b> student reviews of the engineering college split sharply — some cite careers at IBM and Cisco, others describe course-availability and advising problems. Probe this with current students.</li><li>24:1 ratio, 50% four-year graduation.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>850 acres in affluent Boca Raton, two miles from the Atlantic. Housing is expensive by Florida standards.</li><li><b>Two airports</b>: Fort Lauderdale 30 minutes and Palm Beach 25. <b>FLL carries heavy direct Toronto and Montreal traffic.</b></li><li>~1,450 miles, about 22 hours.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> The 2023 basketball Final Four run put the school on the map. Ocean and coastal research. Owlsley the Owl.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Joey Worthen</dd></div>
+    <div><dt>Contact</dt><dd>Not yet retrieved</dd></div>
+    <div><dt>Questionnaire</dt><dd>Not yet retrieved</dd></div>
+  </div>
+  <p class="verdict">Cheapest realistic option once aid is counted, on a rising program that recruits Canadians. Contacts still need gathering.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="clemson">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · ACC</span></div>
+    <h2>Clemson</h2>
+    <p class="sh-city">Clemson, South Carolina</p>
+    <p class="sh-tag">The best professional pathway in college soccer right now.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>28,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>16:1</dd></div>
+    <div><dt>Admit rate</dt><dd>38–49%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$60,000+ all-in</dd></div>
+    <div><dt>Drive to border</dt><dd>12–13 hr</dd></div>
+    <div><dt>US News</dt><dd>#75</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Four national championships — 1984, 1987, 2021 and 2023</b> — plus runner-up finishes in 1979 and 2015 and ten College Cup semifinals.</li><li><b>Founded 1934. The oldest and most decorated program in this research.</b> 38 NCAA appearances.</li><li><b>In 2025 Clemson led every NCAA program in the country with four first-round MLS SuperDraft selections.</b> Kwaku Agyabeng became the tenth Tiger to sign a Generation adidas contract.</li><li><b>Reached the ACC championship game in five of the past six seasons.</b></li><li>2025 was a down year at 8-6-3 — and they still won the ACC tournament. That tells you how high the floor is.</li><li>Historic Riggs Field, capacity 6,500, with <b>486 home wins across 60 years</b>. Noonan is in his 17th season; Jones has 14, Rodriguez 11.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>Median earnings $75,142 four years after graduation — the highest figure in this research</b>, and measured at four years while NJIT's $69,591 is at six.</li><li>#75 nationally. <b>86–87% six-year graduation</b>, second only to UNC.</li><li><b>Out-of-state cost of attendance now exceeds $60,000 a year</b>, with only 34% receiving need-based aid. Roughly three times FAU.</li><li>Computer science ranks #83. Creative Inquiry undergraduate research is the distinctive academic feature.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>A small college town of 17,000 on Lake Hartwell at the foot of the Blue Ridge. <b>The most scenic setting here.</b></li><li><b>Airports are poor.</b> Greenville-Spartanburg is regional with no Toronto service; Charlotte and Atlanta are both two hours by car.</li><li>~800 miles, 12–13 hours. First-year students must live on campus.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Football and Death Valley. Engineering, business and agricultural sciences. The Tiger.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Mike Noonan</dd></div>
+    <div><dt>Contact</dt><dd>Not yet retrieved</dd></div>
+    <div><dt>Questionnaire</dt><dd>Not yet retrieved</dd></div>
+  </div>
+  <p class="verdict">If professional soccer is the goal and $60,000 is absorbable, this is the strongest case anywhere. If not, Charlotte gives you most of it for a third.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="georgia-southern">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · Sun Belt</span></div>
+    <h2>Georgia Southern</h2>
+    <p class="sh-city">Statesboro, Georgia</p>
+    <p class="sh-tag">Easiest admission in the research, attached to a team that was ranked sixth nationally.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>26,500</dd></div>
+    <div><dt>Student–faculty</dt><dd>24:1</dd></div>
+    <div><dt>Admit rate</dt><dd>88–90%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$21,784</dd></div>
+    <div><dt>Drive to border</dt><dd>15 hr</dd></div>
+    <div><dt>US News</dt><dd>#343</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>2025 was a dramatic breakout: 13-4-1, ranked as high as sixth nationally.</b> The win over Marshall is the biggest in program history.</li><li><b>Head coach Lee Squires is English</b> — born in Sheffield, with a career record of 142-67-31 across three programs.</li><li><b>All four coaches publish direct emails</b>, plus an ARMS questionnaire. One of the easiest staffs to approach.</li><li><b>But there's almost no history behind it.</b> Before 2025 the entire honours list was two conference regular-season titles, in 1990 and 2016.</li><li>2026 has started unevenly at roughly 2-1-1, including 0-2 at UNC Wilmington.</li><li>The schedule is hard by design: Clemson, Marshall, James Madison, West Virginia and UCF.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>88–90% acceptance — the most accessible school on either list.</b></li><li><b>Median earnings $62,342 four years out</b> — higher than NC State's six-year figure, despite a #343 ranking.</li><li>36% four-year graduation, 24–25:1 ratio.</li><li><b>94–95% of students come from Georgia.</b> A Canadian would be genuinely unusual here — weigh the culture fit honestly.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>A classic small Southern college town of 33,000, an hour inland from Savannah. First-years must live on campus.</li><li><b>Airport is poor</b> — Savannah is regional with no Toronto service; Jacksonville 2.5 hours, Atlanta 3.5.</li><li>~950 miles, about 15 hours. Also has a campus in Wexford, Ireland.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Six FCS football national championships. Adrian Peterson and Matt Breida came through. GUS the Eagle.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Lee Squires</dd></div>
+    <div><dt>Contact</dt><dd>gsumenssoccer@georgiasouthern.edu</dd></div>
+    <div><dt>Questionnaire</dt><dd>questionnaires.armssoftware.com/350ec954fad8</dd></div>
+  </div>
+  <p class="verdict">Ranked sixth in the country last year and you can get in with an 88% admit rate. The open question is whether 2025 was a step change or a spike.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="nova-southeastern">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D2 · Sunshine State</span></div>
+    <h2>Nova Southeastern</h2>
+    <p class="sh-city">Davie, Florida</p>
+    <p class="sh-tag">A heavily international squad — but a small undergraduate college inside a health-professions university.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>7,311</dd></div>
+    <div><dt>Student–faculty</dt><dd>16:1</dd></div>
+    <div><dt>Admit rate</dt><dd>76%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$40,200</dd></div>
+    <div><dt>Drive to border</dt><dd>22 hr</dd></div>
+    <div><dt>US News</dt><dd>#257</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li>NCAA Division II, Sunshine State Conference — one of the strongest D2 leagues in the country.</li><li>2025: 8-4-3, opening with a <b>2-0 upset of No. 5 Clayton State</b>. Picked fifth for 2026.</li><li>Santiago Hoyos Lopez earned First Team All-SSC and ranked <b>sixth nationally in points per game</b>.</li><li><b>The roster is the story: Dahl, Valdez, Morral Rosales, Rokseth, Scerbo, Bulloch, Katsuma, Ricardo.</b> Scandinavian, Spanish, Japanese, British, Latin American. This staff recruits abroad as routine.</li><li><b>D2 scholarships are equivalency-based</b> — partial awards, stackable with academic and need aid.</li><li>McArthur is young, promoted in January 2025.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>Undergraduate enrolment is only 7,311</b> — about SMU's size. The ~21,000 figure is two-thirds graduate and professional students.</li><li><b>It does not really meet the 18,000 size criterion.</b></li><li>16:1 ratio — the upside of a small undergraduate college. #257 nationally, 55% four-year graduation.</li><li><b>A student reviewer states the institution prioritises the medical school and advises against enrolling for business.</b> One voice, but consistent with the structure. <b>Weakest academic fit among the extras for your subjects.</b></li></ul>
+      <h3>Place</h3><ul class="bl"><li>314 suburban acres in Davie, car-dependent. Residence halls only at the Fort Lauderdale campus.</li><li>Fort Lauderdale International 20 minutes with heavy direct Toronto and Montreal traffic.</li><li>~1,450 miles, about 22 hours.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Health professions — medicine, dental, pharmacy, optometry. Marine science and coral reef restoration. Razor the Shark.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Matt McArthur</dd></div>
+    <div><dt>Contact</dt><dd>Not yet retrieved</dd></div>
+    <div><dt>Questionnaire</dt><dd>Not yet retrieved</dd></div>
+  </div>
+  <p class="verdict">The international roster is a real positive. Everything else points elsewhere unless marine science appeals.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="keiser">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NAIA · Sun Conference</span></div>
+    <h2>Keiser</h2>
+    <p class="sh-city">West Palm Beach, Florida</p>
+    <p class="sh-tag">Excellent soccer at a 1,500-student career college. NAIA eligibility rules are the useful part.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>1,500</dd></div>
+    <div><dt>Student–faculty</dt><dd>—</dd></div>
+    <div><dt>Admit rate</dt><dd>96–97%</dd></div>
+    <div><dt>Out-of-state</dt><dd>~$34,000–39,700</dd></div>
+    <div><dt>Drive to border</dt><dd>21 hr</dd></div>
+    <div><dt>US News</dt><dd>—</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>2025 was outstanding: 16-1-2</b>, winning both the Sun Conference regular season and tournament titles, finishing <b>No. 16 nationally</b>.</li><li><b>11-1 at home and 7-0-1 in conference.</b> Reached the second round of the NAIA National Tournament.</li><li>Fifth conference regular-season title, and <b>NAIA opening rounds in seven consecutive seasons</b>. Opened 2026 ranked No. 15.</li><li>Oldham is in his 10th season; <b>the staff was named NAIA South Staff of the Year</b>.</li><li><b>NAIA eligibility rules are more flexible than the NCAA's</b> — athletic aid stacks more freely with academic and need-based aid, and there is no 2.3 core-GPA sliding scale. <b>A real parallel path if NCAA eligibility is ever tight.</b></li><li>Correction: an earlier note recorded a 2021 NAIA national title. That could not be verified — the <i>football</i> team won the NAIA title in 2023.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>The flagship residential campus has about 1,500 students.</b> The ~20,000 figure is the whole system — 21 Florida campuses plus online, China and Nicaragua.</li><li><b>Does not meet the 18,000 criterion in any meaningful sense.</b></li><li>Founded 1977 as a career college. Effectively open admission at 96–97%. Top 25 for social mobility four years running.</li><li><b>Maths and physics almost certainly don't exist as majors.</b> Computing is IT-oriented. <b>Of your four subjects, it meets one.</b></li></ul>
+      <h3>Place</h3><ul class="bl"><li>100-acre residential campus off Okeechobee Boulevard, built deliberately for a traditional campus experience.</li><li>Palm Beach International 15 minutes; Fort Lauderdale 45 with heavy Toronto service.</li><li>~1,400 miles, about 21 hours.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Florida's largest private non-profit by system enrolment. Career education in health and business. The Seahawks.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Gavin Oldham</dd></div>
+    <div><dt>Contact</dt><dd>Not yet retrieved</dd></div>
+    <div><dt>Questionnaire</dt><dd>Not yet retrieved</dd></div>
+  </div>
+  <p class="verdict">Great soccer, wrong academics. Worth knowing for the NAIA eligibility route more than the school itself.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="uncw">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · CAA</span></div>
+    <h2>UNC Wilmington</h2>
+    <p class="sh-city">Wilmington, North Carolina</p>
+    <p class="sh-tag">The clearest evidence anywhere that freshmen actually play.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>15,254</dd></div>
+    <div><dt>Student–faculty</dt><dd>17:1</dd></div>
+    <div><dt>Admit rate</dt><dd>62–68%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$25,420 ($42,603 intl)</dd></div>
+    <div><dt>Drive to border</dt><dd>12 hr</dd></div>
+    <div><dt>US News</dt><dd>#198</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>In 2024 Heaney took a roster with 20 combined freshmen and sophomores to the CAA Championship Game.</b></li><li><b>The goals in that run came from first-year players</b> — Acevedo, D'Amico and Gyamfi. A redshirt freshman goalkeeper kept a clean sheet in the semifinal; a redshirt sophomore saved three penalties in the shootout that won round one.</li><li><b>No other program here demonstrates that pattern so explicitly.</b> Most say freshmen get minutes; this one built a conference final on them.</li><li><b>Heaney is in his 26th season</b> — second-longest tenure in this research after Vom Steeg. 208 wins, four NCAA appearances.</li><li>They punch up: a road win at South Carolina and a draw with a ranked Clemson in 2023; beat Georgia Southern 2-0 this season.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>#198 nationally but #58 for Best Undergraduate Teaching.</b> 17:1 ratio, average class size ~25.</li><li><b>Cost flag: out-of-state is $25,420, but reported international undergraduate tuition is around $42,603</b> — a gap of roughly $17,000 a year. <b>Verify before treating this as affordable.</b></li><li>Marine biology is world class, with a waterfront Center for Marine Science and a PhD program.</li><li>Not STEM-forward. Maths and physics are small departments. Median salary $46,972.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>Between the Cape Fear River and the Atlantic. <b>Wrightsville Beach is ten minutes away</b> and students bike to it.</li><li><b>Airport is weak</b> — Wilmington International is small; Raleigh-Durham is two hours by car.</li><li>~750 miles, about 12 hours. All first-years must live on campus.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Marine biology and coastal research. Film studies, supported by Wilmington's production industry. Sammy C. Hawk.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Aidan Heaney</dd></div>
+    <div><dt>Contact</dt><dd>Not yet retrieved</dd></div>
+    <div><dt>Questionnaire</dt><dd>Not yet retrieved</dd></div>
+  </div>
+  <p class="verdict">If early minutes matter more than the badge, this is the strongest evidence on the list. Check the international tuition first.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-extra" id="uncg">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-extra">Extra</span><span class="sh-meta">NCAA D1 · SoCon</span></div>
+    <h2>UNC Greensboro</h2>
+    <p class="sh-city">Greensboro, North Carolina</p>
+    <p class="sh-tag">Ranked last by size, and one of the four or five best soccer programs in this entire research.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>14,416</dd></div>
+    <div><dt>Student–faculty</dt><dd>18:1</dd></div>
+    <div><dt>Admit rate</dt><dd>89–90%</dd></div>
+    <div><dt>Out-of-state</dt><dd>$24,014</dd></div>
+    <div><dt>Drive to border</dt><dd>11 hr</dd></div>
+    <div><dt>US News</dt><dd>#198</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Five NCAA national championships</b> — 1982, 1983, 1985, 1986 and 1987 at Division III — plus a D2 runner-up finish in 1989.</li><li><b>2025: reached the Sweet Sixteen, beating No. 2 Virginia on penalties to get there.</b> Peaked at No. 11 nationally and stayed in the Top 25 all season.</li><li><b>Two first-round picks in the 2026 MLS SuperDraft</b> — Enzo Dovlo 12th overall to Atlanta United, Issah Haruna 20th to Orlando City. <b>A pipeline that rivals Clemson's.</b></li><li>23 conference regular-season titles, 15 conference tournament titles, 13 D1 NCAA appearances.</li><li>Rich has delivered four SoCon regular-season titles and two tournament championships in seven seasons.</li><li>UNCG Soccer Stadium, capacity 3,540.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li><b>89–90% acceptance</b>, essentially tied with Georgia Southern as the easiest here.</li><li><b>Average net price $10,907 — second lowest in the research after FAU.</b> Out-of-state tuition $24,014. #13 nationally for social mobility.</li><li><b>Bryan School holds AACSB accreditation in both business and economics — top 1% of business schools worldwide.</b></li><li><b>Counterweights: 39% four-year graduation and $39,869 median salary</b>, second lowest here. Maths, physics and CS are small departments.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>266 urban acres in a city of 300,000, anchoring the Piedmont Triad.</li><li><b>Sits between Charlotte and Raleigh</b> — 90 and 75 minutes — putting UNC, NC State, Duke and Charlotte all within reach.</li><li>Piedmont Triad International is 15 minutes; Charlotte Douglas 90 minutes with direct Toronto service. <b>~700 miles, about 11 hours.</b></li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Founded 1891 as a women's college. Education, nursing and the performing arts. The Weatherspoon Art Museum. Spiro the Spartan.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Chris Rich</dd></div>
+    <div><dt>Contact</dt><dd>Not yet retrieved</dd></div>
+    <div><dt>Questionnaire</dt><dd>Not yet retrieved</dd></div>
+  </div>
+  <p class="verdict">The biggest mismatch here between soccer quality and list position. If soccer per dollar is the criterion, this belongs near the top.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section><div class="tier-break tb-canada"><h2>Canada</h2><p>U SPORTS, not the NCAA. Different rules, different money, different season.</p></div>
+<section class="school t-canada" id="toronto">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-canada">Canada</span><span class="sh-meta">U SPORTS · OUA East</span></div>
+    <h2>University of Toronto</h2>
+    <p class="sh-city">Toronto, Ontario</p>
+    <p class="sh-tag">The oldest program in this research, in a rebuild year with nine starters gone.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>98,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>—</dd></div>
+    <div><dt>Admit rate</dt><dd>—</dd></div>
+    <div><dt>Out-of-state</dt><dd>Domestic tuition</dd></div>
+    <div><dt>Drive to border</dt><dd>Home</dd></div>
+    <div><dt>US News</dt><dd>Canada #1</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Founded 1879 — 147 years ago.</b> By far the oldest program here, predating Clemson by more than half a century.</li><li><b>51 OUA provincial championships, an all-time conference record</b>, plus the 1988 national title and 17 national championship appearances.</li><li><b>2025: won the 51st OUA title 2-0 over York</b>, led the OUA with 42 goals and conceded a province-low eight. The women won their first title the same year — a joint sweep managed only three times before in OUA history.</li><li><b>Orlov has the most internationally developed coaching background in this document</b>: youth performance coach at FC Union Berlin, internships at Fulham, Feyenoord, Korona Kielce and KuPS. Career record 45-15-12.</li><li><b>He is also head coach of Alliance United FC in League1 Ontario</b> — embedded in the same semi-pro ecosystem an Ontario player already moves through.</li><li><b>2026 is a rebuild.</b> Nine starters gone, roughly 1-1-2 so far including a home loss to TMU. Orlov has said he's most excited to work with the younger players.</li><li>Varsity Stadium, capacity 4,000, downtown on the St. George campus.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li>Canada's largest and highest-ranked university, ~98,000 students across three campuses.</li><li><b>The Program of Study system is the key risk.</b> You're admitted to a faculty, not a major. <b>Computer Science and Rotman Commerce are limited-enrolment and you apply after first year, on first-year marks.</b></li><li><b>That competition happens after you've enrolled and started playing.</b> Ask Orlov and an academic advisor what happens if grades dip during the season.</li><li>Maths and physics are world class — the Fields Institute is here. Large first-year classes and demanding grading are well documented.</li><li><b>Domestic Ontario tuition against Northeastern's $69,289 is the clearest financial argument for the Canadian route.</b></li></ul>
+      <h3>Place</h3><ul class="bl"><li>The most urban campus in this research. St. George occupies central Toronto, walkable throughout, with the subway running through it.</li><li><b>No flights required for home matches.</b> Away fixtures at Queen's, Trent, Nipissing, Ontario Tech, TMU and York are all drivable.</li><li>Pearson is 30 minutes; Billy Bishop is downtown.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Canada's flagship research university — insulin, stem cells. Rotman Commerce, Engineering Science, the Fields Institute. True Blue.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Ilya Orlov</dd></div>
+    <div><dt>Contact</dt><dd>ilya.orlov@utoronto.ca</dd></div>
+    <div><dt>Questionnaire</dt><dd>varsityblues.ca/sb_output.aspx?form=3</dd></div>
+  </div>
+  <p class="verdict">The strongest academic institution available at domestic prices, mid-rebuild, with a coach openly looking to younger players.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-canada" id="york">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-canada">Canada</span><span class="sh-meta">U SPORTS · OUA East</span></div>
+    <h2>York University</h2>
+    <p class="sh-city">Toronto, Ontario</p>
+    <p class="sh-tag">Reigning national champions, with a roster built from MLS Next Pro and League1 Ontario.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>55,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>—</dd></div>
+    <div><dt>Admit rate</dt><dd>—</dd></div>
+    <div><dt>Out-of-state</dt><dd>Domestic tuition</dd></div>
+    <div><dt>Drive to border</dt><dd>Home</dd></div>
+    <div><dt>US News</dt><dd>Canada</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>York are the reigning U SPORTS national champions.</b> They won the 2025 title and are defending it, chasing a seventh in program history.</li><li><b>They lost the 2025 OUA final 2-0 to Toronto and won the national championship anyway.</b> Different trophies — York holds the bigger one.</li><li><b>Six national championships</b> (1977, 2008, 2010, 2014, 2015, 2025) and seven OUA titles. Five of the nationals are Isacco's.</li><li><b>Isacco played Division I soccer at Maryland</b> — three-time All-ACC first team goalkeeper, team captain in 1992, Canadian Olympic Team. <b>The only coach here who came through the American system and now coaches in Canada.</b></li><li><b>The roster is a professional pathway</b>: two players from Toronto FC II (MLS Next Pro), plus Vaughan SC in League1 Ontario, TMU Bold, Utah Tech (NCAA D1) and a US junior college.</li><li><b>York Lions Stadium is also home to York United FC in the Canadian Premier League.</b></li><li>Eight coaches on staff — the deepest here. Four publish emails.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li>Canada's third-largest university, ~55,000 students in north Toronto plus the Glendon bilingual campus.</li><li><b>Schulich School of Business is elite, and its BBA is direct-entry</b> — a competitive admission decision rather than a post-first-year hurdle. <b>Arguably better for an athlete: you know where you stand before you arrive.</b></li><li>Osgoode Hall Law School is among Canada's strongest. Lassonde School of Engineering covers computer science.</li><li><b>Generally less selective and less grade-deflating than U of T</b> — worth weighing against prestige for an athlete balancing a season.</li></ul>
+      <h3>Place</h3><ul class="bl"><li>Suburban north Toronto at Keele and Steeles. <b>The TTC Line 1 subway extension runs directly onto campus.</b></li><li>More self-contained and isolated in feel than U of T's downtown campus.</li><li>Pearson is 25 minutes. No flights for home matches; all OUA away fixtures drivable.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Schulich and Osgoode Hall. Canada's most successful modern men's university soccer program. Yeo the Lion.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Carmine Isacco</dd></div>
+    <div><dt>Contact</dt><dd>cisacco@yorku.ca</dd></div>
+    <div><dt>Questionnaire</dt><dd>yorkulions.ca/sb_output.aspx?form=3</dd></div>
+  </div>
+  <p class="verdict">If the Canadian route is live at all, this is the first call.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+<section class="school t-canada" id="western">
+  <header class="sh">
+    <div class="sh-top"><span class="chip chip-canada">Canada</span><span class="sh-meta">U SPORTS · OUA West</span></div>
+    <h2>Western University</h2>
+    <p class="sh-city">London, Ontario</p>
+    <p class="sh-tag">Best traditional campus of the three — but the head coach runs two programs at once.</p>
+  </header>
+  <dl class="facts">
+    <div><dt>Enrolment</dt><dd>40,000</dd></div>
+    <div><dt>Student–faculty</dt><dd>—</dd></div>
+    <div><dt>Admit rate</dt><dd>—</dd></div>
+    <div><dt>Out-of-state</dt><dd>Domestic tuition</dd></div>
+    <div><dt>Drive to border</dt><dd>~2 hr to Windsor</dd></div>
+    <div><dt>US News</dt><dd>Canada</dd></div>
+  </dl>
+  <div class="cols">
+    <div class="col">
+      <h3>The program</h3><ul class="bl"><li><b>Painter coaches both the men's and women's teams.</b> At every other school in this research the men's program has a dedicated head coach. <b>Ask how his time is divided and who runs men's training daily.</b></li><li>He is genuinely decorated: <b>U SPORTS Coach of the Year 2013</b>, OUA West Coach of the Year 2013 and 2017, Canada Soccer A License.</li><li>With the women since 2012: five OUA West titles, nine straight playoff appearances, five U SPORTS national championship appearances. <b>Took over the men in 2018 and won OUA bronze that first season.</b></li><li><b>He played four seasons for Western, winning three OUA championships and the 1999 national title</b> — an alumnus and a national champion as a player.</li><li>Coached <b>FC London from its 2009 inception through 2015 in the PDL, winning a North American championship in 2012</b>.</li><li>Western won OUA titles in 1998 and 2004 and is one of only three programs ever to sweep both men's and women's OUA titles in a season.</li></ul>
+    </div>
+    <div class="col">
+      <h3>Academics</h3><ul class="bl"><li>~40,000 students in London, a city of 425,000 two hours from Toronto.</li><li><b>Known for the strongest undergraduate student experience of the Ontario schools</b> — genuinely residential, in a way neither U of T nor York is.</li><li><b>Ivey is an Advanced Entry Opportunity</b>: you apply to another faculty, complete two years, and enter Ivey in third year. <b>AEO status is granted at admission but does not guarantee entry</b> — you must hold marks through years one and two.</li><li><b>Same structural risk as U of T's Program of Study, spread across two years instead of one.</b></li></ul>
+      <h3>Place</h3><ul class="bl"><li><b>The most traditional campus of the three Canadian options</b> — green, residential, Gothic Revival stone. Closer in feel to Penn State or Clemson.</li><li><b>Under two hours to the Detroit–Windsor crossing</b>, the closest of the three.</li><li>London International for regional connections; Pearson about two hours by car.</li></ul>
+    </div>
+  </div>
+  <p class="known"><span>Known for</span> Ivey Business School. The strongest undergraduate campus culture in Ontario. Medicine and engineering. JW the Mustang.</p>
+  <div class="contact">
+    <div><dt>Head coach</dt><dd>Martin Painter</dd></div>
+    <div><dt>Contact</dt><dd>mpainter@uwo.ca</dd></div>
+    <div><dt>Questionnaire</dt><dd>Not posted</dd></div>
+  </div>
+  <p class="verdict">Best campus experience of the three. The divided coaching role and the two-year Ivey pathway are the questions to resolve.</p>
+  <a class="totop" href="#top">Back to the table</a>
+</section>
+    <div class="tier-break tb-out" id="ruled-out">
+      <h2>No varsity men's soccer</h2>
+      <p>Eight schools were removed. Men's soccer is heavily under-sponsored — roughly 215 Division I men's programs against 340+ women's.</p>
+    </div>
+    <div class="tablewrap">
+      <table><thead><tr><th>School</th><th>State</th><th>Why</th></tr></thead><tbody><tr><td class='t-name'>Cincinnati</td><td class='t-conf'>Ohio</td><td class='why'>Program discontinued 14 April 2020.</td></tr><tr><td class='t-name'>Appalachian State</td><td class='t-conf'>North Carolina</td><td class='why'>Cut 26 May 2020 in COVID budget reductions, immediately after an 11-7-1 season ranked 69th of 206 in RPI. Never reinstated. The former coach founded Appalachian FC, now in USL League Two, playing at the old stadium.</td></tr><tr><td class='t-name'>Florida</td><td class='t-conf'>Florida</td><td class='why'>Club only. The SEC does not sponsor men's soccer — only Kentucky and South Carolina field teams, both as Sun Belt affiliates.</td></tr><tr><td class='t-name'>Georgia</td><td class='t-conf'>Georgia</td><td class='why'>Club only, same reason.</td></tr><tr><td class='t-name'>UT Austin</td><td class='t-conf'>Texas</td><td class='why'>Club only.</td></tr><tr><td class='t-name'>Purdue</td><td class='t-conf'>Indiana</td><td class='why'>No varsity team. Purdue FC is player-run.</td></tr><tr><td class='t-name'>Miami (FL)</td><td class='t-conf'>Florida</td><td class='why'>16 varsity teams, seven men's, no men's soccer.</td></tr><tr><td class='t-name'>Arizona State</td><td class='t-conf'>Arizona</td><td class='why'>Club only.</td></tr></tbody></table>
+    </div>
+    <p class="note">Enrolment figures are approximate. Coaching staffs change constantly — verify before sending anything. Eight schools still need a contact sweep: FAU, Clemson, Keiser, Nova Southeastern, UNC Wilmington, UNC Greensboro, UNC Charlotte and Western.</p>
+  </main>
+</div>
+<script>
+(function(){
+  var side=document.getElementById('side'), btn=document.getElementById('menubtn');
+  btn.addEventListener('click',function(e){e.preventDefault();side.classList.toggle('open');});
+  document.querySelectorAll('.side a').forEach(function(a){
+    a.addEventListener('click',function(){side.classList.remove('open');});
+  });
+
+  var f=document.getElementById('filter');
+  f.addEventListener('input',function(){
+    var q=f.value.trim().toLowerCase();
+    document.querySelectorAll('.toc-group li').forEach(function(li){
+      li.style.display=(!q||li.dataset.name.indexOf(q)>-1)?'':'none';
+    });
+    document.querySelectorAll('#tbl tbody tr').forEach(function(tr){
+      tr.style.display=(!q||tr.dataset.name.indexOf(q)>-1)?'':'none';
+    });
+  });
+
+  var tbody=document.querySelector('#tbl tbody');
+  document.querySelectorAll('th.sortable').forEach(function(th){
+    th.addEventListener('click',function(){
+      var col=+th.dataset.col, desc=th.classList.contains('asc');
+      document.querySelectorAll('th.sortable').forEach(function(o){o.classList.remove('asc','desc');});
+      th.classList.add(desc?'desc':'asc');
+      var rows=[].slice.call(tbody.querySelectorAll('tr'));
+      rows.sort(function(a,b){
+        var x=a.children[col],y=b.children[col];
+        var xv=x.dataset.sort,yv=y.dataset.sort;
+        if(xv!==undefined&&yv!==undefined){ return desc?yv-xv:xv-yv; }
+        return desc? y.textContent.localeCompare(x.textContent) : x.textContent.localeCompare(y.textContent);
+      });
+      rows.forEach(function(r){tbody.appendChild(r);});
+    });
+  });
+
+  var links={};
+  document.querySelectorAll('.toc-group li a').forEach(function(a){ links[a.getAttribute('href').slice(1)]=a; });
+  var obs=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var a=links[e.target.id]; if(!a) return;
+      if(e.isIntersecting){
+        Object.keys(links).forEach(function(k){links[k].classList.remove('on');});
+        a.classList.add('on');
+      }
+    });
+  },{rootMargin:'-10% 0px -80% 0px'});
+  document.querySelectorAll('section.school').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
