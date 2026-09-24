@@ -298,25 +298,28 @@ Every coach has a direct address, unusual for a program this size.
 
 # Canadian universities (U SPORTS)
 
-These three sit outside the NCAA entirely and the rules are different enough that they shouldn't be compared directly against the US schools.
+These six sit outside the NCAA entirely and the rules are different enough that they shouldn't be compared directly against the US schools.
 
 ## How U SPORTS differs
 
-- **Governing body:** U SPORTS, not the NCAA. All three play in Ontario University Athletics (OUA). There is no NCAA Eligibility Center registration and the 2.3 core-course GPA rule does not apply.
+- **Governing body:** U SPORTS, not the NCAA. All six play in Ontario University Athletics (OUA). There is no NCAA Eligibility Center registration and the 2.3 core-course GPA rule does not apply.
 - **Money works differently.** No athletic scholarships in the US sense. Athletic Financial Awards are capped at tuition plus compulsory fees — no room, board or living costs. An entrance award in Ontario requires an 80% high school average.
 - **Short season.** Roughly 16 regular-season games from late August through October, then OUA playoffs and the U SPORTS national championship in November.
 - **Cost.** Domestic tuition is a fraction of US private or out-of-state rates, which changes the financial calculus even without scholarship money.
 - **Eligibility is five years** of competition, and transferring between U SPORTS and NCAA has its own rules worth checking early.
 
-## The three schools
+## The six schools
 
 | School | Conference | Location | Enrollment |
 | --- | --- | --- | --- |
 | University of Toronto | OUA East (U SPORTS) | Toronto, ON | ~98,000 (all campuses) |
 | York University | OUA East (U SPORTS) | Toronto, ON | ~55,000 |
+| University of Waterloo | OUA West (U SPORTS) | Waterloo, ON | ~42,000 |
 | Western University | OUA West (U SPORTS) | London, ON | ~40,000 |
+| University of Guelph | OUA West (U SPORTS) | Guelph, ON | ~30,000 |
+| Wilfrid Laurier University | OUA West (U SPORTS) | Waterloo, ON | ~23,000 |
 
-U of T is the largest university in Canada. All three are comfortably larger than most of the US schools on this list.
+U of T is the largest university in Canada, and all six are on the larger side. The three additions all play in OUA West, and Waterloo and Laurier share the same Kitchener–Waterloo campus city.
 
 ## Coach contacts
 
@@ -351,15 +354,55 @@ Also on staff without published emails: Hieu Quach, Dylan Carreiro, Daniel Gogar
 
 Painter runs both programs — the women's job since 2012, the men's since 2018. The rest of his staff still needs a pass.
 
+**University of Waterloo** — recruit form: athletics.uwaterloo.ca/sb_output.aspx?form=4
+
+| Name | Title | Email |
+| --- | --- | --- |
+| Jon Morgan | Head Coach | not published |
+| Andrew Agyare-Tabbi | Assistant Coach / Recruitment Manager | not published |
+| Sandro Palermo | Assistant Coach | not published |
+| Kevin Espiro | Assistant Coach | not published |
+| Michael Neptune | Goalkeeper Coach | not published |
+
+Andrew Agyare-Tabbi is the recruitment manager and the right target, but no coach emails are posted — the "Become a Warrior" recruit form is the practical route.
+
+**University of Guelph** — no public recruit form found; contact the coach directly
+
+| Name | Title | Email |
+| --- | --- | --- |
+| Alan Koch | Head Coach | akoch05@uoguelph.ca |
+| Justin Springer | Lead Assistant Coach | not published |
+| Justin Ammar | Goalkeeper Coach | not published |
+| Cameron Oliver | Assistant Coach (Analysis) | not published |
+
+Koch is the direct contact and his email is published. Also on staff without published emails: Justin Mayo (strength & conditioning), Sarah McNames (performance coordinator) and team manager Lauren Rossi-Zalmans.
+
+**Wilfrid Laurier University** — no public recruit form found; contact the coach directly
+
+| Name | Title | Email |
+| --- | --- | --- |
+| Mario Halapir | Head Coach | mariohalapir@icloud.com |
+| Luke Holder | Assistant Coach | not published |
+| James Rohrer | Assistant Coach | not published |
+| Santiago Almada | Assistant Coach | not published |
+| Nicole Smart | Assistant Coach, Strength & Conditioning | not published |
+
+Halapir is the direct contact and his email is published; the assistants' addresses are not.
+
 ## Program form
 
 - **Toronto** won the 2025 OUA championship, their 51st, beating York 2-0 in the final at Varsity Stadium. They led the OUA with 42 goals and conceded a province-low eight. They lose nine starters, so 2026 is a rebuild with openings.
 - **York** were 2025 OUA finalists and their roster pulls from Toronto FC II, York United and League1 Ontario — a strong pro-pathway environment.
 - **Western** took OUA bronze in 2018 under Painter.
+- **Waterloo** reached the 2025 OUA semifinal (lost 2-0 to No. 3 Toronto) — a strong rebound and a second-place OUA West finish after a lean 2024, in Jon Morgan's second year as head coach.
+- **Guelph** went 5-3-4 in 2024 and won an opening-round OUA playoff on penalties over Laurier. New head coach Alan Koch, a former MLS head coach at FC Cincinnati, took over in January 2025.
+- **Laurier** were national champions in 2000 and 2001 and OUA champions in 2000 and 2008, but recent seasons have been mid-table in a deep OUA West.
 
 ## Academics
 
-All three offer math, physics, computer science and business. Two caveats on the business side: Western's Ivey Business School is an Advanced Entry Opportunity — you apply to a different faculty first and enter Ivey in third year. York's Schulich is direct-entry but separately competitive. U of T's Rotman Commerce is also a separate, competitive stream. None of the three is a straightforward "admitted to the university, therefore admitted to business" path.
+All six offer math, physics, computer science and business. Two caveats on the business side: Western's Ivey Business School is an Advanced Entry Opportunity — you apply to a different faculty first and enter Ivey in third year. York's Schulich is direct-entry but separately competitive. U of T's Rotman Commerce is also a separate, competitive stream. None of those three is a straightforward "admitted to the university, therefore admitted to business" path.
+
+The three additions each have a distinct academic identity. **Waterloo** is the strongest computer-science and engineering school of the group — home to the first Faculty of Mathematics in North America (1967) and the world's largest co-operative education program, and one of Google's top recruiting universities globally. **Guelph** is No. 1 in Canada for veterinary science (6th in the world, QS 2025) through the Ontario Veterinary College, and strong across agriculture and life sciences. **Laurier's** draw is the Lazaridis School of Business & Economics plus a top-ranked Faculty of Music.
 
 # Open items
 
@@ -372,6 +415,9 @@ All three offer math, physics, computer science and business. Two caveats on the
 - UNC Charlotte staff emails — their site blocks automated access; needs a manual look.
 - Remaining extras sweep — FAU, Clemson, App State, UNCW, UNCG, Keiser, Nova Southeastern.
 - Western men's soccer assistant staff — only the head coach is published so far.
+- Waterloo men's soccer coach emails — none published; the recruit form is the only listed channel. Confirm a direct address for recruitment manager Andrew Agyare-Tabbi.
+- Guelph and Laurier assistant-coach emails — only the head coaches (Koch, Halapir) publish addresses.
+- Recent-season records for Waterloo, Guelph and Laurier — OUA's official standings pages block automated access; verify exact 2024–25 W-L-T figures directly before relying on them.
 - U SPORTS vs NCAA transfer rules — worth understanding early if both paths stay live.
 
 ## Suggested approach to outreach
@@ -1874,7 +1920,7 @@ Outside Ivey, Western is strong in medicine (Schulich School of Medicine and Den
 
 ### Geography
 
-**The most traditional campus environment of the three Canadian schools.** Western's campus in north London is green, residential and self-contained, with Gothic Revival stone architecture — much closer in feel to Penn State or Clemson than to U of T's downtown sprawl or York's suburban layout.
+**The most traditional campus environment of the original three Canadian schools.** Western's campus in north London is green, residential and self-contained, with Gothic Revival stone architecture — much closer in feel to Penn State or Clemson than to U of T's downtown sprawl or York's suburban layout.
 
 London sits **roughly two hours from Toronto and under two hours from the Detroit–Windsor border crossing**, and is served by London International Airport for regional connections, with Pearson about two hours away by car.
 
@@ -1882,8 +1928,116 @@ London sits **roughly two hours from Toronto and under two hours from the Detroi
 
 Ivey Business School. The strongest undergraduate campus culture in Ontario, with heavy residence participation and a well-known Homecoming tradition. Medicine and engineering. A soccer programme with a national championship in its history and a coach who played on that team.
 
-**Bottom line: the best traditional campus experience of the three Canadian options, with a genuinely decorated coach — but he runs two programmes at once, and Ivey's two-year AEO pathway puts the academic hurdle after enrolment rather than at admission.** Thin on published assistant staff and on recent men's-programme results compared with York and Toronto.
+**Bottom line: the best traditional campus experience of the three original Canadian options, with a genuinely decorated coach — but he runs two programmes at once, and Ivey's two-year AEO pathway puts the academic hurdle after enrolment rather than at admission.** Thin on published assistant staff and on recent men's-programme results compared with York and Toronto.
+
+## University of Waterloo — Waterloo, Ontario
+
+### Soccer program
+
+**The academic headline school of the OUA West additions, with a program on the way back up.** Waterloo plays in OUA West, U SPORTS.
+
+**The signature achievement is the 2001 OUA championship — a title 44 years in the making.** Under first-year head coach Peter Mackie the Warriors went 7-3-0, earned the program's first-ever national ranking, and won the gold-medal match **2-1 over Wilfrid Laurier** on two Nicholas Klassen free kicks, then finished fifth at the CIS national championship in Halifax. Six players made the OUA all-star teams and Mackie was named OUA Coach of the Year. That team is in the Warriors Hall of Fame.
+
+**2025 was a genuine rebound.** Waterloo reached the OUA semifinal before losing 2-0 to No. 3 Toronto — a strong second-place OUA West finish after a lean 2024, in **Jon Morgan's** second season. Morgan was promoted from assistant to head coach in March 2024, having been on staff since 2017; he has an English semi-professional playing background and prior roles at Cambridge United and Conestoga College. Exact 2024–25 W-L-T records could not be verified against OUA's access-blocked standings pages, so confirm them directly.
+
+Home matches are at **Warrior Field** on the main campus — a grandstand of roughly 1,700 (about 5,700 all-in) shared with the football program.
+
+**Staff:** Jon Morgan (Head Coach) · Andrew Agyare-Tabbi (Assistant Coach and **Recruitment Manager**) · Sandro Palermo and Kevin Espiro (Assistant Coaches) · Michael Neptune (Goalkeeper Coach). **No coach emails are published** — recruiting is routed through the "Become a Warrior" form at athletics.uwaterloo.ca/sb_output.aspx?form=4, and Agyare-Tabbi is the intended recruiting target.
+
+**Mascot:** King Warrior. Colors black and gold.
+
+### Academics
+
+**The strongest computer-science and engineering environment in this entire document.** Waterloo is home to the **first Faculty of Mathematics in North America (founded 1967)**, which houses the David R. Cheriton School of Computer Science.
+
+**It also runs the largest co-operative education program in the world** — more than 20,000 undergraduate co-op students and 8,000+ employers across 70+ countries. CS and engineering students graduate with roughly two years of paid, alternating work experience. A Google engineering director has publicly named Waterloo one of Google's top three or four recruiting universities worldwide, alongside MIT and Carnegie Mellon.
+
+Waterloo ranks No. 1 for reputation among Canada's comprehensive universities (Maclean's 2026). Enrollment is roughly 42,000. As with the other Canadian schools, admit rate and student-faculty ratio are not published in a comparable form — treat both as unavailable.
+
+**For a recruit targeting computer science or engineering, this is the clearest academic pick of the six Canadian schools**, and unlike U of T's Program of Study or Western's AEO pathway, admission to Math/CS is a direct application decision worth confirming with admissions for the specific plan.
+
+### Geography
+
+**Waterloo is the twin city of Kitchener** — the Kitchener–Waterloo (KW) region, Canada's leading technology hub, nicknamed the "Silicon Valley of the North." BlackBerry's former campus (partly acquired by the university) and a significant Google engineering office are minutes away, with a dense startup scene feeding the co-op program.
+
+The campus is large (~400 hectares). Toronto Pearson is roughly 90 minutes east, and the **Detroit–Windsor border crossing is about three hours** southwest via Highway 401. All OUA away fixtures are drivable; home matches require no flights.
+
+### Known for
+
+The world's biggest co-op program, quantum computing, and one of the strongest computer-science faculties anywhere. King Warrior; black and gold.
+
+**Bottom line: the academic standout of the Canadian group for a computer-science or engineering athlete, with a program trending upward under Jon Morgan — the one catch is that no coach emails are published, so the recruit form is the entry point.**
+
+## University of Guelph — Guelph, Ontario
+
+### Soccer program
+
+**The most professionally decorated coach of the Canadian additions now runs the program.** Guelph plays in OUA West, U SPORTS.
+
+**Alan Koch was hired in January 2025** after longtime coach Keith Mason's retirement. He is a former head coach of **FC Cincinnati in MLS (2017–19)**, and previously coached FC Edmonton in the Canadian Premier League and the Colorado Springs Switchbacks in the USL. At Whitecaps FC 2 he gave **Alphonso Davies his professional debut.** At Simon Fraser (2008–15) he went 126-21-7 and reached two NCAA Division II Final Fours, and he was 2018 USL Coach of the Year. A native of Durban, South Africa.
+
+**The Gryphons hold two OUA championships**, in 1990 and 2016 — the 2016 title, a 3-1 win over York, was the program's first in 26 years. They reached the **1990 CIAU national final**, losing 2-1 to defending champion UBC before a record home crowd. In 2024 they went 5-3-4 and won an opening-round OUA playoff on penalties over Laurier. Exact recent records should be confirmed against OUA's access-blocked standings pages.
+
+Home matches are at the **Gryphon Soccer Complex** (FIFA 2-star certified turf), with some played at Alumni Stadium.
+
+**Staff:** Alan Koch (Head Coach) — **akoch05@uoguelph.ca** · Justin Springer (Lead Assistant Coach) · Justin Ammar (Goalkeeper Coach) · Cameron Oliver (Assistant Coach, Analysis) · plus Justin Mayo (strength & conditioning), Sarah McNames (performance coordinator) and team manager Lauren Rossi-Zalmans. **Koch's email is published and he is the direct first contact**; assistants' addresses are not posted, and no public recruit form was found.
+
+**Mascot:** Gryphon. Colors red, black and gold.
+
+### Academics
+
+**The best animal- and life-sciences school in the country.** The **Ontario Veterinary College is ranked No. 1 in Canada and 6th in the world for veterinary science (QS 2025).** The Ontario Agricultural College sits around 2nd in Canada for agriculture, and the university is top-150 globally for life sciences.
+
+Guelph is a top-6 comprehensive university and No. 1 for research dollars per Maclean's 2025. Enrollment is roughly 30,000 (about 25,000 undergraduate), drawn from 140+ countries. Admit rate and a reliable student-faculty ratio are not published in a comparable form — treat both as unavailable.
+
+**For a recruit aiming at biology, veterinary, environmental or agricultural sciences, Guelph is the strongest fit of the Canadian schools.**
+
+### Geography
+
+**Guelph is a mid-size city of about 140,000, roughly an hour west of Toronto** — smaller and more self-contained than the Toronto campuses, on a large, green 412-hectare campus with a traditional feel.
+
+The **Detroit–Windsor border crossing is about three hours** southwest; Toronto Pearson is roughly an hour away. All OUA away fixtures are drivable.
+
+### Known for
+
+Veterinary medicine and agriculture — the Ontario Veterinary and Agricultural Colleges — and one of Canada's most residential comprehensive campuses. Gryphon; red, black and gold.
+
+**Bottom line: a genuine pro-level coach in Alan Koch rebuilding a program with real history, attached to the best animal- and life-sciences school in Canada — and the head coach's email is published, which makes the first contact straightforward.**
+
+## Wilfrid Laurier University — Waterloo, Ontario
+
+### Soccer program
+
+**A former national champion, next door to Waterloo.** Laurier plays in OUA West, U SPORTS. The formal name is Wilfrid Laurier University; the main campus is in Waterloo.
+
+**The program's peak was back-to-back national titles in 2000 and 2001**, plus a 1980 CIAU national-final appearance. **OUA titles came in 2000 and 2008**, and in 2008 Laurier swept both the men's and women's OUA soccer championships in the same season — a rare double, and one of only a handful of such sweeps in OUA history.
+
+**Mario Halapir** is the long-tenured head coach and was the **2008 OUA Coach of the Year.** Unlike Western, this is a dedicated men's role. Recent seasons have been mid-table in a deep OUA West — competitive but no longer a title favourite — and exact recent records should be confirmed against OUA's access-blocked standings pages.
+
+Home matches are at **Ansley Alumni Field** on the Waterloo campus (football uses the separate University Stadium; a distinct soccer-field capacity is not published).
+
+**Staff:** Mario Halapir (Head Coach) — **mariohalapir@icloud.com** · Luke Holder, James Rohrer and Santiago Almada (Assistant Coaches) · Nicole Smart (Assistant Coach, Strength & Conditioning). **Halapir's email is published and he is the direct first contact**; the assistants' addresses are not, and no public recruit form was found.
+
+**Mascot:** Golden Hawks; Midas the Golden Hawk. Colors purple and gold.
+
+### Academics
+
+**The Lazaridis School of Business & Economics is the flagship** — Laurier's largest faculty and a nationally strong business and economics school, with graduate programs appearing in the QS global rankings. **The Faculty of Music is among Canada's best**, named "Canada's Best Music Campus" by CBC Radio and home to the Penderecki String Quartet. Laurier is also strong in psychology and social work.
+
+Enrollment is roughly 23,000 across the Waterloo, Brantford and Milton campuses, with Waterloo the main site — a smaller, more undergraduate-focused school than Waterloo next door. Admit rate and a comparable student-faculty ratio are not published — treat both as unavailable.
+
+### Geography
+
+**The main campus is in Waterloo, essentially bordering the University of Waterloo** — the same KW technology region, but a more compact and social campus. Twin city with Kitchener, with the same startup and co-op ecosystem on the doorstep.
+
+The **Detroit–Windsor border crossing is about three hours** southwest; Toronto Pearson is roughly 90 minutes east. All OUA away fixtures are drivable.
+
+### Known for
+
+The Lazaridis business school and a top-ranked music faculty, on a compact campus with a strong student culture. Golden Hawks; Midas; purple and gold.
+
+**Bottom line: a former back-to-back national champion with a dedicated, decorated head coach whose email is published, at a school with a strong business program — sharing the KW tech region with Waterloo, though its recent results trail the top of OUA West.**
 
 ## Research complete
 
-All 29 schools are now profiled: the Core 12, the 13 remaining extras, Appalachian State ruled out, and the three Canadian schools.
+All 32 schools are now profiled: the Core 12, the 13 remaining extras, Appalachian State ruled out, and the six Canadian schools.
