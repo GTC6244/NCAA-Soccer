@@ -319,7 +319,7 @@ These six sit outside the NCAA entirely and the rules are different enough that 
 | University of Guelph | OUA West (U SPORTS) | Guelph, ON | ~30,000 |
 | Wilfrid Laurier University | OUA West (U SPORTS) | Waterloo, ON | ~23,000 |
 
-U of T is the largest university in Canada, and all six are on the larger side. The three additions all play in OUA West, and Waterloo and Laurier share the same Kitchener–Waterloo campus city.
+U of T is the largest university in Canada, and all six are on the larger side. The three additions all play in OUA West, and Waterloo and Laurier share the same Kitchener–Waterloo region.
 
 ## Coach contacts
 
